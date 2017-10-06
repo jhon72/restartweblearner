@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+                <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                <script src="main.js"></script>
+            <style>body{background: url(img/fon.png);}</style>       
+         <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">Open Server</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="contacts.html">Контакты</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+          <div class="container">
+              <div class="bubble">
+                <div class="info">
+                    <h2 align="center">Атрибуты HTML</h2>
+                       <blockquote>HTML-атрибуты сообщают браузеру, каким образом должен отображаться тот или иной элемент страницы. Атрибуты позволяют сделать более разнообразными внешний вид информации, добавляемой с помощью одинаковых тегов.
+                        Значение атрибута заключается в кавычки "". Названия и значения атрибутов не чувствительны к регистру, но, тем не менее, рекомендуется набирать их в нижнем регистре. Глобальные атрибуты, приведенные в таблице ниже, могут быть использованы для любого HTML-элемента, хотя некоторые из них могут не оказывать на элементы никакого влияния.<br><br>
+                 <table align="center">                          
+                <tr><th>Атрибут<th>Описание, принимаемое значение</th></tr>
+             <tr><td>accesskey</td><td>Генерирует сочетания клавиш для доступа к текущему элементу. Состоит из разделенного пробелами списка символов. Браузер в первую очередь выбирает те клавиши, которые существуют на раскладке клавиатуры. Применяется к следующим элементам: <strong class="col">&lt;a>, &lt;area>, &lt;button>, &lt;input>, &lt;label>, &lt;legend>, &lt;textarea></strong>.
+                Принимаемые значения: перечень названий клавиш.</td></tr>
+        <tr><td>class</td><td>Определяет имя класса для элемента (используется для определения класса в таблице стилей).
+        Принимаемые значения: имя класса.</td></tr>
+<tr><td>contenteditable</td><td>Определяет, может ли пользователь редактировать содержимое (контент). Позволяет преобразовать любое поле HTML в редактируемый элемент.
+Принимаемые значения: true/false.</td></tr> 
+<tr><td>contextmenu</td><td>Добавляет к элементу контекстное меню, заданное тегом <strong class="col">&lt;menu></strong>.
+Принимаемые значения: значение атрибута id элемента <strong class="col">&lt;menu></strong>.</td></tr>
+<tr><td>dir</td><td>Определяет направление текста контента в элементах <strong class="col">&lt;bdo> и &lt;bdi></strong>.
+Принимаемые значения: ltr/rtl/auto.</td></tr>
+<tr><td>draggable</td><td>Определяет, может ли пользователь перетащить элемент.
+Принимаемые значения: true/false/auto.</td></tr>
+<tr><td>dropzone</td><td>Определяет область для приема перемещаемых элементов, сообщая браузеру пользователя, какие действия совершить при перемещении.
+Принимаемые значения:
+copy — содержимое перемещаемого элемента будет скопировано в область.
+move — содержимое перемещаемого элемента будет перемещено в новую область.
+link — при перемещении будет создана ссылка на первоначальные данные элемента.</td></tr>
+<tr><td>hidden</td><td>Указывает на то, что элемент должен быть скрыт.
+Принимаемые значения: hidden.</td></tr>
+<tr><td>id</td><td>Определяет уникальный идентификатор элемента.
+Принимаемые значения: id — идентификатор элемента.</td></tr> 
+<tr><td>lang</td><td>Определяет код языка содержимого (контента) в элементе.
+Принимаемые значения: код языка.</td></tr>
+<tr><td>spellcheck</td><td>Указывает, подлежит ли содержимое элемента проверке орфографии и грамматики.
+Принимаемые значения: true/false.</td></tr>
+<tr><td>style</td><td>Указывает на код CSS, применяемую для оформления элемента.
+Принимаемые значения: код CSS.</td></tr> 
+<tr><td>tabindex</td><td>Определяет порядок перехода к элементу при помощи клавиши TAB.
+Принимаемые значения: порядковый номер.</td></tr>
+<tr><td>title</td><td>Определяет дополнительную информацию об элементе, задавая всплывающую подсказку для страницы.
+Принимаемые значения: текст.</td></tr>
+<tr><td>translate</td><td>Разрешает или запрещает перевод текста внутри элемента.
+Принимаемые значения: yes/no.</td></tr> 
+</table>
+    </blockquote></div></div></div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
+               </body>
+                <footer class="footer" align="center"><br><input  type="text" id="text-to-find" value=""> 
+<input   type="button" onclick="javascript: FindOnPage('text-to-find'); return false;" value="Найти"/><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a> 
+        </footer>
+    </head>
+</html>
