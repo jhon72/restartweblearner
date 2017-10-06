@@ -1,0 +1,42 @@
+/*Контейнер-блок с контентом*/
+
+.container {
+    
+	margin: 50px auto 0px auto; /* Отступ сверху 50px и выравниваем по центру */
+	width: 700px; /*Ширина*/
+    background: rgb(255, 245, 245); /*Цвет фона*/
+    border-radius: 8px; /*Закругление углов*/
+    padding-left: 120px; /*Расстягивание в лево*/
+    padding-right: 120px; /*Растягивание в право*/
+    font-style: italic; /*Щрифт*/
+    font-weight: normal; /*Размер шрифта*/
+    border-style: outset; /*Рамка*/
+    border-color: rgb(104, 140, 221); /*Цвет рамки*/
+    box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.3); /*Тень вокруг контейнера*/
+    
+    
+}
+
+/*Логотип*/
+
+.hdr {
+	font-family: Verdana; /*Шрифт*/
+	font-size: 2em; /*Размер шрифта*/
+	font-weight: bold; /*Тип шрифта*/
+	color: black; /*Цвет*/
+	letter-spacing: -0.11em;
+	text-shadow: -0.05em 0px 0.07em #000000; /*Тень*/
+}
+ 
+/*Логотип*/
+
+.hdr div {
+	display: inline-block; /*Тип блока*/
+	color: #F00000; /*Цвет*/
+   
+    
+}
+
+strong.col {
+    color: red;
+}
