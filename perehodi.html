@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">Open Server</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="jquery.html">Jquery</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="contacts.html">Контакты</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>CSS переходы</h2>
+                        <b>CSS3-переходы</b> позволяют анимировать исходное значение CSS-свойства на новое значение с течением времени, управляя скоростью смены значений свойств. Большинство свойств меняют свои значения за 16 миллисекунд, поэтому рекомендуемое время стандартного перехода &#8212; <kbd>200ms</kbd>.</p>
+<p>Смена свойств происходит при наступлении определенного события, которое описывается соответствующим псевдоклассом. Чаще всего используется псевдокласс <kbd>:hover</kbd>. Данный псевдокласс не работает на мобильных устройствах, таких как iPhone или Android. Универсальным решением, работающим в настольных и мобильных браузерах, будет обработка событий с помощью JavaScript (например, переключение классов при клике).</p>
+<p>Переходы применяются ко всем элементам, а также к псевдоэлементам <kbd>:before</kbd> и <kbd>:after</kbd>. Для задания всех свойств перехода обычно используют краткую запись свойства <kbd>transition</kbd>.</p>
+<p>CSS3-переходы могут применяться не ко всем свойствам и их значениям.</p>
+<h2>Создание плавных изменений свойств элементов</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#transition-property">1. Название свойства <kbd>transition-property</kbd></a></li>
+<li><a href="#transition-duration">2. Продолжительность перехода <kbd>transition-duration</kbd></a></li>
+<li><a href="#transition-timing-function">3. Функция перехода <kbd>transition-timing-function</kbd></a></li>
+<li><a href="#transition-delay">4. Задержка перехода <kbd>transition-delay</kbd></a></li>
+<li><a href="#transition">5. Краткая запись перехода <kbd>transition</kbd></a></li>
+<li><a href="#part6">6. Плавный переход нескольких свойств</a></li>
+<li><a href="#part7">7. Примеры переходов для различных свойств</a></li>
+</ul>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 10.0<br />
+<b>Firefox:</b> 16.0, 4.0 -moz-<br />
+<b>Chrome:</b> 26.0, 4.0 -webkit-<br />
+<b>Safari:</b> 6.1, 3.1 -webkit-<br />
+<b>Opera:</b> 12.1, 11.6 -o-<br />
+<b>iOS Safari:</b> 7.1<br />
+<b>Opera Mini:</b> &#8212;<br />
+<b>Android Browser:</b> 4.4, 4.1 -webkit-<br />
+<b>Chrome for Android:</b> 44</p></blockquote>
+<h3 id="transition-property">1. Название свойства transition-property</h3>
+<p>Содержит название CSS-свойств, к которым будет применен эффект перехода. Значение свойства может содержать как одно свойство, так и список свойств через запятую. При создании перехода можно использовать как начальное, так и конечное состояние элемента. Свойство не наследуется. </p>
+<p>Создаваемые эффекты должны быть ненавязчивыми. Не все свойства требуют плавного изменения во времени, что связано с пользовательским опытом. Например, при наведении на ссылку мы хотим видеть мгновенную смену цвета ссылки или цвета и стиля подчёркивания. Поэтому переходы следует использовать для тех свойств, к которым действительно нужно привлечь внимание.</p>
+<table class="t1">
+<tr>
+<th colspan="2">transition-property</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Отсутствие свойства для перехода.</td>
+</tr>
+<tr>
+<td><kbd>all</kbd></td>
+<td>Значение по умолчанию. Применяет эффект перехода ко всем свойствам элемента.</td>
+</tr>
+<tr>
+<td>свойство</td>
+<td>Определяет список CSS-свойств, перечисленных через запятую, участвующих в переходе.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {
+width: 100px;
+transition-property: width;
+}
+div:hover {
+width: 300px;
+}</pre>
+<h3 id="transition-duration">2. Продолжительность перехода transition-duration</h3>
+<p>Задаёт промежуток времени, в течение которого должен осуществляться переход. Если разные свойства имеют разные значения для перехода, они указываются через запятую. Если продолжительность перехода не указана, то анимация при смене значений свойств происходить не будет. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">transition-duration</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>время</td>
+<td>Время перехода указывается в секундах или миллисекундах, например, <kbd>2s</kbd> или <kbd>5ms</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {
+transition-duration: .2s;
+}</pre>
+<p data-height="300" data-theme-id="0" data-slug-hash="LRpLbk" data-default-tab="result" data-user="html5book" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/LRpLbk/"  >LRpLbk</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="transition-timing-function">3. Функция перехода transition-timing-function</h3>
+<p>Свойство задаёт временную функцию, которая описывает скорость перехода объекта от одного значения к другому. Если вы определяете более одного перехода для элемент, например, цвет фона элемента и его положение, вы можете использовать разные функции для каждого свойства. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">transition-timing-function</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>ease</kbd></td>
+<td>Функция по умолчанию, переход начинается медленно, разгоняется быстро и замедляется в конце. Соответствует <kbd>cubic-bezier(0.25,0.1,0.25,1)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>linear</kbd></td>
+<td>Переход происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует <kbd>cubic-bezier(0,0,1,1)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>ease-in</kbd></td>
+<td>Переход начинается медленно, а затем плавно ускоряется в конце. Соответствует <kbd>cubic-bezier(0.42,0,1,1)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>ease-out</kbd></td>
+<td>Переход начинается быстро и плавно замедляется в конце. Соответствует <kbd>cubic-bezier(0,0,0.58,1)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>ease-in-out</kbd></td>
+<td>Переход медленно начинается и медленно заканчивается. Соответствует <kbd>cubic-bezier(0.42,0,0.58,1)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>cubic-bezier(x1, y1, x2, y2)</kbd></td>
+<td>Позволяет вручную установить значения от 0 до 1 для кривой ускорения. </td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {
+transition-timing-function: linear;
+}</pre>
+<p data-height="500" data-theme-id="5012" data-slug-hash="JobJNy" data-default-tab="result" data-user="nazarelen" data-pen-title="CSS Timing Function" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen/pen/JobJNy/"  >CSS Timing Function</a> by Elena Nazarova (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen"  >@nazarelen</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></p>
+<p>Для создания более реалистичных анимаций используйте функцию cubic Bézier:</p>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/01/easing.png" alt="easing" width="680" height="513" class="alignnone size-full wp-image-10358" srcset="https://html5book.ru/wp-content/uploads/2015/01/easing.png 680w, https://html5book.ru/wp-content/uploads/2015/01/easing-300x226.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 1. Пользовательские функции cubic Bézier с сайта easings.net</figcaption></figure>
+<table class="t3">
+<tr>
+<th>Пользовательское название</th>
+<th>Значение функции</th>
+</tr>
+<tr>
+<td>easeInSine</td>
+<td><kbd>cubic-bezier(0.47, 0, 0.745, 0.715)</kbd></td>
+</tr>
+<tr>
+<td>easeOutSine</td>
+<td><kbd>cubic-bezier(0.39, 0.575, 0.565, 1)</kbd></td>
+</tr>
+<tr>
+<td>easeInOutSine</td>
+<td><kbd>cubic-bezier(0.445, 0.05, 0.55, 0.95)</kbd></td>
+</tr>
+<tr>
+<td>easeInQuad</td>
+<td><kbd>cubic-bezier(0.55, 0.085, 0.68, 0.53)</kbd></td>
+</tr>
+<tr>
+<td>easeOutQuad</td>
+<td><kbd>cubic-bezier(0.25, 0.46, 0.45, 0.94)</kbd></td>
+</tr>
+<tr>
+<td>easeInOutQuad</td>
+<td><kbd>cubic-bezier(0.455, 0.03, 0.515, 0.955)</kbd></td>
+</tr>
+<tr>
+<td>easeInCubic</td>
+<td><kbd>cubic-bezier(0.55, 0.055, 0.675, 0.19)</kbd></td>
+</tr>
+<tr>
+<td>easeOutCubic</td>
+<td><kbd>cubic-bezier(0.215, 0.61, 0.355, 1)</kbd></td>
+</tr>
+<tr>
+<td>easeInOutCubic</td>
+<td><kbd>cubic-bezier(0.645, 0.045, 0.355, 1)</kbd></td>
+</tr>
+<tr>
+<td>easeInQuart</td>
+<td><kbd>cubic-bezier(0.895, 0.03, 0.685, 0.22)</kbd></td>
+</tr>
+<tr>
+<td>easeOutQuart</td>
+<td><kbd>cubic-bezier(0.165, 0.84, 0.44, 1)</kbd></td>
+</tr>
+<tr>
+<td>easeInOutQuart</td>
+<td><kbd>cubic-bezier(0.77, 0, 0.175, 1)</kbd></td>
+</tr>
+<tr>
+<td>easeInQuint</td>
+<td><kbd>cubic-bezier(0.755, 0.05, 0.855, 0.06)</kbd></td>
+</tr>
+<tr>
+<td>easeOutQuint</td>
+<td><kbd>cubic-bezier(0.23, 1, 0.32, 1)</kbd></td>
+</tr>
+<tr>
+<td>easeInOutQuint</td>
+<td><kbd>cubic-bezier(0.86, 0, 0.07, 1)</kbd></td>
+</tr>
+<tr>
+<td>easeInExpo</td>
+<td><kbd>cubic-bezier(0.95, 0.05, 0.795, 0.035)</kbd></td>
+</tr>
+<tr>
+<td>easeOutExpo</td>
+<td><kbd>cubic-bezier(0.19, 1, 0.22, 1)</kbd></td>
+</tr>
+<tr>
+<td>easeInOutExpo</td>
+<td><kbd>cubic-bezier(1, 0, 0, 1)</kbd></td>
+</tr>
+<tr>
+<td>easeInCirc</td>
+<td><kbd>cubic-bezier(0.6, 0.04, 0.98, 0.335)</kbd></td>
+</tr>
+<tr>
+<td>easeOutCirc</td>
+<td><kbd>cubic-bezier(0.075, 0.82, 0.165, 1)</kbd></td>
+</tr>
+<tr>
+<td>easeInOutCirc</td>
+<td><kbd>cubic-bezier(0.785, 0.135, 0.15, 0.86)</kbd></td>
+</tr>
+<tr>
+<td>easeInBack</td>
+<td><kbd>cubic-bezier(0.6, -0.28, 0.735, 0.045)</kbd></td>
+</tr>
+<tr>
+<td>easeOutBack</td>
+<td><kbd>cubic-bezier(0.175, 0.885, 0.32, 1.275)</kbd></td>
+</tr>
+<tr>
+<td>easeInOutBack</td>
+<td><kbd>cubic-bezier(0.68, -0.55, 0.265, 1.55)</kbd></td>
+</tr>
+</table>
+<h3 id="transition-delay">4. Задержка перехода transition-delay</h3>
+<p>Необязательное свойство, позволяет сделать так, чтобы изменение свойства происходило не моментально, а с некоторой задержкой. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">transition-delay</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>время</td>
+<td>Время задержки перехода указывается в секундах или миллисекундах.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {
+transition-delay: .5s;
+}</pre>
+<p data-height="300" data-theme-id="0" data-slug-hash="wzKZoj" data-default-tab="result" data-user="html5book" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/wzKZoj/"  >wzKZoj</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="transition">5. Краткая запись перехода</h3>
+<p> Все свойства, отвечающие за изменение внешнего вида элемента, можно объединить в одно свойство <kbd>transition</kbd></p>
+<pre class="lang:css decode:true " >{transition: transition-property transition-duration transition-timing-function transition-delay;}</pre>
+<p>Если воспользоваться значениями по умолчанию, то запись </p>
+<pre class="lang:css decode:true " >div {transition: 1s;}</pre>
+<p>будет эквивалентна </p>
+<pre class="lang:css decode:true " >div {transition: all 1s ease 0s;}</pre>
+<h3 id="part6">6. Плавный переход нескольких свойств</h3>
+<p>Для элемента можно задать несколько последовательных переходов, перечислив их через запятую. Каждый переход можно оформить своей временной функцией.</p>
+<pre class="lang:css decode:true " >div {transition: background 0.3s ease, color 0.2s linear;}</pre>
+<p>или </p>
+<pre class="lang:css decode:true " >div {
+transition-property: height, width, background-color;
+transition-duration: 3s;
+transition-timing-function: ease-in, ease, linear;
+}</pre>
+<h3 id="part7">7. Примеры переходов для различных свойств</h3>
+<p>Наведите курсором мыши на блоки, чтобы увидеть свойства в действии.</p>
+<p data-height="1370" data-theme-id="5012" data-slug-hash="gbLXYK" data-default-tab="result" data-user="nazarelen" class='codepen'>See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen/pen/gbLXYK/"  >gbLXYK</a> by HeleN (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen"  >@nazarelen</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<br><br><br><br><br><br></div></div></div>
+
+      
+     <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

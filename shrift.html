@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">Open Server</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="jquery.html">Jquery</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="contacts.html">Контакты</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      
+      
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        
+                        <h2>CSS Шрифты</h2>
+                        
+                        <p><strong>CSS-шрифты</strong> &#8212; набор свойств для управления внешним видом текста веб-страниц. Используя различные шрифты для заголовков, абзацев и других элементов, можно задавать определенный стиль письменных сообщений, передавая желаемые эмоции и настроение. </p>
+<p>Окунаясь в многообразие шрифтов, не забывайте, что текст основного содержимого веб-страницы должен быть в первую очередь читабельным. Не рекомендуется использовать более двух шрифтов на странице, а желаемого контраста можно достигнуть за счет комбинирования шрифтов разной толщины, размера, начертания или же при помощи цвета. </p>
+
+<h2 style="clear:both">Форматирование шрифта с помощью CSS-свойств</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#font-family">1. Семейство шрифтов <kbd>font-family</kbd></a></li>
+<li><a href="#font-style">2. Стиль начертания шрифта <kbd>font-style</kbd></a></li>
+<li><a href="#font-variant">3. Вариант начертания шрифта <kbd>font-variant</kbd></a></li>
+<li><a href="#font-weight">4. Насыщенность шрифта <kbd>font-weight</kbd></a></li>
+<li><a href="#font-size">5. Размер шрифта <kbd>font-size</kbd></a></li>
+<li><a href="#color">6. Цвет шрифта <kbd>color</kbd></a></li>
+<li><a href="#font">7. Краткая запись свойств шрифта <kbd>font</kbd></a></li>
+</ul>
+<h3 id="font-family">1. Семейство шрифтов font-family</h3>
+<p>Свойство используется для выбора начертания шрифта. Поскольку невозможно предсказать, установлен тот или иной шрифт на компьютере посетителя вашего сайта, рекомендуется прописывать все возможные варианты однотипных шрифтов. В таком случае браузер будет проверять их наличие, последовательно перебирая предложенные варианты. Наследуется.</p>
+<p><em style="font-weight:900;">Важно!</em> Если в названии шрифта имеются пробелы или символы (например, #, $, %), то оно заключается в кавычки. Это делается для того, чтобы браузер мог понять, где начинается и заканчивается название шрифта.</p>
+<table class="t1">
+<tr>
+<th colspan="2">font-family</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>family-name</td>
+<td>Название (имя) семейства шрифтов, например, <kbd>Times</kbd>, <kbd>Courier</kbd>, <kbd>Arial</kbd>. Рекомендуется указывать вместе с базовым семейством.</td>
+</tr>
+<tr>
+<td>generic-family</td>
+<td>Базовое семейство. CSS определяет пять базовых семейств шрифтов:<br />
+Шрифты с засечками &#8212; Serif (Times New Roman, Times, Garamond, Georgia)<br />
+Рубленые шрифты &#8212; Sans-serif (Helvetica, Geneva, Arial, Verdana, Trebuchet, Univers)<br />
+Моноширинные шрифты &#8212; Monospace (Courier, Courier New, Andele Mono)<br />
+Рукописные шрифты &#8212; Cursive (Comic Sans, Gabriola, Monotype Corsiva, Author, Zapf Chancery)<br />
+Аллегорические шрифты (Western, Woodblock, Klingon)</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {font-family: "Times New Roman", Georgia, Serif;}</pre>
+<h3 id="font-style">2. Стиль начертания шрифта font-style</h3>
+<p>Свойство позволяет выбрать стиль начертания для текста. При этом разница между курсивом и наклонным текстом заключается в том, что курсивное начертание вносит небольшие изменения в структуру каждой буквы, а наклонный текст представляет собой наклонную версию прямого текста. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">font-style</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию, устанавливает для текста обычное начертание шрифта.</td>
+</tr>
+<tr>
+<td><kbd>italic</kbd></td>
+<td>Выделяет текст курсивом.</td>
+</tr>
+<tr>
+<td><kbd>oblique</kbd></td>
+<td>Устанавливает наклонное начертание шрифта.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >h1 {font-style: normal;}
+h1 {font-style: italic;}
+h1 {font-style: oblique;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/05/font-style.png" alt="font-style" width="660" height="80" class="alignleft size-full wp-image-4949" srcset="https://html5book.ru/wp-content/uploads/2014/05/font-style.png 660w, https://html5book.ru/wp-content/uploads/2014/05/font-style-300x36.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 1. Свойство font-style</figcaption></figure>
+<h3 id="font-variant">3. Вариант начертания шрифта font-variant</h3>
+<p>Свойство позволяет выводить шрифт малыми заглавными буквами. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">font-variant</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию, выводит текст обычным начертанием.</td>
+</tr>
+<tr>
+<td><kbd>small-caps</kbd></td>
+<td>Все строчные буквы заменяются на малые прописные, которые отличаются от обычных прописных слегка измененными пропорциями и уменьшенным размером. Очень похоже на <kbd>text-transform: uppercase</kbd>, отличие состоит в том, что здесь прописные буквы имеют разные размеры.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >h1 {font-variant: normal;}
+h1 {font-variant: small-caps;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/05/font-variant.png" alt="font-variant" width="660" height="65" class="alignleft size-full wp-image-4948" srcset="https://html5book.ru/wp-content/uploads/2014/05/font-variant.png 660w, https://html5book.ru/wp-content/uploads/2014/05/font-variant-300x30.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 2. Свойство font-variant</figcaption></figure>
+<h3 id="font-weight">4. Насыщенность шрифта font-weight</h3>
+<p>Свойство задаёт насыщенность шрифта.</p>
+<table class="t1">
+<tr>
+<th colspan="2">font-weight</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию, устанавливает нормальную насыщенность шрифта. Эквивалентно значению насыщенности, равной 400.</td>
+</tr>
+<tr>
+<td><kbd>bold</kbd></td>
+<td>Делает шрифт текста полужирным. Эквивалентно значению насыщенности, равной 700.</td>
+</tr>
+<tr>
+<td><kbd>bolder</kbd></td>
+<td>Насыщенность шрифта будет больше, чем у предка.</td>
+</tr>
+<tr>
+<td><kbd>lighter</kbd></td>
+<td>Насыщенность шрифта будет меньше, чем у предка.</td>
+</tr>
+<tr>
+<td><kbd>100, 200, 300, 400, 500, 600, 700, 800, 900</kbd></td>
+<td>Значение 100 соответствует самому легкому варианту начертания шрифта, а 900 &#8212; самому плотному. При этом, эти числа не определяют конкретной плотности, т.е. 100, 200, 300 и 400 могут соответствовать одному и тому же варианту слабой насыщенности начертания шрифта; 500 и 600 &#8212; средней насыщенности, а 700, 800 и 900 могут выводить одинаковое очень насыщенное начертание. Распределение плотности так же зависит от количества уровней насыщенности, определенных в конкретном семействе шрифтов.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >h1 {font-weight: normal;}
+span {font-weight: bold;}
+span {font-weight: bolder;}
+span {font-weight: lighter;}
+h1 {font-weight: 100;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/05/font-weight.png" alt="font-weight" width="660" height="150" class="alignleft size-full wp-image-4947" srcset="https://html5book.ru/wp-content/uploads/2014/05/font-weight.png 660w, https://html5book.ru/wp-content/uploads/2014/05/font-weight-300x68.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 3. Свойство font-weight</figcaption></figure>
+<h3 id="font-size">5. Размер шрифта font-size</h3>
+<p>Свойство определяет размер (кегль) шрифта.</p>
+<table class="t1">
+<tr>
+<th colspan="2">font-size</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>absolute-size</td>
+<td><kbd>xx-small</kbd>, <kbd>x-small</kbd>, <kbd>small</kbd>, <kbd>medium</kbd>, <kbd>large</kbd>, <kbd>x-large</kbd>, <kbd>xx-large</kbd>. Абсолютные размеры определены относительно друг друга и коэффициент масштабирования между двумя соседними абсолютными размерами составляет примерно 1,5 при переходе от меньшего к большему и 0,66 при переходе от большего к меньшему. В качестве стандартного размера принимается <kbd>medium</kbd>.</td>
+</tr>
+<tr>
+<td>relative-size</td>
+<td><kbd>smaller</kbd>, <kbd>larger</kbd>. Относительные размеры обусловливают изменение размера шрифта элемента относительно родителя. При этом размер шрифта может выйти за рамки размеров, предполагаемых для <kbd>xx-small</kbd> и <kbd>xx-large</kbd>.</td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Размер шрифта устанавливается с помощью положительных значений единиц длины &#8212; <kbd>px</kbd>, как целых, так и дробных.</td>
+</tr>
+<tr>
+<td><kbd>%</kbd></td>
+<td>Относительное значение, вычисляется на основании любого размера, унаследованного от родительского элемента. Обеспечивает более точную настройку вычисляемого размера шрифта. Задание размеров шрифта с помощью <kbd>em</kbd> эквивалентно процентному значению.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >h3 {font-size: small;}
+h1 {font-size: xx-large;}, em {font-size: large;}
+p {font-size: 20px;}
+h3 {font-size: 120%;}</pre>
+<h3 id="color">6. Цвет шрифта</h3>
+<p>Свойство задаёт цвет шрифта с помощью различных систем цветопередачи. Свойство наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2" id="about_color">color</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td id="hex">HEX</td>
+<td>В данной системе используются арабские десятичные цифры от 0 до 9 и латинские буквы от A до F. Для веб-дизайна взяты 16 основных цветов, так называемый шестнадцатеричный код цвета <kbd>#RRGGBB</kbd>, где каждая пара отвечает за свою долю цвета: RR – красный, GG – зеленый и BB – синий. Каждая доля цвета находится в диапазоне от 00 до FF.</td>
+</tr>
+<tr>
+<td id="rgb">RGB</td>
+<td><b>RedGreenBlue</b>, обозначает количество соответствующего тона (красный,зеленый,синий) в получаемом цвете.</td>
+</tr>
+<tr>
+<td id="rgba">RGBA</td>
+<td>Система цветопередачи RGB, расширенная параметром <b>Alpha</b>, который используется для управления смешиванием цветов. Значение поддерживается IE9+, Firefox 3+, Chrome, Safari, and in Opera 10+. Последнее число определяет степень прозрачности, задается значением от 0 до 1, где 0 соответствует полной прозрачности, а 1 &#8212; непрозрачности.</td>
+</tr>
+<tr>
+<td id="hsl">HSL</td>
+<td><b>Hue, Saturation, Lightness (Intensity)</b> — оттенок (тон), насыщенность, светлота, цветовая модель описания цветов.<br />
+Первое значение &#8212; <b>оттенок</b> &#8212; определяется градусом поворота цветового спектра по часовой стрелке от 0&#176; до 360&#176;, где 60&#176; &#8212; желтый, 120&#176; &#8212; зеленый, 180&#176; &#8212; голубой, 240&#176; &#8212; синий, 300&#176; &#8212; фиолетовый. Второе значение определяет <b>насыщенность</b> выбранного оттенка и указывается в процентах в диапазоне от 0% до 100%. Чем ближе данное значение к 100%, тем цвет более чистый и сочный.<br />
+<b>Светлота</b> или <b>яркость (Lightness)</b> указывается в процентах, чем выше процент, тем ярче становится цвет. Значения 0% и 100% обозначают соответственно чёрный (отсутствие света) и белый (засвеченный) цвета, в независимости от того, какой оттенок из цветового круга был выбран изначально. Оптимальное значение яркости цвета равняется 50%. Значение поддерживается IE9+, Firefox, Chrome, Safari, Opera 10+</td>
+</tr>
+<tr>
+<td id="hsla">HSLA</td>
+<td>Задает прозрачность (через Альфа-канал) элемента.<br />
+Тон (от 0 до 360), насыщенность (от 0% до 100%), светлота (от 0% до 100%), прозрачность (от 0 до 1). Значение поддерживается<br />
+IE9+, Firefox 3+, Chrome, Safari, and in Opera 10+.</td>
+</tr>
+<tr>
+<td>имя цвета</td>
+<td>Значение цвета задаётся кроссбраузерным названием. В настоящий момент существует 140 названий цветов</a>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >body {color: grey;}
+h1 {color: #00ff00;}
+strong {color: rgb(0,0,255);}
+p {color: rgb(0%,0%,100%);}
+span {color: rgba(255,0,0,0.3);}
+h1 {color: hsl(120,100%,50%);}
+h1 {color: hsla(120,100%,50%,0.3);}</pre>
+<h4 id="font">1.7. Краткая запись свойств шрифта</h4>
+<p>Свойство <kbd>font</kbd> объединяет все свойства шрифта, используемого на веб-странице. Если явное значение какого-либо свойства не нужно, то оно опускается. </p>
+<pre class="lang:css decode:true " >font: font-style font-variant font-weight font-size/line-height font-family</pre>
+<p>Например: </p>
+<pre class="lang:css decode:true " >p {font: italic bold 14px/1.5 Times, 'New Century Schoolbook', serif;}</pre>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+<br><br><br><br><br><br></div></div></div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+      
+      
+      
+      
+      
+      
+      
+      
+     
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

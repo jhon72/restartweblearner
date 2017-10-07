@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">Open Server</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="jquery.html">Jquery</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="contacts.html">Контакты</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+     <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>Медиазапросы</h2>
+                       <p> В 2001 году в HTML4 и CSS2 была введена поддержка аппаратно-зависимых таблиц стилей, позволившая создавать стили и таблицы стилей для определенных типов устройств. В качестве медиа-типов были определены следующие: <kbd>aural</kbd>, <kbd>braille</kbd>, <kbd>handheld</kbd>, <kbd>print</kbd>, <kbd>projection</kbd>, <kbd>screen</kbd>, <kbd>tty</kbd>, <kbd>tv</kbd>. Таким образом, браузер применял таблицу стилей только в случае, когда активизировался данный тип устройства.</p>
+<p>Кроме того, было введено ключевое слово <kbd>all</kbd>, которое использовалось, чтобы указать, что таблица стилей применяется ко всем типам носителей.  </p>
+<p>В HTML4 медиа-запрос записывался следующим образом:</p>
+<pre>&lt;link rel="stylesheet" type="text/css" media="screen" href="sans-serif.css"&gt;
+&lt;link rel="stylesheet" type="text/css" media="print" href="serif.css"&gt;</pre>
+<p>Внутри таблицы стилей также можно было объявить, что блоки объявлений должны применяться к определенным типам носителей:</p>
+<pre>@media screen {
+  * {font-family: sans-serif;}
+}</pre>
+<p>Предусматривая возможность введения новых значений и значений с параметрами в будущем, для браузеров была реализована поддержка значений атрибута медиа-носителя, указанных следующим образом:</p>
+<pre>&lt;link rel="stylesheet" media="screen, 3d-glasses, print and resolution > 90dpi" href="..."&gt;</pre>
+<p>Текущий синтаксис HTML5 и CSS3 напрямую ссылается на первую спецификацию Media Queries, обновляя правила для HTML. Также был расширен список характеристик медиа-носителей.</p>
+<h2>Медиазапросы, характеристики устройств и разрешения экрана</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#media">1. Что такое медиа-запрос</a></li>
+<li><a href="#part2">2. Логические операторы</a></li>
+<li><a href="#part3">3. Тип носителя</a></li>
+<li><a href="#part4">4. Характеристики носителя</a></li>
+<li><a href="#part5">5. Метатег viewport</a></li>
+<li><a href="#part6">6. На какие разрешения экрана нужно ориентироваться</a></li>
+<li><a href="#part7">7. Стратегии использования медиа-запросов</a></li>
+</ul>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 9.0 (кроме вложенных медиазапросов)<br />
+<b>Edge:</b> 12.0<br />
+<b>Firefox:</b> 3.5<br />
+<b>Chrome:</b> 26.0<br />
+<b>Safari:</b> 6.1<br />
+<b>Opera:</b> 10.1<br />
+<b>iOS Safari:</b> 7.1<br />
+<b>Android:</b> 4.4<br />
+<b>Chrome for Android:</b> 55.0</p></blockquote>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/07/colly.jpg" alt="colly" width="480" height="700" class="alignleft size-full wp-image-6191" srcset="https://html5book.ru/wp-content/uploads/2015/07/colly.jpg 480w, https://html5book.ru/wp-content/uploads/2015/07/colly-206x300.jpg 206w" sizes="(max-width: 480px) 100vw, 480px" /><figcaption>Рис. 1. Пример адаптивной верстки на основе медиазапросов</figcaption></figure>
+<h3 id="media">1. Что такое медиа-запрос</h3>
+<p>В общем случае медиа-запрос состоит из ключевого слова, описывающего тип устройства (необязательный параметр) и выражения, проверяющего характеристики данного устройства. Из всех характеристик чаще всего проверяется ширина устройства <kbd>width</kbd>. Медиа-запрос является логическим выражением, которое возвращает истину или ложь.</p>
+<p>Медиа-запросы могут быть добавлены следующими способами:</p>
+<p>1) С помощью HTML:<br />
+<kbd>&lt;link rel="stylesheet" media="screen and (color)" href="example.css"&gt;</kbd></p>
+<p>2) С помощью правила @import внутри элемента <kbd>&lt;style&gt;</kbd> или внешней таблицы стилей:<br />
+<kbd>@import url(color.css) screen and (color);</kbd></p>
+<p>3) Непосредственно в коде страницы:</p>
+<pre>&lt;style&gt;
+@media (max-width: 600px) {
+  #sidebar {display: none;}
+}
+&lt;/style&gt;</pre>
+<p>4) Внутри таблицы стилей style.css:</p>
+<pre>@media (max-width: 600px) {
+  #sidebar {display: none;}
+}</pre>
+<p>Таблица стилей, прикрепленная через тег <kbd>&lt;link&gt;</kbd>, будет загружаться вместе с документом, даже если её медиа-запрос вернет ложь.</p>
+<p>Для поддержки медиа-запросов в старых браузерах можно воспользоваться JavaScript-библиотекой <kbd>css3-mediaqueries.js</kbd>, доступную по адресу https://code.google.com/archive/p/css3-mediaqueries-js/.</p>
+<h3 id="part2">2. Логические операторы</h3>
+<p>С помощью логических операторов можно создавать комбинированные медиазапросы, в которых будет проверяться соответствие нескольким условиям.</p>
+<h4>2.1. Оператор and</h4>
+<p>Оператор <kbd>and</kbd> связывает друг с другом разные условия:</p>
+<pre class="lang:css decode:true " >@media screen and (max-width: 600px) {
+/* CSS-стили */;
+}</pre>
+<p>Стили этого запроса будут применяться только для экранных устройств с шириной области просмотра не более <kbd>600px</kbd>.</p>
+<pre class="lang:css decode:true " >@media (min-width: 600px) and (max-width: 800px) {
+/* CSS-стили */;
+}</pre>
+<p>Стили этого запроса будут применяться для всех устройств при ширине области просмотра от <kbd>600px</kbd> до <kbd>800px</kbd> включительно.</p>
+<p>Правило <kbd>@media all and (max-width: 600px) {...}</kbd> равнозначно правилу <kbd>@media (max-width: 600px) {...}</kbd>.</p>
+<h4>2.2. Оператор запятая</h4>
+<p>Оператор запятая работает по аналогии с логическим оператором <kbd>or</kbd>. </p>
+<pre class="lang:css decode:true " >@media screen, projection {
+/* CSS-стили */;
+}</pre>
+<p>В данном случае CSS-стили, заключенные в фигурные скобки, сработают только для экранных или проекционных устройств. </p>
+<h4>2.3. Оператор not</h4>
+<p>Оператор <kbd>not</kbd> позволяет сработать медиазапросу в противоположном случае. Ключевое слово <kbd>not</kbd> добавляется в начало медиазапроса и применяется ко всему запросу целиком, т.е. запрос</p>
+<pre class="lang:css decode:true " >@media not all and (monochrome) {...} </pre>
+<p>будет эквивалентен запросу </p>
+<pre class="lang:css decode:true " >@media not (all and (monochrome)) {...} </pre>
+<p>Если медиазапрос составлен с использованием оператора запятая, то отрицание будет распространяться только на ту часть, которая идет до запятой, т.е. запрос</p>
+<pre class="lang:css decode:true " >@media not screen and (color), print and (color)</pre>
+<p>будет эквивалентен запросу </p>
+<pre class="lang:css decode:true " >@media (not (screen and (color))), print and (color)</pre>
+<h4>2.4. Оператор only</h4>
+<p>Оператор <kbd>only</kbd> используется, чтобы скрыть стили от старых браузеров (поддерживающих синтаксис медиа-запросов CSS2). </p>
+<pre class="lang:css decode:true ">media="only screen and (min-width: 401px) and (max-width: 600px)"</pre>
+<p>Эти браузеры ожидают список медиа-типов, разделённых запятыми. И, согласно спецификации, они должны отсекать каждое значение непосредственно перед первым неалфавитно-цифровым символом, который не является дефисом. Таким образом, старый браузер должен интерпретировать предыдущий пример как <kbd>media="only"</kbd>. Поскольку данного типа медиа-типа не существует, то и таблицы стилей будут игнорироваться.</p>
+<h3 id="part3">3. Тип носителя</h3>
+<p>Тип носителя представляет собой тип устройства, например, принтеры, экраны.</p>
+<table class="t3">
+<caption>Таблица 1. Тип носителя</caption>
+<tr>
+<th style="width:20%">Значение</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><kbd>all</kbd></td>
+<td>Подходит для всех типов устройств.</td>
+</tr>
+<tr>
+<td><kbd>print</kbd></td>
+<td>Предназначен для страничных материалов и документов, просматриваемых на экране в режиме предварительного просмотра печати.</td>
+</tr>
+<tr>
+<td><kbd>screen</kbd></td>
+<td>Предназначен в первую очередь для экранов цветных компьютерных мониторов.</td>
+</tr>
+<tr>
+<td><kbd>speech</kbd></td>
+<td>Предназначен для синтезаторов речи.</td>
+</tr>
+</table>
+<p>CSS2.1 и Media Queries 3 определяли несколько дополнительных типов, таких как <kbd>aural</kbd>, <kbd>braille</kbd>, <kbd>embossed</kbd>, <kbd>projection</kbd>, <kbd>tty</kbd>, <kbd>tv</kbd> и <kbd>handheld</kbd>, но они приняты устаревшими в Media Queries 4 и не будут использоваться.</p>
+<h3 id="part4">4. Характеристики носителя</h3>
+<p>К характеристикам медианосителя относятся проверяемые параметры устройства. Значения, которые используются при задании характеристик, являются контрольными точками.</p>
+<table class="t3">
+<caption>Таблица 2. Характеристики носителя</caption>
+<tr>
+<th style="width:20%">Параметр</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><kbd>width</kbd></td>
+<td>Проверяет ширину области просмотра. Значения задаются в единицах длины, <kbd>px</kbd>, <kbd>em</kbd> и т.д., например, <kbd>(width: 800px)</kbd>. Обычно для проверки используются минимальные  и максимальные значения ширины.<br />
+<kbd>min-width</kbd> применяет правило если ширина области просмотра больше значения, указанного в запросе, <kbd>max-width</kbd> &#8212; ширина области просмотра меньше значения, указанного в запросе.</td>
+</tr>
+<tr>
+<td><kbd>height</kbd></td>
+<td>Проверяет высоту области просмотра. Значения задаются в единицах длины, <kbd>px</kbd>, <kbd>em</kbd> и т.д., например, <kbd>(height: 500px)</kbd>. Обычно для проверки используются минимальные и максимальные значения высоты.<br />
+<kbd>min-height</kbd> применяет правило если высота области просмотра больше значения, указанного в запросе, <kbd>max-height</kbd> &#8212; высота области просмотра которого меньше значения, указанного в запросе.</td>
+</tr>
+<tr>
+<td><kbd>aspect-ratio</kbd></td>
+<td>Проверяет соотношение ширины к высоте области просмотра. Широкоэкранный дисплей с соотношением сторон 16:9 может быть помечен как <kbd>(aspect-ratio: 16/9)</kbd>.<br />
+<kbd>min-aspect-ratio</kbd> проверяет минимальное соотношение, <kbd>max-aspect-ratio</kbd> &#8212; максимальное соотношение ширины к высоте области просмотра.</td>
+</tr>
+<tr>
+<td><kbd>orientation</kbd></td>
+<td>Проверяет ориентацию области просмотра. Принимает два значения: <kbd>(orientation: portrait)</kbd> и <kbd>(orientation: landscape)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>resolution</kbd></td>
+<td>Проверяет разрешение экрана (количество пикселей). Значения также могут проверять количество точек на дюйм (dpi) или количество точек на сантиметр (dpcm), например, <kbd>(resolution: 300dpi)</kbd>.<br />
+<kbd>min-resolution</kbd> проверяет минимальное разрешение экрана, <kbd>max-resolution</kbd> &#8212; максимальное.</td>
+</tr>
+<p><!--
+
+<tr>
+
+<td><kbd>grid</kbd></td>
+
+
+
+<td>Проверяет, относится ли определенное устройство к устройствам с фиксированным размером символов. Размеры букв на таком устройстве занимают одинаковую ширину и высоту и выстраиваются по заданной сетке. К подобным устройствам можно отнести терминалы, а также телефоны, которые поддерживают только один шрифт.</td>
+
+</tr>
+
+--></p>
+<tr>
+<td><kbd>color</kbd></td>
+<td>Проверяет количество бит на каждый из цветовых компонентов устройства вывода. Например, <kbd>(min-color: 4)</kbd> означает, что экран конкретного устройства должен иметь 4-битную глубину цвета.<br />
+<kbd>min-color</kbd> проверяет минимальное количество бит, <kbd>max-color</kbd> &#8212; максимальное количество бит.</td>
+</tr>
+<tr>
+<td><kbd>color-index</kbd></td>
+<td>Проверяет количество записей в таблице подстановки цветов. В качестве значения указывается положительное число, например, <kbd>(color-index: 256)</kbd>.<br />
+<kbd>min-color-index</kbd> проверяет минимальное количество записей, <kbd>max-color-index</kbd> &#8212; максимальное количество записей.</td>
+</tr>
+<tr>
+<td><kbd>monochrome</kbd></td>
+<td>Проверяет количество битов на пиксель монохромного устройства. Значение задается целым положительным числом, например, <kbd>(min-monochrome: 8)</kbd>.<br />
+<kbd>min-monochrome</kbd> проверяет минимальное количество битов, <kbd>max-monochrome</kbd> &#8212; максимальное количество битов.</td>
+</tr>
+<tr>
+<td><kbd>-webkit-device-pixel-ratio</kbd></td>
+<td>Задаёт количество физических пикселей устройства на каждый CSS-пиксель.</td>
+</tr>
+</table>
+<p><kbd>device-width</kbd>, <kbd>device-height</kbd>, <kbd>device-aspect-ratio</kbd> являются устаревшими API, они удалены из Media Queries Level 4.</p>
+<h3 id="part5">5. Метатег viewport</h3>
+<p>Для управления разметкой в мобильных браузерах используется метатег <kbd>viewport</kbd>. Изначально данный тег был представлен разработчиками Apple для браузера Safari на iOS. Мобильные браузеры отображают страницы в виртуальном окне просмотра, которое обычно шире, чем экран устройства. С помощью метатега <kbd>viewport</kbd> можно контролировать размер окна просмотра и масштаб.</p>
+<p>Страницы, адаптированные для просмотра на разных типах устройств, должны содержать в разделе <kbd>&lt;head&gt;</kbd> метатег <kbd>viewport</kbd>.</p>
+<pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+<p>Свойство <kbd>width</kbd> определяет виртуальную ширину окна просмотра, значение <kbd>device-width</kbd> &#8212; физическую ширину устройства. Другими словами, <kbd>width</kbd> отражает значение <code>document.documentElement.clientWidth</code>, а <kbd>device-width</kbd> &#8212; <code>screen.width</code>.</p>
+<p>При первой загрузке страницы свойство <kbd>initial-scale</kbd> управляет начальным уровнем масштабирования, <kbd>initial-scale=1</kbd> означает, что 1 пиксель окна просмотра = 1 пиксель CSS. </p>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/07/mobile_mediaqueries.jpg" alt="" width="380" height="402" class="alignnone size-full wp-image-11636" srcset="https://html5book.ru/wp-content/uploads/2015/07/mobile_mediaqueries.jpg 380w, https://html5book.ru/wp-content/uploads/2015/07/mobile_mediaqueries-284x300.jpg 284w" sizes="(max-width: 380px) 100vw, 380px" /><figcaption>Рис. 2. Разница между width и device-width</figcaption></figure>
+<h3 id="part6">6. На какие размеры экрана нужно ориентироваться</h3>
+<p>При составлении медиазапросов нужно ориентироваться на так называемые <b>переломные (контрольные) точки дизайна</b>, т.е. такие значения ширины области просмотра, в которых дизайн сайта существенно меняется, например, появляется горизонтальная полоса прокрутки. Чтобы определить эти точки, нужно открыть сайт в браузере и постепенно уменьшать область просмотра.</p>
+<pre class="lang:css decode:true " >/* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+/* стили */
+}
+
+/* Smartphones (горизонтальная) ----------- */
+@media only screen and (min-width: 321px) {
+/* стили */
+}
+
+/* Smartphones (вертикальная) ----------- */
+@media only screen and (max-width: 320px) {
+/* стили */
+}
+
+/* iPads (вертикальная и горизонтальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* стили */
+}
+
+/* iPads (горизонтальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+/* стили */
+}
+
+/* iPads (вертикальная) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+/* стили */
+}
+
+/* iPad 3**********/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+/* стили */
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+/* стили */
+}
+
+/* Настольные компьютеры и ноутбуки ----------- */
+@media only screen  and (min-width: 1224px) {
+/* стили */
+}
+
+/* Большие экраны ----------- */
+@media only screen  and (min-width: 1824px) {
+/* стили */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+/* стили */
+}
+@media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+/* стили */
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+@media only screen and (min-width: 320px) and (max-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+
+/* iPhone 6 ----------- */
+@media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+@media only screen and (min-width: 375px) and (max-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+@media only screen and (min-width: 414px) and (max-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+/* стили */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+/* стили */
+}
+@media only screen and (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+/* стили */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+/* стили */
+}
+@media only screen and (min-width: 360px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+/* стили */
+}</pre>
+<p>Чтобы проверить, как выглядит ваш сайт на разных устройствах, можно воспользоваться сервисом <a target="_blank" rel="nofollow" href="http://mattkersley.com/responsive/"  class="site" target="_blank">Responsive design testing for the masses</a>.</p>
+<h3 id="part7">7. Стратегии использования медиа-запросов</h3>
+<p>Для создания дизайна, позволяющего лучшим образом отображать сайт на различных устройствах, используют общие стратегии медиа-запросов:<br />
+1) Уменьшение количества колонок (столбцов) и постепенная отмена обтекания для мобильных устройств.<br />
+2) Использование свойства <kbd>max-width</kbd> вместо <kbd>width</kbd> при задании ширины блока-контейнера.<br />
+3) Уменьшение полей и отступов на мобильных устройствах (например, нижних отступов между заголовком и текстом, левого отступа для списков и т.п.).<br />
+4) Уменьшение размеров шрифтов для мобильных устройств.<br />
+5) Превращение линейных навигационных меню в раскрывающиеся.<br />
+6) Скрытие второстепенного содержимого на мобильных устройствах с помощью <kbd>display: none</kbd>.<br />
+7) Подключение фоновых изображений уменьшенных размеров. </p>
+
+<br><br><br><br><br><br></div></div></div>
+<a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+
+
+     
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

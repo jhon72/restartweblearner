@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">Open Server</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="jquery.html">Jquery</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="contacts.html">Контакты</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+     <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>CSS3 Columns</h2>
+                        <strong>CSS3 columns</strong> &#8212; концепция многоколоночной разметки, которая позволяет разбивать контент на колонки. Колонки могут содержать заголовки, текст, таблицы, картинки и любые другие <kbd>inline</kbd>-элементы.</p>
+<h2 style="clear:both">Создание многоколоночной разметки с помощью модели CSS3 columns</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#column-count">1. Количество колонок <kbd>column-count</kbd></a></li>
+<li><a href="#column-width">2. Ширина колонок <kbd>column-width</kbd></a></a></li>
+<li><a href="#column-gap">3. Ширина пустого пространства между колонками <kbd>column-gap</kbd></a></li>
+<li><a href="#column-span">4. Позиционирование элемента на несколько колонок <kbd>column-span</kbd></a></li>
+<li><a href="#column-rule-style">5. Стиль разделительной линии <kbd>column-rule-style</kbd></a></li>
+<li><a href="#column-rule-width">6. Ширина разделительной линии <kbd>column-rule-width</kbd></a></li>
+<li><a href="#column-rule-color">7. Цвет разделительной линии <kbd>column-rule-color</kbd></a></li>
+<li><a href="#column-rule">8. Краткая запись стилей разделительной линии <kbd>column-rule</kbd></a></li>
+<li><a href="#columns">9. Установка колонок с помощью одного свойства <kbd>columns</kbd></a></li>
+</ul>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 10.0<br />
+<b>Firefox:</b> 9.0 -moz-<br />
+<b>Chrome:</b> 4.0 -webkit-<br />
+<b>Safari:</b> 3.0 -webkit-<br />
+<b>Opera:</b> 11.1, 15.0 -webkit-<br />
+<b>iOS Safari:</b> 9, 7.1 -webkit-<br />
+<b>Opera Mini:</b> 8<br />
+<b>Android Browser:</b> 2.1 -webkit-<br />
+<b>Chrome for Android:</b> 44 -webkit-</p></blockquote>
+<h3 id="column-count">1. Количество колонок column-count</h3>
+<p>Свойство позволяет явно задать необходимое число колонок, а их ширина будет рассчитываться, исходя из ширины доступного пространства. По умолчанию браузер добавляет промежуток между колонками по горизонтали, равный <kbd>1em</kbd>. Если ширина изображения больше ширины колонки, то оно будет обрезано. Если одновременно с <kbd>column-count</kbd> задается <kbd>column-width</kbd>, то значение <kbd>column-count</kbd> будет считаться максимальным числом колонок (столбцов). Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">column-count</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>число</td>
+<td>Предпочтительное количество колонок задаётся целым числом.</td>
+</tr>
+<tr>
+<td><kbd>auto</kbd></td>
+<td>Значение по умолчанию, количество столбцов будет определяться другим свойством, например, <kbd>column-width</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >section {
+-webkit-column-count: 3; 
+-moz-column-count: 3; 
+column-count: 3;
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/06/column-count.png" alt="column-count" width="658" height="430" class="alignleft size-full wp-image-5981" srcset="https://html5book.ru/wp-content/uploads/2015/06/column-count.png 658w, https://html5book.ru/wp-content/uploads/2015/06/column-count-300x196.png 300w" sizes="(max-width: 658px) 100vw, 658px" /><figcaption>Рис. 1. Пример многоколоночной разметки</figcaption></figure>
+<h3 id="column-width">2. Ширина колонок column-width</h3>
+<p>Свойство позволяет разбить контент на колонки без задания свойства <kbd>column-count</kbd>. Количество колонок будет зависеть от того, сколько колонок заданной ширины может поместиться в контейнер. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">column-width</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Ширина колонок задаётся в единицах длины, кроме <kbd>%</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>auto</kbd></td>
+<td>Значение по умолчанию, ширина колонок определяется браузером.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >section {
+-webkit-column-width: 100px; 
+-moz-column-width: 100px; 
+column-width: 100px;
+}</pre>
+<h3 id="column-gap">3. Ширина пустого пространства между колонками column-gap</h3>
+<p>Свойство управляет промежутком между колонками. Если для колонок установлена разделительная линия с помощью свойства <kbd>column-rule</kbd>, то эта линия будет расположена посредине промежутка, а ее ширина не изменит общую ширину. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">column-gap</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Промежуток между колонками задается в единицах длины, кроме <kbd>%</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию. Эквивалентно <kbd>1em</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >section {
+-webkit-column-gap: 40px; 
+-moz-column-gap: 40px;
+column-gap: 40px;
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/06/column-gap.png" alt="column-gap" width="658" height="451" class="alignleft size-full wp-image-5983" srcset="https://html5book.ru/wp-content/uploads/2015/06/column-gap.png 658w, https://html5book.ru/wp-content/uploads/2015/06/column-gap-300x206.png 300w" sizes="(max-width: 658px) 100vw, 658px" /><figcaption>Рис. 2. Промежутки между колонками</figcaption></figure>
+<h3 id="column-span">4. Позиционирование элемента на несколько колонок column-span</h3>
+<p>Свойство задаёт количество колонок, которое пересечет выбранный элемент. Указывается не для блока-контейнера, а для для конкретного элемента внутри, например, для заголовка. </p>
+<p>Если нужно, чтобы изображение растянулось на все колонки, задаётся <kbd>img {display: block; -webkit-column-span: all; column-span: all;}</kbd>. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">column-span</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>1</kbd></td>
+<td>Значение по умолчанию. Элемент расположен в одной колонке.</td>
+</tr>
+<tr>
+<td><kbd>all</kbd></td>
+<td>Элемент будет распространен на все колонки.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >h1 {
+-webkit-column-span: all; 
+column-span: all;
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/06/column-span.png" alt="column-span" width="658" height="497" class="alignleft size-full wp-image-5984" srcset="https://html5book.ru/wp-content/uploads/2015/06/column-span.png 658w, https://html5book.ru/wp-content/uploads/2015/06/column-span-300x227.png 300w" sizes="(max-width: 658px) 100vw, 658px" /><figcaption>Рис. 3. Позиционирование заголовка на все колонки</figcaption></figure>
+<h3 id="column-rule-style">5. Стиль разделительной линии column-rule-style</h3>
+<p>Свойство создаёт внутри пустого пространства между колонками вертикальную полосу &#8212; разделительную линию. Если не задан цвет линии, то некоторые эффекты не будут отображаться. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">column-rule-style</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию, означает отсутствие линии. Цвет и ширина, заданные для линии, игнорируются.</td>
+</tr>
+<tr>
+<td><kbd>hidden</kbd></td>
+<td>Аналогично со значением <kbd>none</kbd>, линия скрыта.</td>
+</tr>
+<tr>
+<td><kbd>dotted</kbd></td>
+<td>Отображает линию набором квадратных точек.</td>
+</tr>
+<tr>
+<td><kbd>dashed</kbd></td>
+<td>Отображает линию как последовательность из тире.</td>
+</tr>
+<tr>
+<td><kbd>solid</kbd></td>
+<td>Обычная линия.</td>
+</tr>
+<tr>
+<td><kbd>double</kbd></td>
+<td>Отображает разделительную линию в виде двух параллельных тонких линий, расположенных на некотором расстоянии между собой. Толщина разделительной линии не указывается, но сумма линий и промежутка между ними равна значению <kbd>column-rule-width</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>groove</kbd></td>
+<td>Отображает линию объемной, вдавленной в полотно. Это достигается путем создания тени из двух цветов, один из которых темнее, другой &#8212; светлее.</td>
+</tr>
+<tr>
+<td><kbd>ridge</kbd></td>
+<td>Отображает разделительную линию объемной, т.е. эффект, противоположный <kbd>groove</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>inset</kbd></td>
+<td>Отображает сплошную линию цветом темнее, чем заданный цвет линии.</td>
+</tr>
+<tr>
+<td><kbd>outset</kbd></td>
+<td>Отображает сплошную линию цветом, заданным свойством <kbd>column-rule-color</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >section {
+-webkit-column-rule-style: dotted; 
+-moz-column-rule-style: dotted; 
+column-rule-style: dotted;
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/06/column-rule-style.png" alt="column-rule-style" width="658" height="277" class="alignleft size-full wp-image-5985" srcset="https://html5book.ru/wp-content/uploads/2015/06/column-rule-style.png 658w, https://html5book.ru/wp-content/uploads/2015/06/column-rule-style-300x126.png 300w" sizes="(max-width: 658px) 100vw, 658px" /><figcaption>Рис. 4. Стиль разделительной линии</figcaption></figure>
+<h3 id="column-rule-width">6. Ширина разделительной линии column-rule-width</h3>
+<p>Свойство устанавливает ширину разделительной линии. Не работает без свойства <kbd>column-rule-style</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">column-rule-width</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>medium</kbd></td>
+<td>Значение по умолчанию. Средняя толщина линии.</td>
+</tr>
+<tr>
+<td><kbd>thin</kbd></td>
+<td>Тонкая линия.</td>
+</tr>
+<tr>
+<td><kbd>thick</kbd></td>
+<td>Утолщенная линия.</td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Ширина разделительной линии задается в единицах длины.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >section {
+-webkit-column-rule-style: dotted; 
+-moz-column-rule-style: dotted; 
+column-rule-style: dotted;
+-webkit-column-rule-width: 10px; 
+-moz-column-rule-width: 10px; 
+column-rule-width: 10px;
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/06/column-rule-width.png" alt="column-rule-width" width="658" height="293" class="alignleft size-full wp-image-5986" srcset="https://html5book.ru/wp-content/uploads/2015/06/column-rule-width.png 658w, https://html5book.ru/wp-content/uploads/2015/06/column-rule-width-300x134.png 300w" sizes="(max-width: 658px) 100vw, 658px" /><figcaption>Рис. 5. Ширина разделительной линии</figcaption></figure>
+<h3 id="column-rule-color">7. Цвет разделительной линии column-rule-color</h3>
+<p>Свойство позволяет изменить цвет разделительной линии, которая наследует цвет текста. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">column-rule-color</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>цвет</td>
+<td>Цвет линии можно задать с помощью различных способов: HEX, RGB, RGBA, HSLA, а также с помощью 140 кроссбраузерных названий цветов.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >section {
+-webkit-column-rule-style: dotted; 
+-webkit-column-rule-width: 5px; 
+-webkit-column-rule-color: #59ACE7; 
+-moz-column-rule-style: dotted; 
+-moz-column-rule-width: 5px; 
+-moz-column-rule-color: #59ACE7; 
+column-rule-style: dotted;
+column-rule-width: 5px;
+column-rule-color: #59ACE7;
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/06/column-rule.png" alt="column-rule" width="658" height="277" class="alignleft size-full wp-image-5987" srcset="https://html5book.ru/wp-content/uploads/2015/06/column-rule.png 658w, https://html5book.ru/wp-content/uploads/2015/06/column-rule-300x126.png 300w" sizes="(max-width: 658px) 100vw, 658px" /><figcaption>Рис. 6. Цвет разделительной линии</figcaption></figure>
+<h3 id="column-rule">8. Краткая запись стилей разделительной линии column-rule</h3>
+<p>Свойство позволяет задать в одном объявлении три свойства разделительной линии &#8212; ширину <kbd>column-rule-width</kbd>, стиль  <kbd>column-rule-style</kbd> и цвет <kbd>column-rule-color</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">column-rule</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>ширина разделительной линии</td>
+<td>Значение по умолчанию <kbd>medium</kbd>.</td>
+</tr>
+<tr>
+<td>стиль разделительной линии</td>
+<td>Значение по умолчанию <kbd>none</kbd>.</td>
+</tr>
+<tr>
+<td>цвет разделительной линии</td>
+<td>По умолчанию принимает цвет элемента.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >section {
+-webkit-column-rule: 5px dotted #59ACE7; 
+-moz-column-rule: 5px dotted #59ACE7; 
+column-rule: 5px dotted #59ACE7;
+}</pre>
+<h3 id="columns">9. Установка колонок с помощью одного свойства columns</h3>
+<p>Свойство представляет собой краткую запись свойств <kbd>column-width</kbd> и <kbd>column-count</kbd>, одновременно задает ширину и количество колонок. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">column-rule</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>auto</td>
+<td>Значение по умолчанию, ширина и количество принимают значение <kbd>auto</kbd>.</td>
+</tr>
+<tr>
+<td>ширина колонок</td>
+<td>Значение по умолчанию <kbd>auto</kbd>.</td>
+</tr>
+<tr>
+<td>количество колонок</td>
+<td>Значение по умолчанию <kbd>auto</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >section {
+-webkit-columns: 100px 3; 
+-moz-columns: 100px 3; 
+columns: 100px 3;
+}</pre>
+
+<br><br><br><br><br><br></div></div></div>
+<a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+
+     
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>
