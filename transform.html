@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>CSS Трансформация</h2>
+                        <strong>CSS3-трансформации</strong> изменяют размер, форму и положение элемента на веб-странице с помощью свойства <kbd>transform</kbd>. Трансформации преобразовывают элемент, не затрагивая остальные элементы веб-страницы, т.е. другие элементы не сдвигаются относительно него. По умолчанию трансформация происходит относительно центра элемента. </p>
+<p>К элементам, которые могут быть трансформированы, относятся элементы с <kbd>display: block;</kbd> и <kbd>display: inline-block;</kbd>, а также элементы, значение свойства <kbd>display</kbd> которых вычисляется как <kbd>table-row</kbd>, <kbd>table-row-group</kbd>, <kbd>table-header-group</kbd>, <kbd>table-footer-group</kbd>, <kbd>table-cell</kbd> или <kbd>table-caption</kbd>. Трансформированным считается элемент с любым установленным значением свойства <kbd>transform</kbd>, отличным от <kbd>none</kbd>.</p>
+<p>Существуют два вида CSS3-трансформаций – <b>2D</b> и <b>3D</b>. <b>2D-трансформации</b> преобразовывают элементы в двухмерном пространстве. </p>
+<h2>2D-трансформации элементов</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#transform">1. Функции 2D-трансформации <kbd>transform</kbd></a></li>
+<li><a href="#transform-origin">2. Точка трансформации <kbd>transform-origin</kbd></a></li>
+<li><a href="#part3">3. Множественные трансформации</a></li>
+<li><a href="#part4">4. Трансформации на практике: как сделать ленточки</a></li>
+</ul>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 10.0, 9.0 -ms-<br />
+<b>Edge:</b> 12.0<br />
+<b>Firefox:</b> 16.0, 3.5 -moz-<br />
+<b>Chrome:</b> 36.0, 4.0 -webkit-<br />
+<b>Safari:</b> 9.0, 3.1 -webkit-<br />
+<b>Opera:</b> 23.0, 15.0 -webkit-<br />
+<b>iOS Safari:</b> 9, 7.1 -webkit-<br />
+<b>Android Browser:</b> 53, 2.1 -webkit-<br />
+<b>Chrome for Android:</b> -webkit-</p></blockquote>
+<h3 id="transform">1. Функции 2D-трансформации transform</h3>
+<p>Свойство задаёт вид преобразования элемента. Свойство описывается с помощью <b>функций трансформации</b>, которые смещают элемент относительно его текущего положения на странице или изменяют его первоначальные размеры и форму. Не наследуется.</p>
+<h5>Допустимые значения:</h5>
+<p><kbd>matrix()</kbd> &#8212; любое число<br />
+<kbd>translate()</kbd>, <kbd>translateX()</kbd>, <kbd>translateY()</kbd> &#8212; единицы длины (положительные и отрицательные), <kbd>%</kbd><br />
+<kbd>scale()</kbd>, <kbd>scaleX()</kbd>, <kbd>scaleY()</kbd> &#8212; любое число<br />
+<kbd>rotate()</kbd> &#8212; угол (deg, grad, rad или turn)<br />
+<kbd>skew()</kbd>, <kbd>skewX()</kbd>, <kbd>skewY()</kbd> &#8212; угол (deg, grad, rad)</p>
+<table class="t3">
+<tr>
+<th style="width:20%">Функция</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию, означает отсутствие трансформации. Также отменяет трансформацию для элемента из группы трансформируемых элементов.</td>
+</tr>
+<tr>
+<td id="matrix()"><kbd>matrix(a, c, b, d, x, y)</kbd></td>
+<td>Смещает элементы и задает способ их трансформации, позволяя объединить несколько функций 2D-трансформаций в одной. В качестве трансформации допустимы поворот, масштабирование, наклон и изменение положения.<br />
+Значение <kbd>a</kbd> изменяет масштаб по горизонтали. Значение от 0 до 1 уменьшает элемент, больше 1 &#8212; увеличивает.<br />
+Значение <kbd>c</kbd> деформирует (сдвигает) стороны элемента по оси Y, положительное значение &#8212; вверх, отрицательное &#8212; вниз.<br />
+Значение <kbd>b</kbd> деформирует (сдвигает) стороны элемента по оси X, положительное значение &#8212; влево, отрицательное &#8212; вправо.<br />
+Значение <kbd>d</kbd> изменяет масштаб по вертикали. Значение меньше 1 уменьшает элемент, больше 1 &#8212; увеличивает.<br />
+Значение <kbd>x</kbd> смещает элемент по оси X, положительное &#8212; вправо, отрицательное &#8212; влево.<br />
+Значение <kbd>y</kbd> смещает элемент по оси Y, положительное значение &#8212; вниз, отрицательное &#8212; вверх.</td>
+</tr>
+<tr>
+<td id="translate()"><kbd>translate(x,y)</kbd></td>
+<td>Сдвигает элемент на новое место, перемещая относительно обычного положения вправо и вниз, используя координаты X и Y, не затрагивая при этом соседние элементы. Если нужно сдвинуть элемент влево или вверх, то нужно использовать отрицательные значения.</td>
+</tr>
+<tr>
+<td id="translateX()"><kbd>translateX(n)</kbd></td>
+<td>Сдвигает элемент относительно его обычного положения по оси X.</td>
+</tr>
+<tr>
+<td id="translateY()"><kbd>translateY(n)</kbd></td>
+<td>Сдвигает элемент относительно его обычного положения по оси Y.</td>
+</tr>
+<tr>
+<td id="scale()"><kbd>scale(x,y)</kbd></td>
+<td>Масштабирует элементы, делая их больше или меньше. Значения от 0 до 1 уменьшают элемент. Первое значение масштабирует элемент по ширине, второе &#8212; по высоте. Отрицательные значения отображают элемент зеркально.</td>
+</tr>
+<tr>
+<td id="scaleX()"><kbd>scaleX(n)</kbd></td>
+<td>Функция масштабирует элемент по ширине, делая его шире или уже. Если значение больше единицы, элемент становится шире, если значение находится между единицей и нулем, элемент становится уже. Отрицательные значения отображают элемент зеркально по горизонтали.</td>
+</tr>
+<tr>
+<td id="scaleY()"><kbd>scaleY(n)</kbd></td>
+<td>Функция масштабирует элемент по высоте, делая его выше или ниже. Если значение больше единицы, элемент становится выше, если значение находится между единицей и нулем &#8212; ниже. Отрицательные значения отображают элемент зеркально по вертикали.</td>
+</tr>
+<tr>
+<td id="rotate()"><kbd>rotate(угол)</kbd></td>
+<td>Поворачивает элементы на заданное количество градусов, отрицательные значения от <kbd>-1deg</kbd> до <kbd>-360deg</kbd> поворачивают элемент против часовой стрелки, положительные &#8212; по часовой стрелке. Значение <kbd>rotate(720deg)</kbd> поворачивает элемент на два полных оборота.</td>
+</tr>
+<tr>
+<td id="skew()"><kbd>skew(x-угол,y-угол)</kbd></td>
+<td>Используется для деформирования (искажения) сторон элемента относительно координатных осей. Если указано одно значение, второе будет определено браузером автоматически.</td>
+</tr>
+<tr>
+<td id="skewX()"><kbd>skewX(угол)</kbd></td>
+<td>Деформирует стороны элемента относительно оси X.</td>
+</tr>
+<tr>
+<td id="skewY()"><kbd>skewY(угол)</kbd></td>
+<td>Деформирует стороны элемента относительно оси Y.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {
+-webkit-transform: rotate(360deg);
+-ms-transform: rotate(360deg); 
+transform: rotate(360deg);
+}</pre>
+<p>Наведите курсор мыши на блоки, чтобы посмотреть функции трансформации в действии.</p>
+<p data-height="660" data-theme-id="5012" data-slug-hash="EaNbLX" data-default-tab="result" data-user="nazarelen" class='codepen'>See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen/pen/EaNbLX/"  >EaNbLX</a> by HeleN (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen"  >@nazarelen</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="transform-origin">2. Точка трансформации transform-origin</h3>
+<p>Свойство позволяет сместить центр трансформации, относительно которого происходит изменение положения/размера/формы элемента. Значение по умолчанию &#8212; <kbd>center</kbd>, или <kbd>50% 50%</kbd>. Задаётся только для трансформированных элементов. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">transform-origin</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>ось Х(<kbd>left</kbd>, <kbd>center</kbd>, <kbd>right</kbd>, длина, <kbd>%</kbd>)<br />
+ось Y(<kbd>top</kbd>, <kbd>center</kbd>, <kbd>bottom</kbd>, длина, <kbd>%</kbd>)</td>
+<td>Пара значений, заданная с помощью ключевых слов, единиц длины или процентов определяет, относительно какой части элемента будет происходить трансформация. Значения больше 100% увеличивают область трансформации элемента.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {
+-webkit-transform: rotate(45deg); 
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+-webkit-transform-origin: 20% 40%; 
+-ms-transform-origin: 20% 40%; 
+transform-origin: 20% 40%;
+}</pre>
+<p data-height="700" data-theme-id="5012" data-slug-hash="aNQNva" data-default-tab="result" data-user="nazarelen" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen/pen/aNQNva/"  >aNQNva</a> by Elena Nazarova (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen"  >@nazarelen</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="part3">3. Множественные трансформации</h3>
+<p>Можно объединить несколько трансформаций одного элемента, перечислив их через пробел в порядке проявления.</p>
+<pre class="lang:css decode:true " >div {transform: scale(1.5) rotate(-10deg);}</pre>
+<h3 id="part4" style="margin-bottom:25px">4. Трансформации на практике: как сделать ленточки</h3>
+<p data-height="800" data-theme-id="5012" data-slug-hash="BKGZPP" data-default-tab="result" data-user="nazarelen" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen/pen/BKGZPP/"  >BKGZPP</a> by Elena Nazarova (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen"  >@nazarelen</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+                          
+                          
+                          
+                          
+                          <h2>CSS 3D трансформация</h2>
+                          <strong>CSS3 3D-трансформации</strong> создают объемные реалистичные эффекты на веб-страницах. </p>
+<p>3D-трансформации работают аналогично с 2D-трансформациями с разницей в том, что элементы могут перемещаться вдоль оси Z, вглубь экрана и из него. </p>
+<p>Чтобы активизировать 3D-пространство, нужно установить свойство <kbd>perspective</kbd> для родительского контейнера.</p>
+<h2 style="clear:both">CSS3 3D-трансформации элементов</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#perspective">1. Установка 3D-перспективы <kbd>perspective</kbd></a></li>
+<li><a href="#perspective-origin">2. Задание точки трансформации для 3D-элемента <kbd>perspective-origin</kbd></a></li>
+<li><a href="#transform-style">3. Стиль 3D-преобразований <kbd>transform-style</kbd></a></li>
+<li><a href="#backface-visibility">4. Видимость обратной стороны элемента <kbd>backface-visibility</kbd></a></li>
+<li><a href="#function-3d">5. Функции 3D-трансформации</a></li>
+</ul>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 10.0<br />
+<b>Firefox:</b> 16.0, 10. -moz-<br />
+<b>Chrome:</b> 36.0, 12.0 -webkit-<br />
+<b>Safari:</b> 4.0 -webkit-<br />
+<b>Opera:</b> 23.0, 15.0 -webkit-<br />
+<b>iOS Safari:</b> 9, 7.1 -webkit-<br />
+<b>Opera Mini:</b> &#8212;<br />
+<b>Android Browser:</b> 44, 4.1 -webkit-<br />
+<b>Chrome for Android:</b> 44</p></blockquote>
+<p data-height="466" data-theme-id="5012" data-slug-hash="XbZgpY" data-default-tab="result" data-user="nazarelen" class='codepen'>See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen/pen/XbZgpY/"  >Beautiful 3D-animation</a> by Elena Nazarova (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen"  >@nazarelen</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="perspective">1. Установка 3D-перспективы perspective</h3>
+<p>Свойство активирует 3D-пространство для элемента. Свойство <kbd>perspective</kbd> и функция <kbd>perspective()</kbd> добавляют глубину элементу, увеличивая его размеры по оси Z, сам элемент при этом становится визуально меньше. Чем меньше значение, тем ближе Z-пространство к зрителю и тем больше эффект, заданный с помощью свойства <kbd>transform</kbd>. </p>
+<p>Если 3D-перспектива задается с помощью функции <kbd>perspective()</kbd>, 3D-пространство активизируется только для одного элемента. Свойство <kbd>perspective</kbd> активирует 3D-пространство внутри элемента, содержащего дочерние трансформированные элементы и применяется к ним. Свойство не наследуется.   </p>
+<table class="t1">
+<tr>
+<th colspan="2">perspective</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Задает глубину просмотра, т.е. расстояние по оси Z. Значение может быть любым положительным числом. Если единица измерения не указана, по умолчанию она считается в <kbd>px</kbd>. Чем больше значение, тем менее выражен эффект. <kbd>0</kbd> означает отсутствие перспективы.</td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию. Означает отсутствие перспективы.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >ul {perspective: 500px;}
+
+li {transform: rotateX(50deg);}</pre>
+<pre class="lang:css decode:true " >
+li:hover {transform: perspective(900px) rotate3d(180,-45,0,-135deg);}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/07/perspective-3d.png" alt="perspective-3d" width="660" height="509" class="alignleft size-full wp-image-6290" srcset="https://html5book.ru/wp-content/uploads/2015/07/perspective-3d.png 660w, https://html5book.ru/wp-content/uploads/2015/07/perspective-3d-300x231.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 1. Примеры разных значений 3D-перспективы</figcaption></figure>
+<h3 id="perspective-origin">2. Задание точки трансформации для 3D-элемента perspective-origin</h3>
+<p>Свойство устанавливает точку начала координат для свойства <kbd>perspective</kbd>. Значение по умолчанию <kbd>perspective-origin: 50% 50%;</kbd>. Позволяет изменять направление трансформации дочернего 3D-элемента. Свойство должно использоваться вместе со свойством <kbd>perspective</kbd> для блока-контейнера и свойством <kbd>transform</kbd> для дочернего элемента. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">perspective-origin</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>значение по оси X/значение по оси Y</td>
+<td>Первое значение указывает положение элемента по оси X. Может задаваться в единицах длины, в <kbd>%</kbd> или одним из трех ключевых слов: <kbd>left</kbd> (эквивалентно 0% по оси X), <kbd>center</kbd> (эквивалентно 50% по оси X) или <kbd>right</kbd> (эквивалентно 100% по оси X).<br />
+Второе значение указывает положение по оси Y. Задается в единицах длины, в <kbd>%</kbd> или одним из трех ключевых слов: <kbd>top</kbd> (эквивалентно 0% по оси Y), <kbd>center</kbd> (эквивалентно 50% по оси Y) или <kbd>bottom</kbd> (эквивалентно 100% по оси Y).</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >ul {
+perspective: 150px;
+perspective-origin: 10% 10%;
+}
+li {transform: rotateX(50deg);}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/07/perspective-origin.png" alt="perspective-origin" width="660" height="491" class="alignleft size-full wp-image-6292" srcset="https://html5book.ru/wp-content/uploads/2015/07/perspective-origin.png 660w, https://html5book.ru/wp-content/uploads/2015/07/perspective-origin-300x223.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 2. Примеры задания точки трансформации</figcaption></figure>
+<h3 id="transform-style">3. Стиль 3D-преобразований transform-style</h3>
+<p>Свойство определяет, как вложенные элементы отрисовываются в трехмерном пространстве. Свойство должно использоваться вместе со свойством <kbd>transform</kbd> и задается только для вложенных элементов. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">transform-style</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>flat</kbd></td>
+<td>Значение по умолчанию. Все дочерние элементы отображаются плоскими в двухмерной плоскости блока-контейнера.</td>
+</tr>
+<tr>
+<td><kbd>preserve-3d</kbd></td>
+<td>Располагает элементы в трехмерном пространстве.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {
+transform: rotateY(60deg);
+transform-style: preserve-3d;
+}</pre>
+<p data-height="400" data-theme-id="0" data-slug-hash="JRodpX" data-default-tab="result" data-user="html5book" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/JRodpX/"  >JRodpX</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="backface-visibility">4. Видимость обратной стороны элемента backface-visibility</h3>
+<p>Свойство определяет, будет ли видна пользователю обратная сторона преобразованного элемента. У непреобразованного элемента к пользователю обращена передняя сторона. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">backface-visibility</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>visible</kbd></td>
+<td>Значение по умолчанию. Указывает, что обратная сторона видна.</td>
+</tr>
+<tr>
+<td><kbd>hidden</kbd></td>
+<td>Скрывает обратную сторону элемента.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {backface-visibility: hidden;}</pre>
+<p data-height="320" data-theme-id="0" data-slug-hash="PGPKKv" data-default-tab="result" data-user="html5book" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/PGPKKv/"  >PGPKKv</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="function-3d">5. Функции 3D-трансформации transform</h3>
+<p>Свойство задает вид как 2D, так и 3D-преобразований элемента. 3D-преобразования описываются с помощью функций трансформации, перечисленных в таблице ниже. Не наследуется.</p>
+<p data-height="650" data-theme-id="0" data-slug-hash="EgVvww" data-default-tab="result" data-user="html5book" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/EgVvww/"  >EgVvww</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<table class="t3">
+<tr>
+<th style="width:20%">Функция</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td id="matrix3d"><kbd>matrix3d<br />
+(n,n,n,n,<br />
+n,n,n,n,<br />
+n,n,n,n,<br />
+n,n,n,n)</kbd></td>
+<td>Функция задает трехмерное преобразование как однородную матрицу размером 4×4 с шестнадцатью значениями в столбцах. Все другие функции преобразований основаны на данной функции.</td>
+</tr>
+<tr>
+<td id="translate3d"><kbd>translate3d(x,y,z)</kbd></td>
+<td>Функция задает перемещение элемента в 3D-пространстве. Движение происходит по вектору <b>[tx, ty, tz]</b>, где <b>tx</b> перемещение вдоль оси X, <b>ty</b> &#8212; перемещение вдоль оси Y, а <b>tz</b> &#8212; вдоль оси Z. Значения могут задаваться в единицах длины или в <kbd>%</kbd>. Отрицательные значения будут перемещать элемент в противоположном направлении.</p>
+<p><kbd>transform: translate3d(100px, 100px, -200px);</kbd><br />
+<kbd>transform: translate3d(50%, -100%, 10%);</kbd><br />
+<kbd>transform: translate3d(-100px, -30px, 50px);</kbd></td>
+</tr>
+<tr>
+<td id="translateZ"><kbd>translateZ(z)</kbd></td>
+<td>Функция задает перемещение элемента на заданное расстояние в направлении оси Z. Значения могут задаваться в единицах длины или в <kbd>%</kbd>. Отрицательные значения будут перемещать элемент в противоположном направлении.</p>
+<p><kbd>transform: translateZ(300px);</kbd><br />
+<kbd>transform: translateZ(-50%);</kbd><br />
+<kbd>transform: translateZ(150%);</kbd></td>
+</tr>
+<tr>
+<td id="scale3d"><kbd>scale3d(x,y,z)</kbd></td>
+<td>Функция задает операцию трехмерного масштабирования по вектору масштабирования <b>[sx,sy,sz]</b>, описываемому тремя параметрами. Отрицательные значения отображают элемент зеркально вдоль трех осей.</p>
+<p><kbd>transform: scale3d(2, 1, 3);</kbd><br />
+<kbd>transform: scale3d(-1, -2, -1);</kbd></td>
+</tr>
+<tr>
+<td id="scaleZ"><kbd>scaleZ(z)</kbd></td>
+<td>Функция масштабирует элемент в направлении оси Z, делая его больше или меньше. В качестве значения задается число. Результат функции наиболее выражен при совместном использовании с такими функциями, как <kbd>rotate()</kbd> и <kbd>perspective()</kbd>.</p>
+<p><kbd>transform: scaleZ(3);</kbd><br />
+<kbd>transform: scaleZ(-1);</kbd></td>
+</tr>
+<tr>
+<td id="rotate3d"><kbd>rotate3d(x,y,z,угол)</kbd></td>
+<td>Функция вращает элемент по часовой стрелке относительно трех осей. Элемент поворачивается под углом, задаваемым последним параметром относительно вектора направления <b>[x,y,z]</b>. Отрицательные значения поворачивают элемент против часовой стрелки.</p>
+<p><kbd>transform: rotate3d(1, 1, 2, 45deg);</kbd></td>
+</tr>
+<tr>
+<td id="rotateX"><kbd>rotateX(угол)</kbd></td>
+<td>Функция задает поворот по часовой стрелке под заданным углом относительно оси X.<br />
+Функция <kbd>rotateX(180deg)</kbd> эквивалентна <kbd>rotate3d(1,0,0,180deg)</kbd>.</p>
+<p><kbd>transform: rotateX(30deg);</kbd><br />
+<kbd>transform: rotateX(-135deg);</kbd></td>
+</tr>
+<tr>
+<td id="rotateY"><kbd>rotateY(угол)</kbd></td>
+<td>Функция задает поворот по часовой стрелке под заданным углом относительно оси Y.<br />
+Функция <kbd>rotateY(180deg)</kbd> эквивалентна <kbd>rotate3d(0,1,0,180deg)</kbd>.</p>
+<p><kbd>transform: rotateY(30deg);</kbd><br />
+<kbd>transform: rotateY(-135deg);</kbd></td>
+</tr>
+<tr>
+<td id="rotateZ"><kbd>rotateZ(угол)</kbd></td>
+<td>Функция задает поворот по часовой стрелке под заданным углом относительно оси Z.<br />
+Функция <kbd>rotateZ(180deg)</kbd> эквивалентна <kbd>rotate3d(0,0,1,180deg)</kbd>.</p>
+<p><kbd>transform: rotateZ(30deg);</kbd><br />
+<kbd>transform: rotateZ(-135deg);</kbd></td>
+</tr>
+<tr>
+<td id="perspective(n)"><kbd>perspective(n)</kbd></td>
+<td>Функция меняет перспективу обзора элемента, создавая иллюзию глубины. Чем больше значение функции перспективы, тем дальше от смотрящего расположен элемент. Значение должно быть больше нуля.</p>
+<p><kbd>transform: perspective(300);</kbd><br />
+<kbd>transform: perspective(300px);</kbd></td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {transform: rotateX(150deg);}</pre>
+                          
+                          
+
+                          <br><br><br><br><br><br></div></div></div>
+      
+     <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

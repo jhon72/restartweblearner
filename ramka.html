@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+     <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>CSS Рамка</h2>
+                        <strong>CSS-рамка</strong> элемента представляет собой одну или несколько линий, окружающих содержимое элемента и его отступы <kbd>padding</kbd>. Рамка задаётся с помощью краткого свойства <kbd>border</kbd>. Стиль рамки задается с помощью трех свойств: <b>стиль</b>, <b>цвет</b> и <b>ширина</b>.</p>
+<h2 style="clear:both">Оформление рамок и границ HTML-элементов с помощью CSS-свойств</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#border-style">1. Стиль рамки <kbd>border-style</kbd></a></li>
+<li><a href="#border-color">2. Цвет рамки <kbd>border-color</kbd></a></li>
+<li><a href="#border-width">3. Ширина рамки <kbd>border-width</kbd></a></li>
+<li><a href="#border">4. Задание рамки одним свойством <kbd>border</kbd></a></li>
+<li><a href="#border-">5. Задание рамки для одной границы элемента <kbd>border-top</kbd>, <kbd>border-bottom</kbd>, <kbd>border-left</kbd>, <kbd>border-right</kbd></a></li>
+<li><a href="#outline">6. Внешний контур <kbd>outline</kbd></a></li>
+<li><a href="#outline-style">6.1. Стиль внешнего контура <kbd>outline-style</kbd></a></li>
+<li><a href="#outline-color">6.2. Цвет внешнего контура <kbd>outline-color</kbd></a></li>
+<li><a href="#outline-width">6.3. Толщина внешнего контура <kbd>outline-width</kbd></a></li>
+</ul>
+<h3 id="border-style">1. Стиль рамки border-style</h3>
+<p><img src="https://html5book.ru/wp-content/uploads/2014/10/border_style-300x108.png" alt="border_style" width="300" height="108" class="alignleft size-medium wp-image-2621" srcset="https://html5book.ru/wp-content/uploads/2014/10/border_style-300x108.png 300w, https://html5book.ru/wp-content/uploads/2014/10/border_style.png 314w" sizes="(max-width: 300px) 100vw, 300px" />По умолчанию рамки всегда отрисовываются поверх фона элемента, фон распространяется до внешнего края элемента. Стиль рамки определяет ее отображение, без этого свойства рамки не будут видны вообще. Для элемента можно задавать рамку для всех сторон одновременно с помощью свойства <kbd>border-style</kbd> или для каждой стороны отдельно с помощью уточняющих свойств <kbd>border-top-style</kbd> и т.д. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-style<br />
+<span style="font-size:12px">(border-top-style, border-right-style, border-bottom-style, border-left-style)</span></th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию, означает отсутствие рамки. Также убирает рамку элемента из группы элементов с установленным значением данного свойства.</td>
+</tr>
+<tr>
+<td><kbd>hidden</kbd></td>
+<td>Эквивалентно <kbd>none</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>dotted</kbd></td>
+<td>
+<h6 style="border:3px dotted #fc9933;padding:5px">dotted</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>dashed</kbd></td>
+<td>
+<h6 style="border:3px dashed #fc9933;padding:5px">dashed</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>solid</kbd></td>
+<td>
+<h6 style="border:3px solid #fc9933;padding:5px">solid</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>double</kbd></td>
+<td>
+<h6 style="border:3px double #fc9933;padding:5px">double</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>groove</kbd></td>
+<td>
+<h6 style="border:3px groove #fc9933;padding:5px">groove</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>ridge</kbd></td>
+<td>
+<h6 style="border:3px ridge #fc9933;padding:5px">ridge</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>inset</kbd></td>
+<td>
+<h6 style="border:3px inset #fc9933;padding:5px">inset</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>outset</kbd></td>
+<td>
+<h6 style="border:3px outset #fc9933;padding:5px">outset</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>{1,4}</kbd></td>
+<td>
+<h6 style="border:3px #fc9933; border-style: solid dotted none dotted;padding:5px">Одновременное перечисление четырех разных стилей для рамок элемента, только для свойства <kbd>border-style</kbd>:<br />
+<kbd>{border-style: solid dotted none dotted;}</kbd></h6>
+</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {border-style: solid;}
+p {border-top-style: solid;}</pre>
+<h3 id="border-color">2. Цвет рамки border-color</h3>
+<p>Свойство задаёт цвет рамок всех сторон одновременно. С помощью уточняющих свойств можно установить свой цвет для рамки каждой стороны элемента. Если для рамки цвет не задан, то он будет таким же, как и цвет текста элемента. Если в элементе нет текста, то цвет рамки будет таким же, как и цвет текста родительского элемента. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-color<br />
+<span style="font-size:12px">(border-top-color, border-right-color, border-bottom-color, border-left-color)</span></th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>transparent</kbd></td>
+<td>Устанавливает прозрачный цвет для рамки. При этом ширина рамки остается. Можно использовать для смены цвета рамки при наведении курсора мыши на элемент, чтобы избежать смещение элемента.</td>
+</tr>
+<tr>
+<td>цвет</td>
+<td>Цвет рамок задается при помощи значений свойства color.</p>
+<h6 style="border:3px solid #cacd58;padding:5px">{border-color: #cacd58;}</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>{1,4}</kbd></td>
+<td>
+<h6 style="border:3px solid; border-color: #cacd58 #5faf8a #b9cea5 #aab238;padding:5px">Одновременное перечисление четырех разных цветов для рамок элемента, только для свойства <kbd>border-color</kbd>:<br />
+<kbd>{border-color: #cacd58 #5faf8a #b9cea5 #aab238;}</kbd></h6>
+</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {border-color: #cacd58;}</pre>
+<h3 id="border-width">3. Ширина рамки border-width</h3>
+<p>Ширина рамки задается с помощью единиц измерения длины или ключевых слов. Если для свойства <kbd>border-style</kbd> задано значение <kbd>none</kbd>, и для рамки элемента установлена какая-то ширина, то в данном случае ширина рамки приравнивается к нулю. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-width<br />
+<span style="font-size:12px">(border-top-width, border-right-width, border-bottom-width, border-left-width)</span></th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>thin / medium / thick</kbd></td>
+<td>Ключевые слова, устанавливают ширину рамки относительно друг друга. Первое значение уже, чем второе, второе &#8212; тоньше третьего. Значение по умолчанию &#8212; <kbd>medium</kbd></td>
+</tr>
+<tr>
+<td><kbd>width (px, em, %)</kbd></td>
+<td>
+<h6 style="border:5px solid #cacd58;padding:5px">{border-width: 5px;}</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>{1,4}</kbd></td>
+<td>
+<h6 style="border:3px solid #cacd58; border-width:5px 10px 15px 3px;padding:5px">Возможность одновременного задания четырех разных ширин для рамок элемента, только для свойства <kbd>border-width</kbd>:<br />
+<kbd>{border-width: 5px 10px 15px 3px;}</kbd></h6>
+</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {border-width: 2px;}</pre>
+<h3 id="border">4. Задание рамки одним свойством</h3>
+<p>Свойство <kbd>border</kbd> позволяет объединить в себе следующие свойства: <kbd>border-width</kbd>, <kbd>border-style</kbd>, <kbd>border-color</kbd>, например:</p>
+<pre class="lang:css decode:true ">div {
+width: 100px; 
+height: 100px; 
+border: 2px solid grey;
+}</pre>
+<p>При этом заданные свойства будут применяться ко всем границам элемента одновременно. Если какое-то из значений не указано, его место займет значение по умолчанию.</p>
+<h3 id="border-">5. Задание рамки для одной границы элемента</h3>
+<p>В случае, когда необходимо задать разный стиль границ элемента, можно воспользоваться краткой записью для соответствующей границы.<br />
+Перечисленные ниже свойства объединяют в одно объявление следующие свойства: <kbd>border-width</kbd>, <kbd>border-style</kbd> и <kbd>border-color</kbd>. Перечень свойств указывается в заданном порядке, при этом одно или два значения могут быть пропущены, в этом случае их значения примут значения по умолчанию.</p>
+<p>Стиль верхней границы задается с помощью свойства <kbd>border-top</kbd>, нижней &#8212; <kbd>border-bottom</kbd>, левой &#8212; <kbd>border-left</kbd>, правой &#8212; <kbd>border-right</kbd>.</p>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {border-top: 2px solid grey;}</pre>
+<h3 style="clear:both" id="outline">6. Внешний контур outline</h3>
+<p>Свойство задаёт внешнюю границу вокруг элементов (т.е. за пределами обычной границы). Основная цель данного свойства &#8212; выделить какой-либо элемент. В отличие от свойства <kbd>border</kbd>, применение данного свойства не влияет на размер или местоположение элемента, т.к. контур отображается поверх блока элемента, что в свою очередь, может привести к перекрыванию внешних отступов элемента и соседних областей. </p>
+<p>Также, внешний контур, в отличие от рамки элемента, окружает элемент со всех сторон, обрамляя его целиком.</p>
+<p>Внешний контур всегда имеет прямоугольную форму, он не повторяет границы блока, для которого задан <kbd>border-radius</kbd>.</p>
+<p>Свойство <kbd>outline</kbd> позволяет объединить в себе следующие свойства: <kbd>outline-color</kbd>, <kbd>outline-style</kbd>, <kbd>outline-width</kbd>. Если какое-то из значений не указано, его место займет значение по умолчанию.</p>
+<pre class="lang:css decode:true ">div {
+width: 100px; 
+height: 100px; 
+outline: #cacd58 solid 2px;
+}</pre>
+<h4 id="outline-style">6.1. Стиль внешнего контура outline-style</h4>
+<p>Вид линии внешнего контура задаётся аналогично со стилем рамки элемента. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">outline-style</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию. Отсутствие внешнего контура.</td>
+</tr>
+<tr>
+<td><kbd>hidden</kbd></td>
+<td>Эквивалентно <kbd>none</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>dotted</kbd></td>
+<td>
+<h6 style="border:1px solid #fc9933;padding:5px;outline-style:dotted">dotted</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>dashed</kbd></td>
+<td>
+<h6 style="border:1px solid #fc9933;padding:5px;outline-style:dashed">dashed</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>solid</kbd></td>
+<td>
+<h6 style="border:1px solid #fc9933;padding:5px;outline-style:solid">solid</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>double</kbd></td>
+<td>
+<h6 style="border:1px solid #fc9933;padding:5px;outline-style:double">double</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>groove</kbd></td>
+<td>
+<h6 style="border:1px solid #fc9933;padding:5px;outline-style:groove">groove</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>ridge</kbd></td>
+<td>
+<h6 style="border:1px solid #fc9933;padding:5px; outline-style: ridge">ridge</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>inset</kbd></td>
+<td>
+<h6 style="border:1px solid #fc9933;padding:5px; outline-style: inset">inset</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>outset</kbd></td>
+<td>
+<h6 style="border:1px solid #fc9933;padding:5px; outline-style: outset">outset</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {outline-style: ridge;}</pre>
+<h4 id="outline-color">6.2. Цвет внешнего контура outline-color</h4>
+<p>Цвет внешнего контура можно прописывать только при установленном значении <kbd>outline-style</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">outline-color</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>invert</kbd></td>
+<td>Значение по умолчанию. Цвет линии (обычно черный) устанавливается автоматически, создавая контраст с основным содержимым.</td>
+</tr>
+<tr>
+<td>цвет</td>
+<td>Цвет внешней обводки задается с помощью свойства color.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {
+outline-style: ridge;
+outline-color: silver;
+}</pre>
+<h4 id="outline-width">6.3. Толщина внешнего контура outline-width</h4>
+<p>Толщина линии внешнего контура задается аналогично с толщиной рамки элемента. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">outline-width</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>thin / medium / thick</kbd></td>
+<td>Ключевые слова, устанавливают толщину внешнего контура относительно друг друга. Первое значение уже, чем второе, второе &#8212; тоньше третьего.</td>
+</tr>
+<tr>
+<td>длина</td>
+<td>
+<h6 style="border:1px solid #cacd58; outline-style:dotted;outline-width: 5px;padding:5px">{outline-style: dotted; outline-width: 5px;}</h6>
+</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {
+outline-style: dotted;
+outline-width: 5px;
+}</pre>
+
+<h2>CSS3 Рамка</h2>
+<strong>CSS3-рамка</strong> дополняет возможности форматирования границ элементов с помощью свойств, позволяющих <b>закруглить углы</b> элемента, а также использовать <b>изображения</b> для оформления границ элемента.</p>
+<h2>Закруглённые углы и рамки-изображения</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#border-radius">1. Закругление углов с помощью <kbd>border-radius</kbd></a></li>
+<li><a href="#border-image">2. Рамки-изображения <kbd>border-image</kbd></a></li>
+<li><a href="#border-image-width">2.1. Ширина рамки-изображения <kbd>border-image-width</kbd></a></li>
+<li><a href="#border-image-source">2.2. Ресурс рамки-изображения <kbd>border-image-source</kbd></a></li>
+<li><a href="#border-image-slice">2.3. Элементы рамки-изображения <kbd>border-image-slice</kbd></a></li>
+<li><a href="#border-image-repeat">2.4. Повтор рамки-изображения <kbd>border-image-repeat</kbd></a></li>
+<li><a href="#border-image-outset">2.5. Смещение рамки-изображения <kbd>border-image-outset</kbd></a></li>
+<li><a href="#outline-offset">3. Смещение внешней рамки <kbd>outline-offset</kbd></a></li>
+<li><a href="#part9">4. Градиентная рамка</a></li>
+</ul>
+<h3 id="border-radius">1. Закругление углов с помощью border-radius</h3>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 9.0<br />
+<b>Firefox:</b> 4.0<br />
+<b>Chrome:</b> 4.0<br />
+<b>Safari:</b> 5.0, 3.1 -webkit-<br />
+<b>Opera:</b> 10.5<br />
+<b>iOS Safari:</b> 7.1<br />
+<b>Opera Mini:</b> &#8212;<br />
+<b>Android Browser:</b> 4.1<br />
+<b>Chrome for Android:</b> 44</p></blockquote>
+<p><img src="https://html5book.ru/wp-content/uploads/2014/10/border-radius1.png" alt="border-radius" width="590" height="186" class="alignleft size-full wp-image-2672" srcset="https://html5book.ru/wp-content/uploads/2014/10/border-radius1.png 590w, https://html5book.ru/wp-content/uploads/2014/10/border-radius1-300x94.png 300w" sizes="(max-width: 590px) 100vw, 590px" /></p>
+<p style="clear:left">Свойство позволяет закруглить углы строчных и блочных элементов. Кривая для каждого угла определяется с помощью одного или двух радиусов, определяющих его форму &#8212; <b>круга</b> или <b>эллипса</b>. Радиус распространяется на весь фон, даже если элемент не имеет границ, точное положение секущей определяется с помощью свойства <kbd>background-clip</kbd>. </p>
+<p>Свойство <kbd>border-radius</kbd> позволяет закруглить все углы одновременно, а с помощью свойств <kbd>border-top-left-radius</kbd>, <kbd>border-top-right-radius</kbd>, <kbd>border-bottom-right-radius</kbd>, <kbd>border-bottom-left-radius</kbd> можно закруглить каждый угол отдельно. </p>
+<p>Если задать два значения для свойства <kbd>border-radius</kbd>, то первое значение закруглит <b>верхний левый</b> и <b>нижний правый угол</b>, а второе &#8212; <b>верхний правый</b> и <b>нижний левый</b>. </p>
+<p>Значения, заданные через <kbd>/</kbd>, определяют <b>горизонтальные</b> и <b>вертикальные радиусы</b>. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-radius<br />
+<span style="font-size:12px">(border-top-left-radius, border-top-right-radius, border-bottom-right-radius, border-bottom-left-radius)</span></th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Позволяет закруглить углы блока с помощью значений единиц длины &#8212; <kbd>px</kbd>, <kbd>em</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>%</kbd></td>
+<td>Значения, закругляющие углы, задаются в процентах от длины и ширины сторон элемента.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Варианты</b></p>
+<pre class="lang:css decode:true ">div {width: 100px; height: 100px; border: 5px solid;}
+.r1 {border-radius: 0 0 20px 20px;}
+.r2 {border-radius: 0 10px 20px;}
+.r3 {border-radius: 10px 20px;}
+.r4 {border-radius: 10px/20px;}
+.r5 {border-radius: 5px 10px 15px 30px/30px 15px 10px 5px;}
+.r6 {border-radius: 10px 20px 30px 40px/30px;}
+.r7 {border-radius: 50%;}
+.r8 {border-top: none; border-bottom: none; border-radius: 30px/90px;}
+.r9 {border-bottom-left-radius: 100px;}
+.r10 {border-radius: 0 100%;}
+.r11 {border-radius: 0 50% 50% 50%;}
+.r12 {border-top-left-radius: 100% 20px; border-bottom-right-radius: 100% 20px;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/10/border-radius.png" alt="border-radius" width="710" height="110" class="alignleft size-full wp-image-2613" srcset="https://html5book.ru/wp-content/uploads/2014/10/border-radius.png 710w, https://html5book.ru/wp-content/uploads/2014/10/border-radius-300x46.png 300w" sizes="(max-width: 710px) 100vw, 710px" /><br />
+<img src="https://html5book.ru/wp-content/uploads/2014/10/border_r_21.png" alt="border_r_2" width="715" height="110" class="alignleft size-full wp-image-2855" srcset="https://html5book.ru/wp-content/uploads/2014/10/border_r_21.png 715w, https://html5book.ru/wp-content/uploads/2014/10/border_r_21-300x46.png 300w" sizes="(max-width: 715px) 100vw, 715px" /><figcaption>Рис. 1. Примеры различных вариантов закругления углов блока</figcaption></figure>
+<h3 id="border-image">2. Рамки-изображения border-image</h3>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 11.0<br />
+<b>Firefox:</b> 15.0, 3.5 -moz-<br />
+<b>Chrome:</b> 16.0, 7.0 -webkit-<br />
+<b>Safari:</b> 6.0, 3.0 -webkit-<br />
+<b>Opera:</b> 15.0, 11.0 -o-<br />
+<b>iOS Safari:</b> 7.1<br />
+<b>Opera Mini:</b> 8 -o-<br />
+<b>Android Browser:</b> 4.4, 4.1 -webkit-<br />
+<b>Chrome for Android:</b> 42</p></blockquote>
+<p>Свойство позволяет устанавливать изображение в качестве рамки элемента. Основное требование, предъявляемое к изображению &#8212; оно должно быть симметричным. Свойство включает в себя следующие значения: <kbd>{border-image: width source slice repeat outset;}</kbd>.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-image</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>краткая запись</td>
+<td>Устанавливает рамку-изображение с помощью одного свойства, являющегося краткой записью свойств <kbd>border-image-source</kbd>, <kbd>border-image-slice</kbd>, <kbd>border-image-width</kbd>, <kbd>border-image-outset</kbd> и <kbd>border-image-repeat</kbd>. Значения по умолчанию: <kbd>{border-image: 1 none 100% stretch 0;}</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает это свойство в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение этого свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><img src="https://html5book.ru/wp-content/uploads/2014/11/border_round.png" alt="border_round" width="90" height="90" class="alignleft size-full wp-image-2970">При помощи такого простого изображения можно получить вот такие рамки для элемента.</p>
+<pre class="lang:css decode:true " style="clear:both">/* Пример 1 */
+div {
+width: 260px; height: 100px; 
+border-style: solid;
+border-image-width: 15px;
+border-image-source: url(border_round.png);
+border-image-slice: 30;
+border-image-repeat: stretch;
+}
+/* Пример 2 */
+div {
+width: 260px; height: 100px; 
+border-style: solid;
+border-image-width: 15px;
+border-image-source: url(border_round.png);
+border-image-slice: 30;
+border-image-repeat: round;
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/11/border_1.png" alt="border_1" width="286" height="110" class="alignleft size-full wp-image-2974"><img src="https://html5book.ru/wp-content/uploads/2014/11/border_2.png" alt="border_2" width="286" height="110" class="alignleft size-full wp-image-2975"><br />
+<img src="https://html5book.ru/wp-content/uploads/2014/10/border_image_primer.png" alt="border_image_primer" width="115" height="150" class="alignleft size-full wp-image-2876"><img src="https://html5book.ru/wp-content/uploads/2014/11/border_slice.png" alt="border_slice" width="115" height="150" class="alignleft size-full wp-image-2904"><figcaption style="clear:both">Рис. 2. Пример оформления границ блока с помощью изображения</figcaption></figure>
+<p>Cрезы A &#8212; B &#8212; C &#8212; D образуют углы рамки, а часть рисунка, расположенная между ними, заполняет оставшееся пространство рамки в соответствии с заданным значением свойства <kbd>border-image-repeat</kbd>. Размер угловой части (в данном примере это число <kbd>30</kbd>), задается с помощью значения свойства <kbd>border-image-slice</kbd>.</p>
+<h4 id="border-image-width">2.1. Ширина рамки-изображения border-image-width</h4>
+<p>Свойство задаёт ширину изображения для границы элемента. Если ширина не задана, то по умолчанию она равна <kbd>1</kbd>.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-image-width</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Устанавливает ширину рамки в единицах длины &#8212; <kbd>px / em</kbd>. Можно задавать от одной до четырех значений одновременно. Если задано одно значение, то ширина всех сторон рамки одинакова, два значения задают ширину верхней-нижней и правой-левой и т.д.</td>
+</tr>
+<tr>
+<td>число</td>
+<td>Числовое значение, на которое умножается значение <kbd>border-width</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>%</kbd></td>
+<td>Ширина рамки элемента вычисляется относительно размера изображения. Горизонтальные относительно ширины, вертикальные — относительно высоты.</td>
+</tr>
+<tr>
+<td><kbd>auto</kbd></td>
+<td>Соответствует значению <kbd>border-image-slice</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает это свойство в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение этого свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {border-image-width: 30px;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/11/border_image_width.png" alt="border_image_width" width="680" height="108" class="alignleft size-full wp-image-3004" srcset="https://html5book.ru/wp-content/uploads/2014/11/border_image_width.png 680w, https://html5book.ru/wp-content/uploads/2014/11/border_image_width-300x47.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 3. Пример задания ширины рамки-изображения с помощью различных типов значений</figcaption></figure>
+<h4 id="border-image-source">2.2. Ресурс рамки-изображения border-image-source</h4>
+<p>Свойство задаёт путь к изображению, которое будет использоваться для оформления границ блока.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-image-source</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Отсутствие изображения для рамки. Значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>url(url)</kbd></td>
+<td>Относительный или абсолютный путь к изображению.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает это свойство в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение этого свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {border-image-source: url(border.png);}</pre>
+<h4 id="border-image-slice">2.3. Элементы рамки-изображения border-image-slice</h4>
+<p>Свойство определяет размер частей изображения, используемых для оформления границ элемента и делит изображение на девять частей: четыре угла, четыре края между углами и центральную часть.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-image-slice</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>число</td>
+<td>Размер частей рамки можно задавать с помощь одного, двух, трех или четырех значений.<br />
+Одно значение устанавливает границы одинакового размера для каждой стороны элемента.<br />
+Два значения: первое определяет размер верхней и нижней границы, второе — правой и левой.<br />
+Три значения: первое определяет размер верхней границы, второе — правой и левой, а третье — нижней границы.<br />
+Четыре значения: определяет размеры верхней, правой, нижней и левой границы.<br />
+Числовое значение представляет количество <kbd>px</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>%</kbd></td>
+<td>Размеры границ рассчитываются относительно размера изображения. Горизонтальные относительно ширины, вертикальные — относительно высоты.</td>
+</tr>
+<tr>
+<td><kbd>fill</kbd></td>
+<td>Значение указывается вместе с числом или процентным значением. Если оно задано, изображение не обрезается внутренним краем рамки, а заполняет также область внутри рамки.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает это свойство в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение этого свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {border-image-slice: 50 20;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/11/border-image-slice.png" alt="border-image-slice" width="660" height="269" class="alignleft size-full wp-image-7571" srcset="https://html5book.ru/wp-content/uploads/2014/11/border-image-slice.png 660w, https://html5book.ru/wp-content/uploads/2014/11/border-image-slice-300x122.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 4. Пример задания срезов рамки-изображения</figcaption></figure>
+<h4 id="border-image-repeat">2.4. Повтор рамки-изображения border-image-repeat</h4>
+<p>Свойство управляет заполнением фоновым изображением пространства между углами рамки. Можно задавать как с помощью одного значения, так  и с помощью пары значений.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-image-repeat</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>stretch</kbd></td>
+<td>Растягивает изображение на все пространство. Значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>repeat</kbd></td>
+<td>Повторяет заполняющую часть изображения, при этом видны места стыков с угловой частью, и если длины образца не хватает, то он растягивается.</td>
+</tr>
+<tr>
+<td><kbd>round</kbd></td>
+<td>Наиболее точно заполняет промежуток между углами рамки, дублируя заполняющую часть изображения, при этом может образовать стыки по середине стороны рамки.</td>
+</tr>
+<tr>
+<td><kbd>space</kbd></td>
+<td>Действует аналогично с <kbd>repeat</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает это свойство в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение этого свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {border-image-repeat: repeat;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/11/strech_repeat_round.png" alt="strech_repeat_round" width="680" height="110" class="alignleft size-full wp-image-3008" srcset="https://html5book.ru/wp-content/uploads/2014/11/strech_repeat_round.png 680w, https://html5book.ru/wp-content/uploads/2014/11/strech_repeat_round-300x48.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 5. Пример повтора центральной части рамки-изображения с помощью различных типов значений</figcaption></figure>
+<h4 id="border-image-outset">2.5. Смещение рамки-изображения border-image-outset</h4>
+<p>Свойство позволяет переместить изображение-рамку за пределы границ элемента на указанную длину. Может задаваться как с помощью одного, так и четырёх значений.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-image-outset</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Отступ рамки-изображения задается с помощью любого положительного числа, указанного в <kbd>px</kbd> или <kbd>em</kbd>.</td>
+</tr>
+<tr>
+<td>число</td>
+<td>Числовое значение, на которое умножается <kbd>border-width</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает это свойство в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение этого свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {border-image-outset: 10px;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/11/outset.png" alt="outset" width="680" height="171" class="alignleft size-full wp-image-3010" srcset="https://html5book.ru/wp-content/uploads/2014/11/outset.png 680w, https://html5book.ru/wp-content/uploads/2014/11/outset-300x75.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 6. Пример смещения рамки-изображения с помощью различных типов значений</figcaption></figure>
+<h3 id="outline-offset">3. Смещение внешней рамки outline-offset</h3>
+<p>Свойство задаёт расстояние между границей элемента <kbd>border</kbd> и внешней границей, созданной с помощью свойства <kbd>outline</kbd>.</p>
+<table class="t1">
+<tr>
+<th colspan="2">outline-offset</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Задаёт расстояние с помощью единиц длины &#8212; <kbd>px / em</kbd>. Отрицательное значение отображает рамку внутри элемента, положительное — снаружи элемента.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает это свойство в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение этого свойства от родительского элемента.</td>
+</tr>
+</table>
+<pre class="lang:css decode:true ">/*Рисунок 1:*/
+img {
+border: 1px solid pink; 
+outline: 1px dashed grey;
+outline-offset: 3px;
+}
+/*Рисунок 2:*/
+img {
+border-width: 1px 10px;
+border-style: solid;
+border-color: pink; 
+outline: 1px dashed grey;
+outline-offset: 3px;
+}
+/*Рисунок 3:*/
+img {
+border: 3px inset pink; 
+outline: 1px dashed grey;
+outline-offset: 1px;
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/11/outline_offset.png" alt="outline_offset" width="680" height="191" class="alignleft size-full wp-image-3023" srcset="https://html5book.ru/wp-content/uploads/2014/11/outline_offset.png 680w, https://html5book.ru/wp-content/uploads/2014/11/outline_offset-300x84.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 7. Пример оформления изображения внешней рамкой</figcaption></figure>
+<h3 id="part9">4. Градиентная рамка</h3>
+<p>Значением <kbd>border-image</kbd> может выступать не только изображение, но и градиентная заливка. </p>
+<h4>Полупрозрачная рамка</h4>
+<p>В качестве одного из цветов выступает <kbd>transparent</kbd>. Таким способом можно задавать границы сразу для всех сторон элемента или по отдельности для каждой стороны. Толщина рамки регулируется свойством <kbd>border-width</kbd>.</p>
+<pre class="lang:default decode:true " >&lt;div class="wrap"&gt;&lt;div class="gradient"&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+<pre class="lang:css decode:true " >* {box-sizing:border-box;}
+.wrap {
+height: 200px;
+padding: 25px;
+background: #00E4F6;
+}
+.gradient {
+height: 150px; 
+width: 50%; 
+margin: 0 auto;
+border: 10px solid transparent;
+border-image: linear-gradient(to right, transparent 0%, #ADF2F7 100%);
+border-image-slice: 1;
+}</pre>
+<div style="height: 200px;padding: 25px;box-sizing:border-box;background:#00E4F6;margin-bottom:24px">
+<div style="box-sizing:border-box;height: 150px; width: 50%; margin:0 auto; border: 10px solid transparent;border-image: linear-gradient(to right, transparent 0%, #ADF2F7 100%);border-image-slice: 1;"></div>
+</div>
+<h4>Почтовый конверт</h4>
+<pre class="lang:default decode:true " >&lt;div class="wrap"&gt;&lt;div class="gradient"&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+<pre class="lang:css decode:true " >* {box-sizing:border-box;}
+.wrap {
+height: 200px;
+padding: 25px;
+}
+.gradient {
+height: 150px; 
+width: 50%; 
+margin: 0 auto;
+border: 10px solid transparent;
+border-image: 10 repeating-linear-gradient(45deg, #A7CECC, #A7CECC 10px, transparent 10px, transparent 20px, #F8463F 20px, #F8463F 30px,transparent 30px, transparent 40px);
+}</pre>
+<div style="height: 200px;padding: 25px;box-sizing:border-box;">
+<div style="box-sizing:border-box;height: 150px; width: 50%; margin:0 auto;border: 10px solid transparent; border-image:10  repeating-linear-gradient(45deg, #A7CECC, #A7CECC 10px, transparent 10px, transparent 20px, #F8463F 20px, #F8463F 30px,transparent 30px, transparent 40px);"></div>
+</div>
+
+<br><br><br><br><br><br></div></div></div>
+     
+ <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

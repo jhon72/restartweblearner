@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a class="active" href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>События JQuery</h2>
+                        <strong>События jQuery</strong> помогают сделать веб-страницы интерактивными, реагируя на простейшие действия пользователя. События представляют собой точный момент, в который что-либо происходит, например щелчок кнопки мыши. </p>
+<p>Момент, в который произошло событие, называется <strong>запуском события</strong>. События могут срабатывать при выполнении различных операций с веб-страницей. Помимо этого, и сам браузер может стать источником событий.</p>
+<h2 style="clear:both">Управление веб-страницей с помощью событий jQuery</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#part1">1. События мыши</a></li>
+<li><a href="#part2">2. События документа/окна</a></li>
+<li><a href="#part3">3. События форм</a></li>
+<li><a href="#part4">4. События клавиатуры</a></li>
+<li><a href="#part5">5. События jQuery</a></li>
+<li><a href="#part6">6. Объект события</a></li>
+</ul>
+<h3 id="part1">1. События мыши</h3>
+<p><strong class="opr">.click()</strong><br />
+Это событие запускается, когда вы нажимаете и отпускаете кнопку мыши. Применяется к ссылкам, картинкам, кнопкам, абзацам, блокам и т.д.</p>
+<p><strong class="opr">.dblclick()</strong><br />
+Событие запускается, когда вы дважды нажимаете и отпускаете кнопку мыши, например, открываете какую-нибудь папку на рабочем столе.</p>
+<p><strong class="opr">.mousedown()</strong><br />
+Событие происходит во время нажатия кнопки мыши, например, при перетаскивании элементов.</p>
+<p><strong class="opr">.mousemove()</strong><br />
+Событие запускается, когда вы передвигаете указатель мыши по странице.</p>
+<p><strong class="opr">.mouseout()</strong><br />
+Событие запускается, когда вы уводите указатель мыши с элемента.</p>
+<p><strong class="opr">.mouseover()</strong><br />
+Событие запускается, когда вы проводите указателем мыши по элементу (аналогично использованию псевдокласса <kbd>:hover</kbd>).</p>
+<p><strong class="opr">.mouseup()</strong><br />
+Событие активизируется, когда вы отпускаете кнопку мыши.</p>
+<h3 id="part2">2. События документа/окна</h3>
+<p><strong class="opr">.load()</strong><br />
+Событие запускается, когда браузер загрузит все файлы веб-страницы: html-файлы, внешние css и javascript файлы, медиа-файлы. Это может быть неудобно в случае если веб-страница содержит большое количество файлов. Для решения данной проблемы можно воспользоваться функцией <kbd>ready()</kbd>, которая запускает скрипты сразу после загрузки html-кода.</p>
+<p><strong class="opr">.resize()</strong><br />
+Событие запускается, когда вы изменяете размер окна браузера.</p>
+<p><strong class="opr">.scroll()</strong><br />
+Событие запускается, когда вы используете полосы прокрутки, либо прокручиваете веб-страницу с помощью колесика мыши, или же используете для этих целей клавиши клавиатуры (pg up, pg dn, home, end).</p>
+<p><strong class="opr">.unload()</strong><br />
+Событие запускается, когда вы собираетесь покинуть страницу, щелкая по ссылке для перехода на другую страницу, закрываете вкладку страницы или же окно браузера.</p>
+<h3 id="part3">3. События форм</h3>
+<p><strong class="opr">.blur()</strong><br />
+Событие запускается, когда поле формы выводится из фокуса, т.е. вы ввели данные в поле формы и перешли на другое.</p>
+<p><strong class="opr">.change()</strong><br />
+Событие запускается при изменении статуса поля формы, например при выбора пункта из выпадающего меню.</p>
+<p><strong class="opr">.focus()</strong><br />
+Событие запускается при переходе в поле формы, щелкая в нем кнопкой мыши или клавишей табуляции.</p>
+<p><strong class="opr">.reset()</strong><br />
+Событие позволяет вернуть форму в первоначальное состояние, отменив сделанные изменения. </p>
+<p><strong class="opr">.select()</strong><br />
+Событие запускается, когда вы выделяете текст внутри текстового поля формы.</p>
+<p><strong class="opr">.submit()</strong><br />
+Событие запускается, когда вы отправляете заполненную форму с помощью щелчка по кнопке &#171;Отправить&#187; или нажатия клавиши &#171;Enter&#187;, когда курсор помещен в текстовом поле.</p>
+<h3 id="part4">4. События клавиатуры</h3>
+<p><strong class="opr">.keydown()</strong><br />
+Событие запускается при нажатии клавиши, перед событием keypress.</p>
+<p><strong class="opr">.keypress()</strong><br />
+Событие запускается, когда вы нажимаете на клавишу, до тех пор, пока вы не отпустите клавишу.</p>
+<p><strong class="opr">.keyup()</strong><br />
+Событие запускается, когда вы отпускаете клавишу.</p>
+<h3 id="part5">5. События jQuery</h3>
+<p><strong class="opr">.hover()</strong><br />
+Данная функция работает как событие, позволяя одновременно решить две задачи, связанные с  событием наведения указателя мыши и событием снятия указателя мыши в отношении выбранного объекта. Основная структура функции:<br />
+<kbd> $('#селектор').hover(функция1, функция2);</kbd></p>
+<p><strong class="opr">.toggle()</strong><br />
+Событие работает аналогично событию <kbd>hover()</kbd>, с разницей в том, что событие запускается от щелчка кнопкой мыши. Например, можно открыть выпадающее меню одним щелчком и скрыть вторым.</p>
+<h3 id="part6">6. Объект события</h3>
+<p>При запуске события браузер сохраняет информацию о нём в <strong>объекте события</strong>. Объект события содержит данные, собранные в момент, когда событие произошло. Обработка события происходит с помощью функции, при этом объект передается функции как аргумент &#8212; переменная <kbd>evt</kbd> (в качестве имени переменной можно использовать также <kbd>event</kbd> или просто <kbd>e</kbd>). Чтобы получить доступ к аргументу, необходимо добавить к функции имя параметра. В пределах данной функции можно получить доступ к различным свойствам, используя точечный синтаксис. Когда функция вызывается, то объект события сохраняется в переменной <kbd>evt</kbd>. <br />
+Объект события имеет различные свойства, наиболее распространённые из них описаны в нижеприведенной таблице. </p>
+<table class="t3">
+<caption>Таблица 1. Свойства объекта события</caption>
+<tr>
+<th style="width:20%">Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>pageX</td>
+<td>Расстояние (px) от указателя мыши до левого края окна браузера</td>
+</tr>
+<tr>
+<td>pageY</td>
+<td>Расстояние (px) от указателя мыши до верхнего края окна браузера</td>
+</tr>
+<tr>
+<td>screenX</td>
+<td>Расстояние (px) от указателя мыши до левого края монитора</td>
+</tr>
+<tr>
+<td>screenY</td>
+<td>Расстояние (px) от указателя мыши до верхнего края монитора</td>
+</tr>
+<tr>
+<td>shiftKey</td>
+<td>TRUE, если когда происходило событие, была нажата клавиша SHIFT</td>
+</tr>
+<tr>
+<td>which</td>
+<td>Используется для определения числового кода нажатой клавиши (вместе с shiftKey)</td>
+</tr>
+<tr>
+<td>target</td>
+<td>Означает, что по объекту события щелкнули кнопкой мыши (например, для события <kbd>click()</kbd>)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Объект, использованный с функцией <kbd>bind()</kbd> для передачи данных функции, управляющей событием</td>
+</tr>
+</table>
+                        
+<br><br><br><br><br><br></div></div></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a class="active" href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>Селекторы JQuery</h2>
+                        <strong>Селекторы jQuery</strong> выбирают элементы веб-страницы, а методы выполняют операции с этими элементами. </p>
+<p>Чтобы выбрать элементы, нужно передать селектор функции <kbd>$()</kbd>, например, <kbd>$("img:odd")</kbd>. Данный селектор будет применен ко всему дереву DOM, и чтобы ограничить процедуру отбора элементов, можно указать определенный фрагмент дерева DOM &#8212; <kbd>$("img:odd", "div#slideshow")</kbd>. Таким образом будут выбраны все четные картинки из блока с <kbd>id=slideshow</kbd>.</p>
+<p>Для более точного выбора элементов селекторы можно комбинировать, например, следующая запись позволит выбрать все флажки полей формы, которые были выделены пользователем &#8212; <kbd>$("input[type=checkbox][checked]")</kbd>. </p>
+<p>А с помощью этой комбинации селекторов <kbd>$("input:checkbox:checked:enabled")</kbd> можно выбрать только активные и отмеченные флажки полей формы.</p>
+<p>Также, допускается объединять несколько селекторов в одно выражение, разделяя селекторы запятой &#8212; <kbd>$("p,span")</kbd>, что позволит отобрать все элементы <kbd>&lt;p&gt;</kbd> и <kbd>&lt;span&gt;</kbd>.</p>
+<table class="t3">
+<caption>Таблица 1. Селекторы jQuery</caption>
+<tr>
+<th style="width:20%">Селектор</th>
+<th>Описание, пример</th>
+</tr>
+<tr>
+<td>Элемента</td>
+<td>Выбирает все элементы данного типа на странице, например, <kbd>$("div")</kbd>.</td>
+</tr>
+<tr>
+<td>Элемент1 элемент2</td>
+<td>Выбирает все элементы2, вложенные непосредственно в элемент1, например, <kbd>$("p img")</kbd>.</td>
+</tr>
+<tr>
+<td>Класса</td>
+<td>Выбирает все элементы заданного класса, например, <kbd>$(".sidebar")</kbd>.</td>
+</tr>
+<tr>
+<td>Идентификатора</td>
+<td>Выбирает элемент с указанным идентификатором, например, <kbd>$("#main")</kbd>.</td>
+</tr>
+<tr>
+<td>Элемент класс</td>
+<td>Выбирает из элементов данного типа только те элементы, которым назначен указанный класс, например, <kbd>$("p.first")</kbd>.</td>
+</tr>
+<tr>
+<td>Потомка</td>
+<td>Выбирает все указанные элементы выбранного селектора, например, <kbd>$(".sidebar a")</kbd>.</td>
+</tr>
+<tr>
+<td>Дочерние</td>
+<td>Выбирает элементы, соответствующие второму селектору, которые содержатся непосредственно внутри первого селектора, являющиеся дочерними по отношению к нему, например, <kbd>$("body > p")</kbd>.</td>
+</tr>
+<tr>
+<td rowspan="2">Сестринские</td>
+<td>Выбирает элементы, соответствующие второму селектору, идущие непосредственно за первым элементом, являющимся для него сестринским, например, <kbd>$("h2 + p")</kbd>.</td>
+</tr>
+<tr>
+<td>Выбирает элементы, соответствующие второму селектору, являющиеся сестринскими по отношению к первому элементу и расположенные после него, например, <kbd>$("h2 ~ p")</kbd>.</td>
+</tr>
+<tr>
+<td rowspan="4">Атрибута</td>
+<td>Выбирает все элементы, которые содержат данный атрибут или указанно значение атрибута, например, <kbd>$("img[alt]")</kbd>, <kbd>$("a[href]")</kbd>, <kbd>$("input[type="text"]")</kbd>.</td>
+</tr>
+<tr>
+<td>Выбирает все элементы, начинающиеся с определенного значения, например, <kbd>$("a[href^="http://"]")</kbd>.</td>
+</tr>
+<tr>
+<td>Выбирает все элементы, заканчивающиеся на определенное значение, например, <kbd>$("a[href$=".pdf"]")</kbd>.</td>
+</tr>
+<tr>
+<td>Выбирает все элементы, содержащие в любом месте определенное значение, например, <kbd>$("a[target*="blank"]")</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:even</kbd></td>
+<td>Выбирает элементы по четным значениям индекса 0, 2, 4&#8230;, т.е. выбирает 1, 3, 5&#8230; элементы, например, <kbd>$("li:even")</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:odd</kbd></td>
+<td>Выбирает элементы по нечетным значениям индекса, т.е. выбирает 0, 2, 4&#8230; элементы.</td>
+</tr>
+<tr>
+<td><kbd>:first</kbd></td>
+<td>Выбирает только один элемент, первый из подходящих, например, <kbd>$("p:first")</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:last</kbd></td>
+<td>Выбирает только один элемент, последний из подходящих.</td>
+</tr>
+<tr>
+<td><kbd>:first-child</kbd></td>
+<td>Выбирает элементы, которые являются первыми дочерними элементами своих родителей.</td>
+</tr>
+<tr>
+<td><kbd>:last-child</kbd></td>
+<td>Выбирает элементы, которые являются последними дочерними элементами своих родителей.</td>
+</tr>
+<tr>
+<td><kbd>:only-child</kbd></td>
+<td>Выбирает элементы, являющиеся единственными дочерними элементами своих родителей.</td>
+</tr>
+<tr>
+<td><kbd>:nth-child(n)</kbd></td>
+<td>Выбирает элементы, которые являются n-дочерними элементами своих родителей.</td>
+</tr>
+<tr>
+<td><kbd>:nth-child(Xn+Y)</kbd></td>
+<td>Выбирает n-элемент, порядковый номер которого рассчитывается по формуле в круглых скобках.</td>
+</tr>
+<tr>
+<td><kbd>:nth-of-type(n)</kbd></td>
+<td>Выбирает элементы, являющиеся n-ми дочерними элементами данного типа для своих родителей.</td>
+</tr>
+<tr>
+<td><kbd>:parent</kbd></td>
+<td>Выбирает непустые элементы, которые имеют вложенные (дочерние) элементы, а также содержащие текст.</td>
+</tr>
+<tr>
+<td><kbd>:eq(n)</kbd></td>
+<td>Выбирает элементы с индексом <kbd>n</kbd>, при этом индексы отсчитываются от нуля.</td>
+</tr>
+<tr>
+<td><kbd>:gt(n)</kbd></td>
+<td>Выбирает все элементы, индекс которых больше <kbd>n</kbd>, индексы отсчитываются от нуля.</td>
+</tr>
+<tr>
+<td><kbd>:lt(n)</kbd></td>
+<td>Выбирает все элементы, расположенные перед n-элементом, не включая n-элемент.</td>
+</tr>
+<tr>
+<td><kbd>:not(селектор)</kbd></td>
+<td>Позволяет выбрать элемент, не соответствующий данному типу селектора, например, <kbd>$("a:not(.link)")</kbd>, <kbd>$("a:not([href$=".pdf"])")</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:has(селектор)</kbd></td>
+<td>Выбирает элементы, которые содержат внутри себя указанный селектор, например, элементы списка, содержащие внутри себя ссылки: <kbd>$("li:has(a)")</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:contains(текст)</kbd></td>
+<td>Выбирает элементы, которые содержат указанный в скобках текст, например, <kbd>$("a:contains(Скачать)")</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:hidden</kbd></td>
+<td>Выбирает скрытые элементы, для которых установлено значение <kbd>display: none;</kbd>, а также элементы форм со значением <kbd>type="hidden"</kbd> например, <kbd>$("ul:hidden").show()</kbd> &#8212; делает скрытые элементы видимыми.</td>
+</tr>
+<tr>
+<td><kbd>:visible</kbd></td>
+<td>Выбирает видимые элементы, к видимым элементам относятся элементы, размеры которых больше нуля, а также элементы со значением <kbd>visibility: hidden</kbd> и <kbd>opacity: 0</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:active</kbd></td>
+<td>Выбирает элемент, который активизирован пользователем, например, с помощью щелчка мыши.</td>
+</tr>
+<tr>
+<td><kbd>:checked</kbd></td>
+<td>Выбирает только отмеченные флажки или радиокнопки.</td>
+</tr>
+<tr>
+<td><kbd>:focus</kbd></td>
+<td>Выбирает элемент, находящийся в фокусе.</td>
+</tr>
+<tr>
+<td><kbd>:hover</kbd></td>
+<td>Выбирает элемент, на который наведен указатель мыши.</td>
+</tr>
+<tr>
+<td><kbd>:disabled</kbd></td>
+<td>Выбирает неактивные элементы (форм).</td>
+</tr>
+<tr>
+<td><kbd>:enabled</kbd></td>
+<td>Выбирает активные элементы (форм).</td>
+</tr>
+<tr>
+<td><kbd>:empty</kbd></td>
+<td>Выбирает элементы, не содержащие дочерних элементов.</td>
+</tr>
+<tr>
+<td><kbd>:target</kbd></td>
+<td>Выбирает элементы, на которые ссылается идентификатор фрагмента в url-адресе.</td>
+</tr>
+<tr>
+<td><kbd>:animated</kbd></td>
+<td>Выбирает все анимируемые в данный момент элементы.</td>
+</tr>
+<tr>
+<td><kbd>:button</kbd></td>
+<td>Выбирает все кнопки <kbd>input[type=submit]</kbd>, <kbd>input[type=reset]</kbd>, <kbd>input[type=button]</kbd>, <kbd>button</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:checkbox</kbd></td>
+<td>Выбирает элементы-флажки <kbd>input[type=checkbox]</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:file</kbd></td>
+<td>Выбирает элементы типа <kbd>file</kbd>, <kbd>input[type=file]</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:header</kbd></td>
+<td>Выбирает элементы-заголовки от <kbd>h1</kbd> до <kbd>h6</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:image</kbd></td>
+<td>Выбирает изображения в элементах форм <kbd>input[type=image]</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:input</kbd></td>
+<td>Выбирает элементы форм <kbd>input, select, textarea, button</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:password</kbd></td>
+<td>Выбирает элементы ввода пароля <kbd>input[type=password]</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:radio</kbd></td>
+<td>Выбирает радиокнопки <kbd>input[type=radio]</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:reset</kbd></td>
+<td>Выбирает кнопки сброса <kbd>input[type=reset]</kbd>, <kbd>button[type=reset]</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:selected</kbd></td>
+<td>Выбирает выделенные элементы <kbd>option</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:submit</kbd></td>
+<td>Выбирает кнопки отправки формы <kbd>input[type=submit]</kbd>, <kbd>button[type=submit]</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>:text</kbd></td>
+<td>Выбирает элементы ввода текста<kbd>input[type=text]</kbd>.</td>
+</tr>
+</table>
+                        
+                        
+<br><br><br><br><br><br></div></div></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>CSS Фон</h2>
+                        <strong>CSS-фон</strong> &#8212; свойства, добавляющие фон для любого HTML-элемента. Каждый элемент имеет фоновый слой, который может быть прозрачным (по умолчанию), цветной заливкой и изображением. В качестве изображения может выступать градиент или <strong>картинка</strong>. Для одного элемента можно задать несколько фоновых изображений.</p>
+<p>Фон не отображается у пустых элементов с нулевой высотой. Свойства фона не наследуются, но фон родительского блока всегда будет виден.</p>
+<h2 style="clear:both">Цвет фона и фоновые изображения на веб-странице</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#background-color">1. Цвет фона <kbd>background-color</kbd></a></li>
+<li><a href="#background-image">2. Фоновое изображение <kbd>background-image</kbd></a></li>
+<li><a href="#background-repeat">3. Повтор фоновых изображений <kbd>background-repeat</kbd></a></li>
+<li><a href="#background-position">4. Позиционирование фоновых изображений <kbd>background-position</kbd></a></li>
+<li><a href="#background-attachment">5. Фиксация изображения на месте <kbd>background-attachment</kbd></a></li>
+<li><a href="#background-clip">6. Заполнение фоном отступов и границ элемента <kbd>background-clip</kbd></a></li>
+<li><a href="#background-origin">7. Положение фонового изображения относительно его родительского блока <kbd>background-origin</kbd></a></li>
+<li><a href="#background-size">8. Размер изображения <kbd>background-size</kbd></a></li>
+<li><a href="#background">9. Задание фона элемента одним свойством <kbd>background</kbd></a></li>
+<li><a href="#part9">10. Множественные фоны</a></li>
+</ul>
+<h3 id="background-color">1. Цвет фона background-color</h3>
+<p>Свойство устанавливает цветную заливку для любого HTML-элемента. Для блочных элементов цвет фона распространяется на всю ширину и высоту блока элемента, для строчных &#8212; только на область их содержимого. Не наследуется. </p>
+<table class="t1">
+<tr>
+<th colspan="2">background-color</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>цвет</td>
+<td>Цвет фона можно задать разными способами: HEX, RGB, RGBA, HSL, HSLA, а также с помощью 140 кроссбраузерных названий цветов.</td>
+</tr>
+<tr>
+<td><kbd>transparent</kbd></td>
+<td>Значение по умолчанию. Задает прозрачный фон для элемента.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {background-color: papayawhip;}
+h1 {background-color: palevioletred;}
+p {background-color: peachpuff;}
+span {background-color: peru;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/10/background-color.png" alt="background-color" class="alignleft"><figcaption>Рис. 1. Свойство background-color для разных элементов</figcaption></figure>
+<h3 id="background-image">2. Фоновое изображение background-image</h3>
+<p>Свойство устанавливает изображение в качестве фона для элемента. Фоновым изображением может быть картинка или градиент, который задаётся с помощью функций <kbd>background-image: linear-gradient()</kbd>, <kbd>background-image: radial-gradient()</kbd> или с помощью функций повтора градиента <kbd>background-image: repeating-linear-gradient()</kbd>, <kbd>background-image: repeating-radial-gradient()</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">background-image</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>url('URL')</kbd></td>
+<td>Абсолютный или относительный адрес изображения.</td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию, также удаляет изображение у элемента из группы элементов, для которых установлено фоновое изображение.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {background-image: url(https://html5book.ru/images/flower.png);}
+table {background-image: radial-gradient(farthest-corner at 50% 50%, white, #DCECF8);}
+p {background-image: linear-gradient(to top left, white, lightblue);}</pre>
+<h3 id="background-repeat">3. Повтор фоновых изображений background-repeat</h3>
+<p>Свойство определяет, каким образом будет повторяться фоновый рисунок. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">background-repeat</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>repeat</kbd></td>
+<td>Весь фон страницы будет заполнен фоновым рисунком. Если при этом задать <kbd>background-position</kbd>, то повтор будет осуществляться с указанной позиции. Значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>no-repeat</kbd></td>
+<td>Фоновое изображение не будет повторяться.</td>
+</tr>
+<tr>
+<td><kbd>repeat-x</kbd></td>
+<td>Фоновый рисунок повторяется от левого до правого края веб-страницы по верхнему краю страницы.</td>
+</tr>
+<tr>
+<td><kbd>repeat-y</kbd></td>
+<td>Фоновый рисунок повторяется от верхнего до нижнего края веб-страницы по левому краю страницы.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {background-repeat: no-repeat;}
+div {background-repeat: repeat-x;}
+div {background-repeat: repeat-y;}
+div {background-repeat: repeat;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/03/13.png" alt="13" class="alignleft"><figcaption>Рис. 2. Свойство background-repeat</figcaption></figure>
+<h3 id="background-position">4. Позиционирование фоновых изображений background-position</h3>
+<p>Свойство управляет точным расположением фонового изображения. Можно определить начальную позицию фонового изображения в виде горизонтальной и вертикальной координат посредством ключевых слов, точных абсолютных и процентных значений. Значение по умолчанию <kbd>background-position: 0% 0%</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">background-position</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>left top</kbd>,<br />
+<kbd>left center</kbd>,<br />
+<kbd>left bottom</kbd>,<br />
+<kbd>right top</kbd>,<br />
+<kbd>right center</kbd>,<br />
+<kbd>right bottom</kbd>,<br />
+<kbd>center top</kbd>,<br />
+<kbd>center center</kbd>,<br />
+<kbd>center bottom</kbd>
+</td>
+<td>Позиционирование по горизонтали и вертикали задаётся с помощью пары ключевых слов. Если задано одно ключевое слово, второе примет значение <kbd>center</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>px / em/ %</kbd></td>
+<td>Указывается два значения, первое определяет расстояние между левой стороной изображения и левым краем элемента-контейнера (по горизонтали), второе значение указывает расстояние между верхней стороной изображения и верхним краем элемента-контейнера (по вертикали). Также можно использовать <b>отрицательные значения</b> для обрезки части изображения.<br />
+Процентное значение рассчитывается относительно самого изображения и относительно элемента-контейнера, в котором оно расположено. Например, при задании <kbd>background-position:50% 50%;</kbd> центр изображения совпадет с центром элемента-контейнера.<br />
+Одновременно можно комбинировать значения в <kbd>px, em</kbd> и <kbd>%</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {background-position: center center;}
+div {background-position: 50% 100%;}
+div {background-position: left;}
+div {background-position: 50px;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/03/15.png" alt="15" class="alignleft"><figcaption>Рис. 3. Свойство background-position</figcaption></figure>
+<p>Можно задать фоновую картинку так, чтобы она располагалась только по низу блока:</p>
+<pre class="lang:css decode:true " >div {
+background-color: #FCF8F7;
+height: 120px;
+background-image: url(https://html5book.ru/images/flower112.png);
+background-position: left bottom;
+background-repeat: repeat-x;
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/10/background_repeat_bottom.png" alt="background_repeat_bottom" class="alignleft"><figcaption>Рис. 4. Фоновое изображение по низу блока</figcaption></figure>
+<p>Также благодаря свойству позиционирования, для одного блока можно использовать несколько фоновых изображений:</p>
+<pre class="lang:css decode:true " >div {
+width: 660px;
+background-color:#E0E4EF;
+height: 300px;
+background-image: url(https://html5book.ru/images/flower112.png), url(https://html5book.ru/images/leaf112.png), 
+url(https://html5book.ru/images/flower221.png);
+background-repeat: repeat-x;
+background-position: 0 250px, 0 150px, 0 98px; 
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/03/16.png" alt="16" class="alignleft"><figcaption>Рис. 5. Задание для блока нескольких фоновых изображений</figcaption></figure>
+<h3 id="background-attachment">5. Фиксация изображения на месте background-attachment</h3>
+<p>Свойство позволяет фиксировать фоновое изображение при прокрутке страницы. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">background-attachment</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>scroll</kbd></td>
+<td>Фоновое изображение прокручивается вместе с текстом и другим содержимым. Значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>fixed</kbd></td>
+<td>Предотвращает перемещение, фиксирует фоновое изображение на заднем плане.</td>
+</tr>
+<tr>
+<td><kbd>local</kbd></td>
+<td>Фоновое изображение прокручивается вместе с содержимым элемента.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {background-attachment: scroll;}
+div {background-attachment: fixed;}
+div {background-attachment: local;}</pre>
+<h3 id="background-clip">6. Заполнение фоном отступов и границ элемента background-clip</h3>
+<p>Свойство определяет, будет ли цвет фона ограничиваться содержимым элемента или будет простираться до внешнего края границы <kbd>border</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">background-clip</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>border-box</kbd></td>
+<td>Фон простирается до внешнего края границы элемента. Значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>padding-box</kbd></td>
+<td>Фона простирается до внешнего края отступов элемента.</td>
+</tr>
+<tr>
+<td><kbd>content-box</kbd></td>
+<td>Фон окрашивает только содержимое элемента.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {background-clip: border-box;}
+div {background-clip: padding-box;}
+div {background-clip: content-box;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/03/12.png" alt="12" class="alignleft"><figcaption>Рис. 6. Свойство background-clip</figcaption></figure>
+<h3 id="background-origin">7. Положение фонового изображения относительно его родительского блока background-origin</h3>
+<p>Свойство определяет, где будет позиционироваться фоновое изображение. Если одновременно задано свойство <kbd>background-attachment: fixed</kbd>, эффекта не будет.</p>
+<table class="t1">
+<tr>
+<th colspan="2">background-origin</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>padding-box</kbd></td>
+<td>Положение элемента вычисляется относительно верхнего левого угла с внутренней стороны границы элемента. Значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>border-box</kbd></td>
+<td>Положение элемента вычисляется относительно верхнего левого угла с внешней стороны границы элемента.</td>
+</tr>
+<tr>
+<td><kbd>content-box</kbd></td>
+<td>Положение элемента вычисляется относительно верхнего левого угла содержимого.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {background-origin: padding-box;}
+div {background-origin: border-box;}
+div {background-origin: content-box;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/10/background-origin.png" alt="background-origin" width="660" height="252" class="alignleft size-full wp-image-8568" srcset="https://html5book.ru/wp-content/uploads/2014/10/background-origin.png 660w, https://html5book.ru/wp-content/uploads/2014/10/background-origin-300x115.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 7. Свойство background-origin</figcaption></figure>
+<h3 id="background-size">8. Размер изображения background-size</h3>
+<p>Свойство позволяет масштабировать фоновое изображение по вертикали и горизонтали (<kbd>background-image</kbd>). Оно описывает, как изображение будет растягиваться и обрезаться, чтобы полностью закрыть собой фоновую область. С помощью этого свойства изображение также можно уменьшать по ширине и по высоте. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">background-size</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>auto</kbd></td>
+<td>Значение по умолчанию. Высота и ширина изображения равны его оригинальным размерам.</td>
+</tr>
+<tr>
+<td><kbd>px / em /cm</kbd></td>
+<td>Размер задается парой значений, первое значение устанавливает ширину изображения, второе &#8212; высоту. Для того, чтобы фон масштабировался вместе с текстом, размеры изображения нужно задавать в <kbd>em</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>%</kbd></td>
+<td>Задает размер фонового изображения в процентах от ширины или высоты элемента, которое заполняется фоном.</td>
+</tr>
+<tr>
+<td><kbd>cover</kbd></td>
+<td>Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.</td>
+</tr>
+<tr>
+<td><kbd>contain</kbd></td>
+<td>Масштабирует изображение с сохранением пропорций таким образом, чтобы оно целиком поместилось внутри блока.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {background-size: 300px 150px;}
+div {background-size: 50% 30%;}
+div {background-size: cover;}
+div {background-size: contain;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/03/14.png" alt="14" class="alignleft"><figcaption>Рис. 8. Свойство background-size</figcaption></figure>
+<h3 id="background">9. Задание фона элемента одним свойством background</h3>
+<p>Свойство позволяет описать в одном объявлении следующие свойства фона: <kbd>background-color</kbd>, <kbd>background-image</kbd>, <kbd>background-position</kbd>, <kbd>background-size</kbd>, <kbd>background-repeat</kbd>, <kbd>background-origin</kbd>, <kbd>background-clip</kbd> и <kbd>background-attachment</kbd>. Необязательно указывать все перечисленные свойства, если какое-либо свойство будет пропущено, оно примет значение по-умолчанию.</p>
+<p>Если вы указываете в краткой записи фона свойство <kbd>background-size</kbd>, то его значения нужно будет записать через слеш <kbd>/</kbd>, чтобы отделить его от свойства <kbd>background-position</kbd>.</p>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >body { 
+background: #00ff00 url("smiley.gif") no-repeat fixed center; 
+}</pre>
+<h3 id="part9">10. Множественные фоны</h3>
+<p>CSS3 предоставила еще одну полезную возможность &#8212; множественные фоны, которые можно задавать как для страницы целиком, так и для конкретного блока. Например:</p>
+<pre class="lang:css decode:true ">div {
+width: 680px;
+height: 630px;
+background-image: url(https://html5book.ru/wp-content/uploads/2015/02/flower_rose.png), url(https://html5book.ru/wp-content/uploads/2015/02/love.png), url(https://html5book.ru/wp-content/uploads/2015/02/border_white.png);
+background-repeat: no-repeat;
+background-position: bottom right, center center, top left;
+}</pre>
+<p>Изображения нужно перечислять в порядке наложения, самое верхнее изображение должно быть первым, а самое большое, расположенное на заднем плане &#8212; последним.</p>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/10/backgrounds.png" alt="backgrounds" width="660" height="612" class="alignnone size-full wp-image-4206" srcset="https://html5book.ru/wp-content/uploads/2014/10/backgrounds.png 660w, https://html5book.ru/wp-content/uploads/2014/10/backgrounds-300x278.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 9. Пример использования нескольких фоновых изображений</figcaption></figure>
+
+<br><br><br><br><br><br></div></div></div>
+
+      
+     <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

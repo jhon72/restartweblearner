@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a class="active" href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>Циклы JavaScript</h2>
+                        <b>Циклы JavaScript</b> обеспечивают многократное выполнение повторяющихся вычислений. Они оптимизируют процесс написания кода, выполняя одну и ту же инструкцию или блок инструкций, образующих тело цикла, заданное число раз (используя переменную-счётчик) или пока заданное условие истинно. Циклы выполняют обход последовательности значений. Однократное выполнение цикла называется <b>итерацией</b>. </p>
+<p>На производительность цикла влияют количество итераций и количество операций, выполняемых в теле цикла каждой итерации.</p>
+<p>В JavaScript существуют следующие операторы цикла:</p>
+<p>1) <kbd>for</kbd> используется когда вы заранее знаете, сколько раз вам нужно что-то сделать;<br />
+2) <kbd>for...in</kbd> используется для обхода свойств объектов;<br />
+3) <kbd>while</kbd> используется когда вы не знаете, сколько раз нужно что-то сделать;<br />
+4) <kbd>do...while</kbd> работает аналогично с оператором <kbd>while</kbd>. Отличается тем, что <kbd>do...while</kbd> всегда выполняет выражение в фигурных скобках, по крайней мере один раз, даже если проверка условия возвращает <kbd>false</kbd>.</p>
+<h2>Типы циклов в JavaScript, управление циклом</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#part1">1. Цикл for</a></li>
+<li><a href="#part2">2. Цикл for&#8230;in</a></li>
+<li><a href="#part3">3. Цикл while</a></li>
+<li><a href="#part4">4. Цикл do&#8230;while</a></li>
+<li><a href="#part5">5. Бесконечный цикл</a></li>
+<li><a href="#part6">6. Вложенный цикл</a></li>
+<li><a href="#part7">7. Управление циклом</a></li>
+</ul>
+<h3 id="part1">1. Цикл for</h3>
+<p>Цикл <kbd>for</kbd> используется для выполнения итераций по элементам массивов или объектов, напоминающих массивы, таких как <kbd>arguments</kbd> и <kbd>HTMLCollection</kbd>. Условие проверяется перед каждой итерацией цикла. В случае успешной проверки выполняется код внутри цикла, в противном случае код внутри цикла не выполняется и программа продолжает работу с первой строки, следующей непосредственно после цикла.    </p>
+<p>Следующий цикл выведет на консоль строчку <kbd>Hello, JavaScript!</kbd> пять раз.</p>
+<pre class="lang:js decode:true " >for (var i = 0; i &lt; 5; i++) {
+  console.log(i + ": Hello, JavaScript!");
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2017/01/loop-for.png" alt="" width="680" height="238" class="alignnone size-full wp-image-10709" srcset="https://html5book.ru/wp-content/uploads/2017/01/loop-for.png 680w, https://html5book.ru/wp-content/uploads/2017/01/loop-for-300x105.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 1. Результат выполнения цикла for на консоли</figcaption></figure>
+<h4>1.1. Как работает цикл for</h4>
+<p>Цикл <kbd>for</kbd> состоит из трёх разных операций:</p>
+<p>Шаг 1. <b>инициализация</b> <kbd>var i = 0;</kbd> &#8212; объявление переменной-счётчика, которая будет проверяться во время выполнения цикла. Эта переменная инициализируется со значением <kbd>0</kbd>. Чаще всего в качестве счётчиков цикла выступают переменные с именами <kbd>i</kbd>, <kbd>j</kbd> и <kbd>k</kbd>.</p>
+<p>Шаг 2. <b>проверка условия</b> <kbd>i &lt; 5;</kbd> &#8212; условное выражение, если оно возвращает <kbd>true</kbd>, тело цикла (инструкция в фигурных скобках) будет выполнено. В данном примере проверка условия идёт до тех пор, пока значение счётчика меньше <kbd>5</kbd>.</p>
+<p>Шаг 3. <b>завершающая операция</b> <kbd>i++</kbd> &#8212; операция приращения счётчика, увеличивает значение переменной <kbd>var i</kbd> на единицу. Вместо операции инкремента также может использоваться операция декремента.</p>
+<p>По завершении цикла в переменной <kbd>var i</kbd> сохраняется значение <kbd>1</kbd>. Следующий виток цикла выполняется для <kbd>for (var i = 1; i &lt; 5; i++) { }</kbd>. Условное выражение вычисляется снова, чтобы проверить, является ли значение счётчика <kbd>i</kbd> всё ещё меньше <kbd>5</kbd>. Если это так, операторы в теле цикла выполняются ещё раз. Завершающая операция снова увеличивает значение переменной на единицу. Шаги 2 и 3 повторяются до тех пор, пока условие <kbd>i &lt; 5;</kbd> возвращает <kbd>true</kbd>. </p>
+<h4>1.2. Вывод значений массива</h4>
+<p>Чтобы вывести значения массива с помощью цикла <kbd>for</kbd>, нужно задействовать свойство массива <kbd>length</kbd>. Это поможет определить количество элементов в массиве и выполнить цикл такое же количество раз.</p>
+<p>Приведённый ниже скрипт выведет на экран пять сообщений с названиями цветов: </p>
+<pre class="lang:js decode:true " >var flowers = ["Rose", "Lily", "Tulip", "Jasmine", "Orchid"];
+for (var i = 0; i &lt; flowers.length; i++){ 
+  alert(flowers[i] + " - это цветок.");
+}</pre>
+<p>Если значение свойства <kbd>length</kbd> не изменяется в ходе выполнения цикла, можно сохранить его в локальной переменной, а затем использовать эту переменную в условном выражении. Таким образом можно повысить скорость выполнения цикла, так как значение свойства <kbd>length</kbd> будет извлекаться всего один раз за всё время работы цикла.</p>
+<pre class="lang:js decode:true " >var flowers = ["Rose", "Lily", "Tulip", "Jasmine", "Orchid"], len = flowers.length;
+for (var i = 0; i < len; i++){ 
+  alert(flowers[i] + " - это цветок.");
+}</pre>
+<h3 id="part2">2. Цикл for...in</h3>
+<p>Циклы <kbd>for...in</kbd> используются для обхода свойств объектов, не являющихся массивами. Такой обход также называется <b>перечислением</b>. При обходе рекомендуется использовать метод <kbd>hasOwnProperty()</kbd>, чтобы отфильтровать свойства, которые были унаследованы от прототипа.</p>
+<p>Для примера создадим объект с помощью литерала объекта. </p>
+<pre class="lang:js decode:true " >var user = {
+  name: 'Alice', 
+  age: 25, 
+  country: 'Russia'
+};
+
+for (var prop in user) {
+  console.log(prop + ": " + user[prop]);
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2017/01/for-in-loop.png" alt="" width="680" height="284" class="alignnone size-full wp-image-10715" srcset="https://html5book.ru/wp-content/uploads/2017/01/for-in-loop.png 680w, https://html5book.ru/wp-content/uploads/2017/01/for-in-loop-300x125.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 2. Результат выполнения цикла for...in на консоли</figcaption></figure>
+<p>Предположим, что в сценарии до или после создания объекта <kbd>user</kbd> прототип объекта <kbd>Object</kbd> был расширен дополнительным методом <kbd>clone()</kbd>. </p>
+<pre class="lang:js decode:true " >if (typeof Object.prototype.clone === 'undefined') {
+  Object.prototype.clone = function () {};
+}</pre>
+<p>Так как цепочка наследования прототипа постоянно проверяется интерпретатором, то все объекты автоматически получают доступ к новому методу. </p>
+<figure><img src="https://html5book.ru/wp-content/uploads/2017/01/loop-for-in-2.png" alt="" width="680" height="332" class="alignnone size-full wp-image-10711" srcset="https://html5book.ru/wp-content/uploads/2017/01/loop-for-in-2.png 680w, https://html5book.ru/wp-content/uploads/2017/01/loop-for-in-2-300x146.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 3. Результат повторного выполнения цикла for...in на консоли</figcaption></figure>
+<p>Чтобы избежать обнаружения этого метода в процессе перечисления свойств объекта <kbd>user</kbd>, используется метод <kbd>hasOwnProperty()</kbd>, который отфильтрует свойства прототипа.</p>
+<pre class="lang:js decode:true " >
+var user = {
+  name: 'Alice', 
+  age: 25, 
+  country: 'Russia'
+};
+if (typeof Object.prototype.clone === 'undefined') {
+  Object.prototype.clone = function () {};
+}
+for (var prop in user) {
+  if (user.hasOwnProperty(prop)) {
+    console.log(prop + ": " + user[prop]);
+}
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2017/01/loop-for-in-3.png" alt="" width="680" height="341" class="alignnone size-full wp-image-10712" srcset="https://html5book.ru/wp-content/uploads/2017/01/loop-for-in-3.png 680w, https://html5book.ru/wp-content/uploads/2017/01/loop-for-in-3-300x150.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 4. Результат перечисления свойств объекта с помощью метода hasOwnProperty()</figcaption></figure>
+<h3 id="part3">3. Цикл while</h3>
+<p>Цикл <kbd>while</kbd> - цикл с предварительной проверкой условного выражения. Инструкция внутри цикла (блок кода в фигурных скобках) будет выполняться в случае, если условное выражение вычисляется в <kbd>true</kbd>. Если первая проверка даст результат <kbd>false</kbd>, блок инструкций не выполнится ни разу. </p>
+<p>После завершения итерации цикла условное выражение опять проверяется на истинность и процесс будет повторяться до тех пор, пока выражение не будет вычислено как <kbd>false</kbd>. В этом случае программа продолжит работу с первой строки, следующей непосредственно после цикла (если таковая имеется).  </p>
+<p>Данный цикл выведет на экран таблицу умножения для числа 3:</p>
+<pre class="lang:js decode:true " >var i = 1; 
+var msg = '';
+while (i &lt; 10) {
+  msg+= i + ' x 3 = ' + (i * 3) + '&lt;br&gt;';  
+  i++;
+}
+document.write(msg);</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2017/01/while-loop.png" alt="" width="680" height="201" class="alignnone size-full wp-image-10717" srcset="https://html5book.ru/wp-content/uploads/2017/01/while-loop.png 680w, https://html5book.ru/wp-content/uploads/2017/01/while-loop-300x89.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 5. Результат выполнения цикла while</figcaption></figure>
+<h3 id="part4">4. Цикл do...while</h3>
+<p>Цикл <kbd>do...while;</kbd> проверяет условие продолжения после выполнения цикла. В отличие от цикла <kbd>while</kbd>, в <kbd>do...while;</kbd> тело цикла выполняется как минимум один раз, так как условие проверяется в конце цикла, а не в начале. Данный цикл используется реже, чем <kbd>while</kbd>, так как на практике ситуация, когда требуется хотя бы однократное исполнение цикла, встречается редко.</p>
+<pre class="lang:js decode:true " >var result = '';
+var i = 0;
+do {
+   i += 1;
+   result += i + ' ';
+} while (i &lt; 5);
+document.write(result);</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2017/01/do-while-loop.png" alt="" width="680" height="200" class="alignnone size-full wp-image-10718" srcset="https://html5book.ru/wp-content/uploads/2017/01/do-while-loop.png 680w, https://html5book.ru/wp-content/uploads/2017/01/do-while-loop-300x88.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 6. Результат выполнения цикла do...while</figcaption></figure>
+<p>В следующем примере операторы внутри цикла выполняются один раз, даже если условие не выполняется.</p>
+<pre class="lang:js decode:true " >var i = 10;
+do {
+    document.write(i + ' ');
+    i++;
+} while (i &lt; 10);</pre>
+<h3 id="part5">5. Бесконечные циклы</h3>
+<p>При создании любого цикла можно создать бесконечный цикл, который никогда не завершится. Такой цикл может потенциально продолжать работать до тех пор, пока работает компьютер пользователя. Большинство современных браузеров могут обнаружить это и предложат пользователю остановить выполнение скрипта. Чтобы избежать создания бесконечного цикла, вы должны быть уверены, что заданное условие в какой-то момент вернёт <kbd>false</kbd>. Например, следующий цикл задаёт условие, которое никогда не возвращает ложь, так как переменная <kbd>i</kbd> никогда не будет меньше <kbd>10</kbd>:</p>
+<pre class="lang:js decode:true " >for (var i = 25; i > 10; i++) {
+document.write("Это предложение будет выводиться бесконечно...&lt;br&gt;");
+}</pre>
+<h3 id="part6">6. Вложенные циклы</h3>
+<p>Цикл внутри другого цикла называется <b>вложенным</b>. При каждой итерации цикла вложенный цикл выполняется полностью. Вложенные циклы можно создавать с помощью цикла <kbd>for</kbd> и цикла <kbd>while</kbd>.</p>
+<pre class="lang:js decode:true " >for (var count = 1; count &lt; 3; count++) {
+  document.write(count + ". Строка цикла&lt;br&gt;");
+  for (var nestcount = 1; nestcount&lt; 3; nestcount++) {
+    document.write("Строка вложенного цикла&lt;br&gt;");
+  }
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2016/05/nested-loop.png" alt="nested-loop" width="648" height="163" class="alignleft size-full wp-image-9026" srcset="https://html5book.ru/wp-content/uploads/2016/05/nested-loop.png 648w, https://html5book.ru/wp-content/uploads/2016/05/nested-loop-300x75.png 300w" sizes="(max-width: 648px) 100vw, 648px" /><figcaption>Рис. 7. Результат выполнения вложенного цикла for</figcaption></figure>
+<h3 id="part7">7. Управление циклом</h3>
+<p>Циклом можно управлять с помощью операторов <kbd>break;</kbd> и <kbd>continue;</kbd>. </p>
+<h4>7.1. Оператор break;</h4>
+<p>Оператор <kbd>break;</kbd> завершает выполнение текущего цикла. Он используется в исключительных случаях, когда цикл не может выполняться по какой-то причине, например, если приложение обнаруживает ошибку. Чаще всего оператор <kbd>break;</kbd> является частью конструкции <kbd>if</kbd>.</p>
+<p>Когда оператор <kbd>break;</kbd> используется без метки, он позволяет выйти из цикла или из инструкции <kbd>switch</kbd>. В следующем примере создаётся счётчик, значения которого должны изменяться от <kbd>1</kbd> до <kbd>99</kbd>, однако оператор <kbd>break</kbd> прерывает цикл после 14 итераций.</p>
+<pre class="lang:js decode:true " >for (var i = 1; i &lt; 100; i++) {
+  if (i == 15) {
+    break;
+    }
+  document.write(i);
+  document.write(' &lt;br&gt;');
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2017/01/loop-break.png" alt="" width="680" height="269" class="alignnone size-full wp-image-10723" srcset="https://html5book.ru/wp-content/uploads/2017/01/loop-break.png 680w, https://html5book.ru/wp-content/uploads/2017/01/loop-break-300x119.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 8. Результат работы оператора break в цикле for</figcaption></figure>
+<p>Для вложенных циклов оператор <kbd>break;</kbd> используется с меткой, с помощью которой завершается работа именованной инструкции. Метка позволяет выйти из любого блока кода. Именованной инструкцией может быть любая инструкция, внешняя по отношению к оператору <kbd>break;</kbd>. В качестве метки может быть имя инструкции <kbd>if</kbd> или имя блока инструкций, заключенных в фигурные скобки только для присвоения метки этому блоку. Между ключевым словом <kbd>break;</kbd> и именем метки не допускается перевод строки. </p>
+<pre class="lang:js decode:true " >outerloop:
+  for(var i = 0; i &lt; 10; i++) {
+    innerloop:
+      for(var j = 0; j &lt; 10; j++) {
+        if (j &gt; 3) break; // Выход из самого внутреннего цикла
+        if (i == 2) break innerloop; // То же самое
+        if (i == 4) break outerloop; // Выход из внешнего цикла
+        document.write("i = " + i + " j = " + j + "&lt;br&gt;");
+      }
+    }
+document.write("FINAL i = " + i + " j = " + j + "&lt;br&gt;");</pre>
+<h4>7.2. Оператор continue;</h4>
+<p>Оператор <kbd>continue;</kbd> останавливает текущую итерацию цикла и запускает новую итерацию. При этом, цикл <kbd>while</kbd> возвращается непосредственно к своему условию, а цикл <kbd>for</kbd> сначала вычисляет выражение инкремента, а затем возвращается к условию.</p>
+<p>В этом примере на экран будут выведены все чётные числа:</p>
+<pre class="lang:js decode:true " >var i;
+  for(i = 1; i &lt;= 10; i++) {
+    if (i % 2 !== 0) {
+      continue;
+    }
+    document.write("&lt;br&gt;&lt;b&gt;чётное число&lt;/b&gt; = " + i);
+  }</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2017/01/js-continue.png" alt="" width="680" height="199" class="alignnone size-full wp-image-10751" srcset="https://html5book.ru/wp-content/uploads/2017/01/js-continue.png 680w, https://html5book.ru/wp-content/uploads/2017/01/js-continue-300x88.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 9. Результат работы оператора continue в цикле for</figcaption></figure>
+<p>Оператор <kbd>continue;</kbd> также может применяться во вложенных циклах с меткой. </p>
+<pre class="lang:js decode:true " >outerloop:
+for (var i = 0; i < 3; i++)
+{
+  document.write("внешний цикл: "+i+"<br />");
+  for (var j = 0; j < 5; j++)
+  {
+    if (i == 1)
+    break;
+    if (j == 3)
+    continue outerloop;
+    document.write("вложенный цикл: "+j+"<br />");
+   }
+}
+document.write("Все циклы выполнены"+"<br />");</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2017/01/js-continue-label.png" alt="" width="680" height="297" class="alignnone size-full wp-image-10753" srcset="https://html5book.ru/wp-content/uploads/2017/01/js-continue-label.png 680w, https://html5book.ru/wp-content/uploads/2017/01/js-continue-label-300x131.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 10. Результат работы оператора continue с меткой</figcaption></figure>
+                        
+<br><br><br><br><br><br></div></div></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html> 

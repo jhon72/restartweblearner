@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      
+      
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+
+<h2>CSS Таблицы</h2>
+    <p>Спецификация CSS даёт неограниченные возможности для оформления таблиц. По умолчанию таблица и ячейки таблицы не имеют видимых границ и фона, при этом ячейки внутри таблицы не прилегают вплотную друг к другу. </p>
+<p>Ширина ячеек таблицы определяется шириной их содержимого, поэтому ширина столбцов таблицы может быть разной. Высота всех ячеек ряда одинаковая и определяется высотой самой высокой ячейки.</p>
+<h2 style="clear:both">Форматирование таблиц</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#part1">1. Границы таблицы <kbd>border</kbd></a></li>
+<li><a href="#part2">2. Как задать ширину и высоту таблицы</a></li>
+<li><a href="#part3">3. Как задать фон таблицы</a></li>
+<li><a href="#part4">4. Столбцы таблицы</a></li>
+<li><a href="#caption-side">5. Как добавить таблице заголовок</a></li>
+<li><a href="#border-collapse">6. Как убрать промежуток между рамками ячеек</a></li>
+<li><a href="#border-spacing">7. Как увеличить промежуток между рамками ячеек</a></li>
+<li><a href="#empty-cells">8. Как скрыть пустые ячейки таблицы</a></li>
+<li><a href="#table-layout">9. Компоновка макета таблицы с помощью свойства <kbd>table-layout</kbd></a></li>
+<li><a href="#top_table">10. Лучшие макеты таблиц (<strong>Топ-10 таблиц</strong>)</a></li>
+</ul>
+<h3 id="part1">1. Границы таблицы border</h3>
+<p>Таблица и ячейки внутри неё по-умолчанию отображаются в браузере без видимых границ. <b>Границы таблицы</b> задаются свойством <kbd>border</kbd>: </p>
+<pre class="lang:css decode:true " >table {
+border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+border: 1px solid grey; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+}</pre>
+<p><b>Границы ячеек заголовка</b> каждого столбца задаются для элемента <kbd>th</kbd>:</p>
+<pre class="lang:css decode:true " >th {border: 1px solid grey;}</pre>
+<p><b>Границы ячеек</b> тела таблицы задаются для элемента <kbd>td</kbd>:</p>
+<pre class="lang:css decode:true " >td {border: 1px solid grey;}</pre>
+<p>Толщина рамок соседних ячеек не удваивается, поэтому задать границы для всей таблицы можно следующим способом:</p>
+<pre>th, td {border: 1px solid grey;}</pre>
+<p>Внешнюю границу таблицы можно выделить, задав ей увеличенную ширину: </p>
+<pre>table {border: 3px solid grey;}</pre>
+<p>Границы можно задавать частично:</p>
+<pre class="lang:css decode:true " >/* устанавливаем для таблицы внешнюю границу серого цвета толщиной 3px */
+table {border-top: 3px solid grey; }
+/* задаём для ячейки тела таблицы границу серого цвета толщиной 1px */
+td {border-bottom: 1px solid grey;}</pre>
+
+<h3 id="part2">2. Как задать ширину и высоту таблицы</h3>
+<p>По умолчанию <b>ширина и высота таблицы</b> определяется содержимым её ячеек. Если ширина не задана, то она будет равна ширине самого широкого ряда (строки). </p>
+<p><b>Ширина таблицы и столбцов</b> задаётся с помощью свойства <kbd>width</kbd>. Если для таблицы задано <kbd>table {width: 100%;}</kbd>, то ширина таблицы будет равна ширине блока-контейнера, в котором она находится.</p>
+<p>Ширину таблицы и столбцов обычно задают в <kbd>px</kbd> или <kbd>%</kbd>, например:</p>
+<pre class="lang:css decode:true " >table {width: 600px;}
+th {width: 20%;}
+td:first-child {width: 30%;}</pre>
+<p><b>Высота таблицы</b> не задается. <b>Высотой рядов</b> таблицы можно управлять, добавив верхний и нижний <kbd>padding</kbd> для элементов <kbd>&lt;td&gt;</kbd> и <kbd>&lt;th&gt;</kbd>. Фиксировать высоту с помощью свойства <kbd>height</kbd> не рекомендуется.</p>
+<pre class="lang:css decode:true " >th, td {padding: 10px 15px;}</pre>
+<h3 id="part3">3. Как задать фон таблицы</h3>
+<p>По умолчанию <b>фон таблицы</b> и ячеек прозрачный. Если страница или блок, содержащие таблицу, имеют фон, то он будет просвечиваться сквозь таблицу. Если фон задан и для таблицы и для ячеек, то в местах наложения фона таблицы и ячеек будет виден фон только ячеек. В качестве фона для таблицы в целом и её ячеек могут выступать:<br />
+заливка сплошным цветом,<br />
+градиентная заливка,<br />
+фоновое изображение.</p>
+<h3 id="part4">4. Столбцы таблицы</h3>
+<p>Модель CSS таблиц ориентирована в основном на строки (ряды), формируемые с помощью тега <kbd>&#60;tr&#62;</kbd>. На практике бывают случаи, когда необходимо специальное форматирование столбцов, которое возможно следующими способами:</p>
+<p><span class="first">с</span> помощью тега <kbd>&#60;col&#62;</kbd> можно задать фон для любого количества столбцов;</p>
+<p><span class="first">с</span> помощью селектора <kbd>table td:first-child</kbd>, <kbd>table td:last-child</kbd> можно задать стили для первого или последнего столбца таблицы (за исключением первой ячейки заголовка таблицы);</p>
+<p><span class="first">с</span> помощью селектора <kbd>table td:nth-child(правило отбора столбцов)</kbd> можно задать стили для любых столбцов таблицы. </p>
+
+<h3 id="caption-side">5. Как добавить таблице заголовок</h3>
+<p>Добавить заголовок в таблицу можно с помощью тега <kbd>&lt;caption&gt;</kbd>, а с помощью свойства <kbd>caption-side</kbd> его можно поместить перед таблицей или под ней. Для горизонтального выравнивания текста заголовка применяется свойство <kbd>text-align</kbd>. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">caption-side</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>top</kbd></td>
+<td>Заголовок таблицы располагается над таблицей. Значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>bottom</kbd></td>
+<td>Располагает заголовок под таблицей.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<pre class="lang:default decode:true ">&lt;table&gt;
+   &lt;caption&gt;Таблица № 1&lt;/caption&gt;
+      &lt;tr&gt;
+         &lt;th&gt;Company&lt;/th&gt;
+         &lt;th&gt;Q1&lt;/th&gt;
+         &lt;th&gt;Q2&lt;/th&gt;
+         &lt;th&gt;Q3&lt;/th&gt;
+         &lt;th&gt;Q4&lt;/th&gt;
+      &lt;/tr&gt;
+...
+&lt;/table&gt;</pre>
+<pre class="lang:css decode:true ">caption {
+caption-side: bottom;
+text-align: right;
+padding: 10px 0; 
+font-size: 14px;
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/06/caption_side.png" alt="caption_side" width="495" height="223" class="alignleft size-full wp-image-2389" srcset="https://html5book.ru/wp-content/uploads/2014/06/caption_side.png 495w, https://html5book.ru/wp-content/uploads/2014/06/caption_side-300x135.png 300w" sizes="(max-width: 495px) 100vw, 495px" /><figcaption style="clear:both">Рис. 2. Пример отображения заголовка под таблицей</figcaption></figure>
+<h3 style="clear:both" id="border-collapse">6. Как убрать промежуток между рамками ячеек</h3>
+<p>Рамки ячеек таблицы по умолчанию разделены небольшим промежутком. Если задать для таблицы <kbd>border-collapse: collapse</kbd>, то промежуток уберётся. Свойство наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-collapse</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>separate</kbd></td>
+<td>Рамки ячеек располагаются раздельно.</td>
+</tr>
+<tr>
+<td><kbd>collapse</kbd></td>
+<td>Рамки ячеек сливаются в одну, а промежутки между рамками убираются.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">table {border-collapse: collapse;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/06/table_border_collapse1.png" alt="table_border_collapse" width="668" height="208" class="alignleft size-full wp-image-2399" srcset="https://html5book.ru/wp-content/uploads/2014/06/table_border_collapse1.png 668w, https://html5book.ru/wp-content/uploads/2014/06/table_border_collapse1-300x93.png 300w" sizes="(max-width: 668px) 100vw, 668px" /><figcaption style="clear:both">Рис. 3. Пример таблиц со сливающимися и раздельными рамками ячеек</figcaption></figure>
+<h3 style="clear:both" id="border-spacing">7. Как увеличить промежуток между рамками ячеек</h3>
+<p>С помощью свойства <kbd>border-spacing</kbd> можно менять расстояние между рамками ячеек. Данное свойство применяется к таблице в целом. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">border-spacing</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>&lt;длина&gt; &lt;длина&gt;</td>
+<td>Добавляет промежутки между рамками как по вертикали, так и по горизонтали. Если заданы две длины, то первая всегда определяет горизонтальный промежуток, а вторая &#8212; вертикальный.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">table {border-collapse: separate; border-spacing: 10px 20px;}
+table {border-collapse: separate; border-spacing: 10px;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/06/table_border_spacing.png" alt="table_border_spacing" width="651" height="334" class="alignleft size-full wp-image-2401" srcset="https://html5book.ru/wp-content/uploads/2014/06/table_border_spacing.png 651w, https://html5book.ru/wp-content/uploads/2014/06/table_border_spacing-300x153.png 300w" sizes="(max-width: 651px) 100vw, 651px" /><figcaption style="clear:both">Рис. 4. Пример таблиц с увеличенными промежутками между рамками ячеек</figcaption></figure>
+<h3 style="clear:both" id="empty-cells">8. Как скрыть пустые ячейки таблицы</h3>
+<p>Свойство <kbd>empty-cells</kbd> скрывает или показывает пустые ячейки. Действует только на ячейки, которые не содержат какой-либо контент. Если для ячейки задан фон, а для таблицы задано <kbd>table {border-collapse: collapse;}</kbd>, то ячейка не будет скрыта. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">empty-cells</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>show</kbd></td>
+<td>Рамка и фон пустой ячейки будут отрисовываться так же, как для ячейки таблицы, имеющей содержимое.</td>
+</tr>
+<tr>
+<td><kbd>hide</kbd></td>
+<td>Если все ячейки строки пусты, то вся строка отображается так, если бы было задано значение <kbd>display: none</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<pre class="lang:default decode:true ">&lt;table&gt;
+&lt;tr&gt;
+  &lt;th&gt;Company&lt;/th&gt;
+  &lt;th&gt;Q1&lt;/th&gt;
+  &lt;th&gt;Q2&lt;/th&gt;
+  &lt;th&gt;Q3&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Microsoft&lt;/td&gt;
+  &lt;td&gt;20.3&lt;/td&gt;
+  &lt;td&gt;30.5&lt;/td&gt;
+  &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td&gt;Google&lt;/td&gt;
+  &lt;td&gt;50.2&lt;/td&gt;
+  &lt;td&gt;40.63&lt;/td&gt;
+  &lt;td&gt;45.23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</pre>
+<pre class="lang:css decode:true ">table {
+border: 1px solid #69c;
+border-collapse: separate;
+empty-cells: hide;
+}
+th, td {border: 2px solid #69c;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/06/table_empty.png" alt="table_empty" width="278" height="148" class="alignleft size-full wp-image-2404"><figcaption style="clear:both">Рис. 5. Пример скрытия пустой ячейки таблицы</figcaption></figure>
+<h3 style="clear:both" id="table-layout">9. Компоновка макета таблицы с помощью свойства table-layout</h3>
+<p>Компоновка макета таблицы определяется одним из двух подходов: фиксированный макет или автоматический макет. Под компоновкой в данном случае подразумевается как распределяется ширина таблицы между шириной ячеек. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">table-layout</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>auto</kbd></td>
+<td>Значение по умолчанию. Ширина макета таблицы определяется шириной её содержимого с учетом значений свойств <kbd>padding-left</kbd>, <kbd>padding-right</kbd>, <kbd>border-left width</kbd> плюс одна ширина <kbd>border-right</kbd> последней ячейки в ряду, или заданной шириной ячеек и толщиной рамки. Если ширина ячеек не задана явно, они могут быть разной ширины.</td>
+</tr>
+<tr>
+<td><kbd>fixed</kbd></td>
+<td>Свойство сработает только в том случае, если для таблицы задана ширина. Ширина ячеек будет одинаковой, а содержимое ячеек, которое не помещается в ячейку, будет наползать под содержимое соседней ячейки.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">table {table-layout: fixed;}</pre>
+<h3 id="top_table">10. Лучшие макеты таблиц</h3>
+
+<p><img src="https://html5book.ru/wp-content/uploads/2014/06/top-table.png" alt="top-table" width="660" height="350" class="alignleft size-full wp-image-4606" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table-300x159.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<p style="text-align:center"><a class="read-more-button" href="https://html5book.ru/examples/demo-top10-tables.html" target="_blank">Перейти на страницу с примерами</a></p>
+<h4>1. Горизонтальный минимализм</h4>
+<p>Горизонтальные таблицы &#8212; это таблицы, текст в которых читается по горизонтали. Каждая сущность представляет собой отдельную строку. Вы можете оформить подобные таблицы в минималистском стиле, поместив  двухпиксельную границу под заголовком <kbd>th</kbd>.<br />
+<img src="https://html5book.ru/wp-content/uploads/2014/06/top-table1.png" alt="top-table1" width="660" height="199" class="alignleft size-full wp-image-4584" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table1.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table1-300x90.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:default decode:true " >&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Employee&lt;/th&gt;&lt;th&gt;Salary&lt;/th&gt;&lt;th&gt;Bonus&lt;/th&gt;&lt;th&gt;Supervisor&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Stephen C. Cox&lt;/td&gt;&lt;td&gt;$300&lt;/td&gt;&lt;td&gt;$50&lt;/td&gt;&lt;td&gt;Bob&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Josephin Tan&lt;/td&gt;&lt;td&gt;$150&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;Annie&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Joyce Ming&lt;/td&gt;&lt;td&gt;$200&lt;/td&gt;&lt;td&gt;$35&lt;/td&gt;&lt;td&gt;Andy&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;James A. Pentel&lt;/td&gt;&lt;td&gt;$175&lt;/td&gt;&lt;td&gt;$25&lt;/td&gt;&lt;td&gt;Annie&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</pre>
+<pre class="lang:css decode:true " >table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  background: white;
+  max-width: 70%;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: left;
+}
+th {
+  font-weight: normal;
+  color: #039;
+  border-bottom: 2px solid #6678b1;
+  padding: 10px 8px;
+}
+td {
+  color: #669;
+  padding: 9px 8px;
+  transition: .3s linear;
+}
+tr:hover td {color: #6699ff;}</pre>
+<p>При большом количестве строк такой дизайн таблиц затрудняет их чтение. Для решения этой проблемы можно добавить однопиксельную границу под всеми элементами <kbd>td</kbd>.<br />
+<img src="https://html5book.ru/wp-content/uploads/2014/06/top-table2.png" alt="top-table2" width="660" height="178" class="alignleft size-full wp-image-4586" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table2.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table2-300x81.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:css decode:true " >td {
+  border-bottom: 1px solid #ccc;
+  color: #669;
+  padding: 9px 8px;
+  transition: .3s linear;
+}/*остальной код - как в примере выше*/</pre>
+<p>Добавление эффекта <kbd>:hover</kbd> для элемента <kbd>tr</kbd> облегчит чтение таблиц, оформленных в минималистском стиле. При наведении курсора мыши на ячейку, остальные ячейки той же строки выделяются одновременно, что упрощает процесс отслеживания информации, если таблицы имеют несколько столбцов.<br />
+<img src="https://html5book.ru/wp-content/uploads/2014/06/top-table3.png" alt="top-table3" width="660" height="209" class="alignleft size-full wp-image-4590" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table3.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table3-300x95.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:css decode:true " >th {
+  font-weight: normal;
+  color: #039;
+  padding: 10px 15px;
+}
+td {
+  color: #669;
+  border-top: 1px solid #e8edff;
+  padding: 10px 15px;
+}
+tr:hover td {background: #e8edff;}</pre>
+<h4>2. Вертикальный минимализм</h4>
+<p>Несмотря на то, что подобные таблицы используются редко, тем не менее, вертикально ориентированные таблицы полезны для категоризации или сравнения описания объектов, представленных колонкой. Можно оформить их в минималистском стиле, добавив пробел, разделяющий столбцы.<br />
+<img src="https://html5book.ru/wp-content/uploads/2014/06/top-table4.png" alt="top-table4" width="660" height="219" class="alignleft size-full wp-image-4592" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table4.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table4-300x100.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:css decode:true " >th {
+  font-weight: normal;
+  border-bottom: 2px solid #6678b1;
+  border-right: 30px solid #fff;
+  border-left: 30px solid #fff;
+  color: #039;
+  padding: 8px 2px;
+}
+td {
+  border-right: 30px solid #fff;
+  border-left: 30px solid #fff;
+  color: #669;
+  padding: 12px 2px;
+}</pre>
+<h4>3. &#171;Коробочный&#187; стиль</h4>
+<p>Наиболее надежным стилем для оформления таблиц всех типов, является так называемый &#171;коробочный&#187; стиль. Достаточно подобрать хорошую цветовую гамму, а затем задать цвет фона для всех ячеек. Не забудьте подчеркнуть различие между строками, установив границы в качестве разделителя.<br />
+<img src="https://html5book.ru/wp-content/uploads/2014/06/top-table5.png" alt="top-table5" width="660" height="192" class="alignleft size-full wp-image-4594" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table5.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table5-300x87.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:css decode:true " >th {
+  font-size: 13px;
+  font-weight: normal;
+  background: #b9c9fe;
+  border-top: 4px solid #aabcfe;
+  border-bottom: 1px solid #fff;
+  color: #039;
+  padding: 8px;
+}
+td {
+  background: #e8edff;
+  border-bottom: 1px solid #fff;
+  color: #669;
+  border-top: 1px solid transparent;
+  padding: 8px;
+}
+tr:hover td {background: #ccddff;}</pre>
+<p>Самое сложное &#8212; найти ту цветовую гамму, которая будет гармонично сочетаться с вашим сайтом. Если сайт нагружен по графике и дизайну, то вам будет довольно трудно использовать этот стиль.<br />
+<img src="https://html5book.ru/wp-content/uploads/2014/06/top-table6.png" alt="top-table6" width="660" height="198" class="alignleft size-full wp-image-4595" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table6.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table6-300x90.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:css decode:true " >table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  max-width: 70%;
+  width: 70%;
+  text-align: center;
+  border-collapse: collapse;
+  border-top: 7px solid #9baff1;
+  border-bottom: 7px solid #9baff1;
+}
+th {
+  font-size: 13px;
+  font-weight: normal;
+  background: #e8edff;
+  border-right: 1px solid #9baff1;
+  border-left: 1px solid #9baff1;
+  color: #039;
+  padding: 8px;
+}
+td {
+  background: #e8edff;
+  border-right: 1px solid #aabcfe;
+  border-left: 1px solid #aabcfe;
+  color: #669;
+  padding: 8px;
+}</pre>
+<h4>4. Горизонтальная зебра</h4>
+<p>Зебра-таблица выглядит довольно привлекательной и удобной. Дополнительный цвет фона может служить в качестве визуальной подсказки для людей при чтении таблицы.<br />
+<img src="https://html5book.ru/wp-content/uploads/2014/06/top-table7.png" alt="top-table7" width="660" height="209" class="alignleft size-full wp-image-4598" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table7.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table7-300x95.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:css decode:true " >th {
+  font-weight: normal;
+  color: #039;
+  padding: 10px 15px;
+}
+td {
+  color: #669;
+  border-top: 1px solid #e8edff;
+  padding: 10px 15px;
+}
+tr:nth-child(2n) {background: #e8edff;}</pre>
+<h4>5. Газетный стиль</h4>
+<p>Для достижения так называемого газетного эффекта, можно применить границы для элементов таблицы и поиграть с ячейками внутри. Легкий, минималистичный газетный стиль может выглядеть так: обыграйте цветовую гамму, добавьте границы, отступы, разные фоны, и эффект <kbd>:hover</kbd> при наведении на строку.<br />
+<img src="https://html5book.ru/wp-content/uploads/2014/06/top-table8.png" alt="top-table8" width="660" height="188" class="alignleft size-full wp-image-4600" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table8.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table8-300x85.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:css decode:true " >table {border: 1px solid #69c;}
+th {
+  font-weight: normal;
+  color: #039;
+  border-bottom: 1px dashed #69c;
+  padding: 12px 17px;
+}
+td {
+  color: #669;
+  padding: 7px 17px;
+}
+tr:hover td {background: #ccddff;}</pre>
+<p><img src="https://html5book.ru/wp-content/uploads/2014/06/top-table9.png" alt="top-table9" width="660" height="211" class="alignleft size-full wp-image-4601" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table9.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table9-300x96.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:css decode:true " >table {border: 1px solid #69c;}
+th {
+  font-weight: normal;
+  color: #039;
+  padding: 10px;
+}
+td {
+  color: #669;
+  border-top: 1px dashed #fff;
+  padding: 10px;
+  background:#ccddff;
+}
+tr:hover td {background: #99bcff;}</pre>
+<p><img src="https://html5book.ru/wp-content/uploads/2014/06/top-table10.png" alt="top-table10" width="660" height="227" class="alignleft size-full wp-image-4602" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table10.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table10-300x103.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:css decode:true " >table {border: 1px solid #6cf;}
+th {
+  font-weight: normal;
+  font-size: 13px;
+  color: #039;
+  text-transform: uppercase;
+  border-right: 1px solid #0865c2;
+  border-top: 1px solid #0865c2;
+  border-left: 1px solid #0865c2;
+  border-bottom: 1px solid #fff;
+  padding: 20px;
+}
+td {
+  color: #669;
+  border-right: 1px dashed #6cf;
+  padding: 10px 20px;
+}</pre>
+<h4>6. Фон таблицы</h4>
+<p>Если вы ищете быстрый и уникальный способ оформления таблицы, выберите привлекательное изображение или фото, относящиеся к теме таблицы и установите ее фоном таблицы.<br />
+<img src="https://html5book.ru/wp-content/uploads/2014/06/top-table11.png" alt="top-table11" width="660" height="209" class="alignleft size-full wp-image-4604" srcset="https://html5book.ru/wp-content/uploads/2014/06/top-table11.png 660w, https://html5book.ru/wp-content/uploads/2014/06/top-table11-300x95.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:css decode:true " >table {
+  background: url("https://html5book.ru/images/blurry.jpg") no-repeat;
+  background-position: 100% 55px;
+}
+th {
+  font-weight: normal;
+  color: #339;
+  padding: 10px 12px;
+ }
+td {
+  background: url("https://html5book.ru/images/back.png");
+  color: #669;
+  border-top: 1px solid white;
+  padding: 10px 12px;
+}
+tr:hover td {
+  background: url("https://html5book.ru/images/back.png"); 
+  background: transparent;
+}</pre>
+
+
+
+<br><br><br><br><br><br></div></div></div>
+      
+      
+      
+      <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

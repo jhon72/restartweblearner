@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+    
+    <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        
+                        <h2>CSS Списки</h2>
+                        <strong>CSS-списки</strong> &#8212; набор свойств, отвечающих за оформление списков. Использование HTML-списков очень распространено при создании панелей навигации по сайту. Элементы списка представляют набор блочных элементов. </p>
+<p>С помощью стандартных CSS-свойств можно <b>изменить внешний вид маркера списка</b>, <b>добавить изображение для маркера</b>, а также <b>изменить местоположение маркера</b>. Высоту блока маркера можно задать свойством <kbd>line-height</kbd>.</p>
+<h2 style="clear: both">Оформление списков с помощью CSS-стилей</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#list-style-type">1. Тип маркера списка <kbd>list-style-type</kbd></a></li>
+<li><a href="#list-style-image">2. Изображения для элементов списка <kbd>list-style-image</kbd></a></li>
+<li><a href="#list-style-position">3. Местоположение маркера списка <kbd>list-style-position</kbd></a></li>
+<li><a href="#list-style">4. Краткая форма задания стилей списка <kbd>list-style</kbd></a></li>
+<li><a href="#part5">5. Примеры красивого оформления списков</a></li>
+</ul>
+<h3 id="list-style-type">1. Тип маркера списка list-style-type</h3>
+<p>Свойство изменяет типа маркера или <b>удаляет маркер</b> для маркированного и нумерованного списков</kbd>. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">list-style-type</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>disc</kbd></td>
+<td>Значение по умолчанию. В качестве маркера элементов списка выступает закрашенный кружок.</td>
+</tr>
+<tr>
+<td><kbd>armenian</kbd></td>
+<td>Традиционная армянская нумерация.</td>
+</tr>
+<tr>
+<td><kbd>circle</kbd></td>
+<td>В качестве маркера выступает незакрашенный кружок.</td>
+</tr>
+<tr>
+<td><kbd>cjk-ideographic</kbd></td>
+<td>Идеографическая нумерация.</td>
+</tr>
+<tr>
+<td><kbd>decimal</kbd></td>
+<td>1, 2, 3, 4, 5, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>decimal-leading-zero</kbd></td>
+<td>01, 02, 03, 04, 05, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>georgian</kbd></td>
+<td>Традиционная грузинская нумерация.</td>
+</tr>
+<tr>
+<td><kbd>hebrew</kbd></td>
+<td>Традиционная еврейская нумерация.</td>
+</tr>
+<tr>
+<td><kbd>hiragana</kbd></td>
+<td>Японская нумерация: a, i, u, e, o, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>hiragana-iroha</kbd></td>
+<td>Японская нумерация: i, ro, ha, ni, ho, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>katakana</kbd></td>
+<td>Японская нумерация: A, I, U, E, O, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>katakana-iroha</kbd></td>
+<td>Японская нумерация: I, RO, HA, NI, HO, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>lower-alpha</kbd></td>
+<td>a, b, c, d, e, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>lower-greek</kbd></td>
+<td>Строчные символы греческого алфавита.</td>
+</tr>
+<tr>
+<td><kbd>lower-latin</kbd></td>
+<td>a, b, c, d, e, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>lower-roman</kbd></td>
+<td>i, ii, iii, iv, v, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Маркер отсутствует.</td>
+</tr>
+<tr>
+<td><kbd>square</kbd></td>
+<td>В качестве маркера выступает закрашенный или незакрашенный квадрат.</td>
+</tr>
+<tr>
+<td><kbd>upper-alpha</kbd></td>
+<td>A, B, C, D, E, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>upper-latin</kbd></td>
+<td>A, B, C, D, E, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>upper-roman</kbd></td>
+<td>I, II, III, IV, V, &#8230;</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">ul {list-style-type: none;}
+ul {list-style-type: square;}
+ol {list-style-type: none;}
+ol {list-style-type: lower-alpha;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/07/ul_ol.png" alt="ul_ol" width="480" height="140" class="alignleft size-full wp-image-2379" srcset="https://html5book.ru/wp-content/uploads/2014/07/ul_ol.png 480w, https://html5book.ru/wp-content/uploads/2014/07/ul_ol-300x87.png 300w" sizes="(max-width: 480px) 100vw, 480px" /><figcaption style="clear:both">Рис. 1. Пример оформления маркированного и нумерованного списков</figcaption></figure>
+<h3 id="list-style-image">2. Изображения для элементов списка list-style-image</h3>
+<p>В качестве маркера элементов списка можно использовать изображения и градиентые заливки. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">list-style-image</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>url(url)</kbd></td>
+<td>Путь к изображению.</td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>значение по умолчанию, означает отсутствие изображения. Также убирает изображение для элемента из группы элементов с установленным изображением-маркером.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">ul {list-style-image: url("images/romb.png");}
+ul {list-style-image: linear-gradient(#FF7A2F 0, #FF7A2F 50%, #FFB214 50%);}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/07/ul_image.png" alt="ul_image" width="470" height="127" class="alignleft size-full wp-image-2376" srcset="https://html5book.ru/wp-content/uploads/2014/07/ul_image.png 470w, https://html5book.ru/wp-content/uploads/2014/07/ul_image-300x81.png 300w" sizes="(max-width: 470px) 100vw, 470px" /><figcaption style="clear:both">Рис. 2. Оформление маркированного списка с помощью изображения</figcaption></figure>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/07/css-list-style-image.png" alt="css-list-style-image" width="404" height="147" class="alignleft size-full wp-image-4264" srcset="https://html5book.ru/wp-content/uploads/2014/07/css-list-style-image.png 404w, https://html5book.ru/wp-content/uploads/2014/07/css-list-style-image-300x109.png 300w" sizes="(max-width: 404px) 100vw, 404px" /><figcaption style="clear:both">Рис. 3. Оформление маркированного списка с помощью градиента</figcaption></figure>
+<h3 id="list-style-position">3. Местоположение маркера списка list-style-position</h3>
+<p>Данное свойство предоставляет возможность располагать маркер вне или внутри содержимого элемента списка. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">list-style-position</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>outside</kbd></td>
+<td>Значение по умолчанию. Маркер располагается вне блока с текстом.</td>
+</tr>
+<tr>
+<td><kbd>inside</kbd></td>
+<td>Маркер списка изображается в одном блоке с текстом. Последующие строки текста будут располагаться под значком маркера, т.е. маркер будет обтекаться текстом.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">ul {list-style-position: inside;}
+ol {list-style-position: outside;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/07/list_position.png" alt="list_position" width="411" height="148" class="alignleft size-full wp-image-2381" srcset="https://html5book.ru/wp-content/uploads/2014/07/list_position.png 411w, https://html5book.ru/wp-content/uploads/2014/07/list_position-300x108.png 300w" sizes="(max-width: 411px) 100vw, 411px" /><figcaption style="clear:both">Рис. 4. Пример расположения маркера внутри и снаружи блока списка</figcaption></figure>
+<h3 style="clear:both" id="list-style">4. Краткая форма задания стилей списка</h3>
+<p>Можно объединить все три свойства форматирования списка в одно с помощью <kbd>list-style</kbd>. Значения свойств могут быть расположены в произвольном порядке, а часть значений может быть опущена. Если присутствует одно значение, то другие свойства примут значения браузера по умолчанию.</p>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">ul {list-style: url("images/romb.png") inside;}</pre>
+<h3 id="part5">4. Примеры красивого оформления списков</h3>
+<p><img src="https://html5book.ru/wp-content/uploads/2015/04/list-styling.png" alt="list-styling" width="660" height="490" class="alignleft size-full wp-image-4749" srcset="https://html5book.ru/wp-content/uploads/2015/04/list-styling.png 660w, https://html5book.ru/wp-content/uploads/2015/04/list-styling-300x223.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<p style="text-align:center"><a class="read-more-button" href="https://html5book.ru/krasivoe-oformlenie-spiskov/" target="_blank">Перейти на страницу с примерами</a></p>
+
+<br><br><br><br><br><br></div></div></div>
+      
+     <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

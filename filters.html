@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>CSS Фильтры</h2>
+                        <strong>CSS3-фильтры</strong> воспроизводят в браузере визуальные эффекты, похожие на фильтры Photoshop. Фильтры можно добавлять не только к изображениям, но и к любым непустым элементам. </p>
+<p>Набор фильтров не ограничивается предустановленным в браузере. Вы также можете использовать фильтры SVG, загрузив их по ссылке вместе с элементом svg.</p>
+<p>Изначально фильтры были созданы как часть спецификации SVG. Их задачей было применение эффектов, основанных на пиксельной сетке к векторной графике.  С поддержкой SVG браузерами появилась возможность использовать эти эффекты непосредственно в браузерах.</p>
+<p>Браузеры обрабатывают страницу попиксельно применяя заданные эффекты и отрисовывают результат поверх оригинала. Таким образом, применяя несколько фильтров можно достигать различных эффектов, они как бы накладываются друг на друга. Чем больше фильтров, тем больше времени требуется браузеру, чтобы отрисовать страницу.</p>
+<p>Можно применять несколько фильтров одновременно. Классический способ применения таких эффектов &#8212; при наведении на элемент <kbd>:hover</kbd>.</p>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> не поддерживает<br />
+<b>Edge:</b> 13.0 кроме url()<br />
+<b>Firefox:</b> 35.0<br />
+<b>Chrome:</b> 18.0 -webkit-<br />
+<b>Safari:</b> 9.1, 6.0 -webkit-<br />
+<b>Opera:</b> 40.0, 15.0 -webkit-<br />
+<b>iOS Safari:</b> 9.3, 6.1 -webkit-<br />
+<b>Android Browser:</b> 53.0, 4.4 -webkit-<br />
+<b>Chrome for Android:</b> 55.0, 47.0 -webkit-</p></blockquote>
+<p data-height="1550" data-theme-id="0" data-slug-hash="WGQOGg" data-default-tab="result" data-user="html5book" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/WGQOGg/"  >WGQOGg</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<table class="t1">
+<tr>
+<th colspan="2">filter</th>
+</tr>
+<tr>
+<td><kbd>blur()</kbd></td>
+<td>Значение задается в единицах длины, например <kbd>px</kbd>, <kbd>em</kbd>. Применяет размытие по Гауссу к исходному изображению. Чем больше значение радиуса, тем больше размытие. Если значение радиуса не задано, по умолчанию берется <kbd>0</kbd>.<br />
+<b>Синтаксис</b><br />
+<kbd>filter: blur(3px);</kbd></td>
+</tr>
+<tr>
+<td><kbd>brightness()</kbd></td>
+<td>Значение задается в <kbd>%</kbd> или в десятичных дробях. Изменяет яркость изображения. Чем больше значение, тем ярче изображение. Значение по умолчанию <kbd>1</kbd>.<br />
+<b>Синтаксис</b><br />
+<kbd>filter: brightness(50%);</kbd><br />
+<kbd>filter: brightness(.5);</pre>
+</td>
+</tr>
+<tr>
+<td><kbd>contrast()</kbd></td>
+<td>Значение задается в <kbd>%</kbd> или в десятичных дробях. Регулирует контрастность изображения, т.е. разницу между самыми темными и самыми светлыми участками изображения/фона. Значение по умолчанию <kbd>100%</kbd>. Нулевое значение скроет исходное изображение под темно-серым фоном. Значения, увеличивающиеся от <kbd>0</kbd> до <kbd>100%</kbd> или от <kbd>0</kbd> до <kbd>1</kbd>, будут постепенно открывать исходное изображение до оригинального отображения, а значения свыше будут увеличивать контраст между светлыми и темными участками.<br />
+<b>Синтаксис</b><br />
+<kbd>filter: contrast(20%);</kbd><br />
+<kbd>filter: contrast(.2);</kbd></td>
+</tr>
+<tr>
+<td><kbd>drop-shadow()</kbd></td>
+<td>Фильтр действует подобно свойствам <kbd>box-shadow</kbd> и <kbd>text-shadow</kbd>. Использует следующие значения: смещение по оси Х смещение по оси Y размытость растяжение цвет тени. Отличительная особенность фильтра заключается в том, что тень добавляется к элементам  и его содержимому с учетом их прозрачности, т.е. если элемент содержит текст внутри, то фильтр добавит тень одновременно для текста и видимых границ блока. В отличие от других фильтров, для этого фильтра обязательно задание параметров (минимальное - величина смещения).<br />
+<b>Синтаксис</b><br />
+<kbd>filter: drop-shadow(2px 3px 5px black);</kbd></td>
+</tr>
+<tr>
+<td><kbd>grayscale()</kbd></td>
+<td>Извлекает все цвета из картинки, делая на выходе черно-белое изображение. Значение задается в <kbd>%</kbd> или десятичных дробях. Чем больше значение, тем сильнее эффект.<br />
+<b>Синтаксис</b><br />
+<kbd>filter: grayscale(.5);</kbd><br />
+<kbd>filter: grayscale(50%);</kbd></td>
+</tr>
+<tr>
+<td><kbd>hue-rotate()</kbd></td>
+<td>
+Меняет цвета изображения в зависимости от заданного угла поворота в цветовом круге. Значение задается в градусах от <kbd>0deg</kbd> до <kbd>360deg</kbd>. <kbd>0deg</kbd> - значение по умолчанию, означает отсутствие эффекта.<br />
+<b>Синтаксис</b><br />
+<kbd>filter: hue-rotate(180deg);</kbd></td>
+</tr>
+<tr>
+<td><kbd>invert()</kbd></td>
+<td>Фильтр делает негатив изображения. Значение задается в <kbd>%</kbd>. <kbd>0%</kbd> не применяет фильтр, <kbd>100%</kbd> полностью преобразует цвета.<br />
+<b>Синтаксис</b><br />
+<kbd>filter: invert(100%);</kbd></td>
+</tr>
+<tr>
+<td><kbd>opacity()</kbd></td>
+<td>Фильтр работает аналогично со свойством <kbd>opacity</kbd>, добавляя прозрачность элементу. Отличительная особенность - браузеры обеспечивают аппаратное ускорение для фильтра, что позволяет повысить производительность. Дополнительный бонус - фильтр можно одновременно сочетать с другими фильтрами, создавая при этом интересные эффекты. Значение задается только в <kbd>%</kbd>, <kbd>0%</kbd> делает элемент полностью прозрачным, а <kbd>100%</kbd> не оказывает никакого эффекта.<br />
+<b>Синтаксис</b><br />
+<kbd>filter: opacity(30%);</kbd></td>
+</tr>
+<tr>
+<td><kbd>saturate()</kbd></td>
+<td>Управляет насыщенностью цветов, работая по принципу контрастного фильтра. Значение <kbd>0%</kbd> убирает цветность, а <kbd>100%</kbd> не оказывает никакого эффекта. Значения от <kbd>0%</kbd> до <kbd>100%</kbd> уменьшают насыщенность цвета, выше <kbd>100%</kbd> - увеличивают насыщенность цвета. Значение может задаваться как в <kbd>%</kbd>, так и целым числом, <kbd>1</kbd> эквивалентно <kbd>100%</kbd>.<br />
+<b>Синтаксис</b><br />
+<kbd>filter: saturate(300%);</kbd></td>
+</tr>
+<tr>
+<td><kbd>sepia()</kbd></td>
+<td>Эффект, имитирующий старину и «ретро». Значение <kbd>0%</kbd> не изменяет внешний вид элемента, а <kbd>100%</kbd> полностью воспроизводит эффект сепии.<br />
+<b>Синтаксис</b><br />
+<kbd>filter: sepia(150%);</kbd></td>
+</tr>
+<tr>
+<td><kbd>url()</kbd></td>
+<td>Функция принимает расположение внешнего XML-файла с svg-фильтром, или якорь к фильтру, находящемся в текущем документе.<br />
+<b>Синтаксис</b><br />
+<kbd>filter: url(#filterId); /* если фильтр находится в этом документе */</kbd><br />
+<kbd>filter: url(filter.svg#filterId); /* если фильтр  с id="filterId" находится в файле filter.svg*/</kbd>
+</pre>
+</td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию. Означает отсутствие эффекта.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает это свойство в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+
+<br><br><br><br><br><br></div></div></div>
+<a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+     
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>CSS Градиент</h2>
+                        <strong>CSS3-градиент</strong> представляет собой переходы от одного цвета к другому. </p>
+<p>Градиенты создаются с помощью функций <kbd>linear-gradient()</kbd> и <kbd>radial-gradient()</kbd>. </p>
+<p>Градиентный фон можно устанавливать в свойствах <kbd>background</kbd>, <kbd>background-image</kbd>, <kbd>border-image</kbd> и <kbd>list-style-image</kbd>. </p>
+<h2 style="clear:both">Как сделать градиент в CSS</h2>
+<ul class="contents">
+<li style="color:white; background:#5e4a3f;">Содержание:</li>
+<li><a href="#linear-gradient()">1. Линейный градиент: <kbd>linear-gradient()</kbd></a></li>
+<li><a href="#radial-gradient()">2. Радиальный градиент: <kbd>radial-gradient()</kbd></a></li>
+<li><a href="#repeating-gradient()">3. Повтор градиента: <kbd>repeating-linear-gradient()</kbd> и <kbd>repeating-radial-gradient()</kbd></a></li>
+<li><a href="#part4">4. Кроссбраузерный градиент</a></li>
+<li><a href="#part5">5. Комбинация градиента и фонового изображения</a></li>
+</ul>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 10.0<br />
+<b>Firefox:</b> 16, 3.6 -moz-<br />
+<b>Chrome:</b> 26.0, 10.0 -webkit-<br />
+<b>Safari:</b> 6.1, 5.1 -webkit-<br />
+<b>Opera:</b> 12.1, 11.1 -o-<br />
+<b>iOS Safari:</b> 7.1<br />
+<b>Opera Mini:</b> &#8212;<br />
+<b>Android Browser:</b> 4.4, 4.1 -webkit-<br />
+<b>Chrome for Android:</b> 44</p></blockquote>
+<h3 id="linear-gradient()">1. Линейный градиент <kbd>linear-gradient()</kbd></h3>
+<figure><a href="https://html5book.ru/wp-content/uploads/2014/10/linear-gradient-axis.png"><img src="https://html5book.ru/wp-content/uploads/2014/10/linear-gradient-axis.png" alt="linear-gradient-axis" width="70%" height="70%" class="alignleft size-full wp-image-8487" srcset="https://html5book.ru/wp-content/uploads/2014/10/linear-gradient-axis.png 890w, https://html5book.ru/wp-content/uploads/2014/10/linear-gradient-axis-300x232.png 300w, https://html5book.ru/wp-content/uploads/2014/10/linear-gradient-axis-768x593.png 768w" sizes="(max-width: 890px) 100vw, 890px" /></a><figcaption>Рис. 1. Линия градиента, начальная и конечная точки и угол градиента</figcaption></figure>
+<p><strong>Линейный градиент</strong> создается с помощью двух и более цветов, для которых задано направление, или <b>линия градиента</b>. </p>
+<p>Если направление не указано, используется значение по умолчанию &#8212; <b>сверху-вниз</b>. </p>
+<p>Цвета градиента по умолчанию распределяются равномерно в направлении, перпендикулярном линии градиента.</p>
+<pre class="lang:css decode:true ">{background: linear-gradient(угол / сторона или угол наклона с помощью ключевого слова (пары ключевых слов), первый цвет, второй цвет и т.д.);}
+</pre>
+<p><b>Направление</b> градиента может быть задано двумя способами:<br />
+<b>с помощью угла наклона</b> в градусах <kbd>deg</kbd>, значение которого определяет угол наклона линии внутри элемента. </p>
+<pre class="lang:css decode:true " >div {
+height: 200px;
+background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+}</pre>
+<div style="height: 200px;background: linear-gradient(45deg, #EECFBA, #C5DDE8);margin-bottom:15px"></div>
+<p><b>с помощью ключевых слов</b> <kbd>to top</kbd>, <kbd>to right</kbd>, <kbd>to bottom</kbd>, <kbd>to left</kbd>, которые соответствуют углу градиента, равному <kbd>0deg</kbd>, <kbd>90deg</kbd>, <kbd>180deg</kbd> и <kbd>270deg</kbd> соответственно.</p>
+<pre class="lang:css decode:true " >div {
+height: 200px;
+background: linear-gradient(to right, #F6EFD2, #CEAD78);
+}</pre>
+<div style="height: 200px;background: linear-gradient(to right, #F6EFD2, #CEAD78);margin-bottom:15px"></div>
+<p>Если направление задано парой ключевых слов, например, <kbd>to top left</kbd>, то начальная точка градиента будет расположена в противоположном направлении, в данном случае справа внизу.</p>
+<pre class="lang:css decode:true " >div {
+height: 200px;
+background: linear-gradient(to top left, powderblue, pink);
+}</pre>
+<div style="height: 200px;background: linear-gradient(to top left, powderblue, pink);margin-bottom:15px"></div>
+<p>Для неравномерного распределения цветов указывается начальная позиция каждого цвета через точки остановки градиента, так называемые <b>color stops</b>. <b>Точки остановки</b> задаются в <kbd>%</kbd>, где <kbd>0%</kbd> &#8212; начальная точка, <kbd>100%</kbd> &#8212; конечная точка, например:</p>
+<pre class="lang:css decode:true " >div {
+height: 200px;
+background: linear-gradient(to top, #E4AF9D 20%, #E4E4D8 50%, #A19887 80%);
+}</pre>
+<div style="height: 200px;background: linear-gradient(to top, #E4AF9D 20%, #E4E4D8 50%, #A19887 80%);margin-bottom:15px"></div>
+<p>Для чёткого распределения цветных полос каждый последующий цвет нужно начинать с точки остановки предыдущего цвета:</p>
+<pre class="lang:css decode:true">div {
+height: 200px;
+background: linear-gradient(to right, #FFDDD6 20%, #FFF9ED 20%, #FFF9ED 80%, #DBDBDB 80%);
+}</pre>
+<div style="height: 200px;background: linear-gradient(to right, #FFDDD6 20%, #FFF9ED 20%, #FFF9ED 80%, #DBDBDB 80%);margin-bottom:15px"></div>
+<h3 id="radial-gradient()">2. Радиальный градиент <kbd>radial-gradient()</kbd></h3>
+<p><strong>Радиальный градиент</strong> отличается от линейного тем, что цвета выходят из одной точки (центра градиента) и равномерно распределяются наружу, рисуя форму круга или эллипса.  </p>
+<pre class="lang:css decode:true ">{background: radial-gradient(форма градиента / размер / позиция центра, первый цвет, второй цвет и т.д.);}
+</pre>
+<p><b>Форма градиента</b> определяется ключевыми словами <kbd>circle</kbd> или <kbd>ellipse</kbd>. Если форма не задана, по умолчанию радиальный градиент принимает форму эллипса.</p>
+<pre class="lang:css decode:true">div {
+height: 200px;
+background: radial-gradient(white, #FFA9A1);
+}</pre>
+<div style="height: 200px;background: radial-gradient(white, #FFA9A1);margin-bottom:15px"></div>
+<p><b>Позиция центра</b> задаётся с помощью ключевых слов, используемых в свойстве <kbd>background-position</kbd>, с добавлением приставки <kbd>at</kbd>. Если позиция центра не задана, используется значение по умолчанию <kbd>at center</kbd>.</p>
+<pre class="lang:css decode:true">div {
+height: 200px;
+background: radial-gradient(at top, #FEFFFF, #A7CECC);
+}</pre>
+<div style="height: 200px;background: radial-gradient(at top, #FEFFFF, #A7CECC);margin-bottom:15px"></div>
+<p>С помощью пары значений, указанных в единицах длины <kbd>%</kbd>, <kbd>em</kbd> или <kbd>px</kbd>, можно управлять размером эллипсообразного градиента. Первое значение задает ширину эллипса, второе &#8212; высоту.</p>
+<pre class="lang:css decode:true">div {
+height: 200px;
+background: radial-gradient(40% 50%, #FAECD5, #CAE4D8);
+}</pre>
+<div style="height: 200px;background: radial-gradient(40% 50%, #FAECD5, #CAE4D8);margin-bottom:15px"></div>
+<p><b>Размер градиента</b> задаётся с помощью ключевых слов. Значение по умолчанию <kbd>farthest-corner</kbd> (к дальнему углу).</p>
+<table class="t3">
+<tr>
+<th style="width:20%">Значение</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td><kbd>closest-side</kbd></td>
+<td>Размер градиента рассчитывается из расстояния до любой ближней стороны блока для <kbd>circle</kbd> или до ближних сторон по <kbd>X</kbd> и по <kbd>У</kbd> для <kbd>ellipse</kbd>. </td>
+</tr>
+<tr>
+<td><kbd>farthest-side</kbd></td>
+<td>Размер рассчитывается из расстояния до дальних сторон.</td>
+</tr>
+<tr>
+<td><kbd>closest-corner</kbd></td>
+<td>Размер рассчитывается из расстояния до ближних углов.</td>
+</tr>
+<tr>
+<td><kbd>farthest-corner</kbd></td>
+<td>Размер рассчитывается из расстояния до дальних углов.</td>
+</tr>
+</table>
+<pre class="lang:css decode:true">div {
+height: 200px;
+background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #352A3B);
+}</pre>
+<div style="height: 200px;background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #352A3B);margin-bottom:15px"></div>
+<p>С помощью радиального градиента можно создавать реалистичные объёмные фигуры, такие как мячи, кнопки. </p>
+<h4>Мяч</h4>
+<pre class="lang:css decode:true">div {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+margin: 0 auto;
+background: radial-gradient(circle at 65% 15%, aqua, darkblue);
+}</pre>
+<div style="width: 200px;height: 200px;border-radius: 50%;margin: 0 auto 15px;background: radial-gradient(circle at 65% 15%, aqua, darkblue);"></div>
+<h4>Кнопка</h4>
+<pre class="lang:default decode:true " >&lt;div class="wrap"&gt;&lt;div class="button"&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+<pre class="lang:css decode:true " >.wrap {
+height: 200px;
+padding: 50px 0;
+background: #cccccc;
+}
+.button {
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin: 0 auto; 
+background: radial-gradient(farthest-side ellipse at top left, white, #aaaaaa);
+box-shadow: 5px 10px 20px rgba(0,0,0,0.3), -5px -10px 20px rgba(255,255,255,0.5);
+}</pre>
+<div style="height: 200px;padding:50px 0; background: #ccc;box-sizing:border-box">
+<div style="width: 100px;height: 100px;border-radius: 50%;margin:0 auto; background: radial-gradient(farthest-side ellipse at top left, #fff, #aaa);box-shadow: 5px 10px 20px rgba(0,0,0,0.3), -5px -10px 20px rgba(255,255,255,0.5);"></div>
+</div>
+<h4>Почтовая марка</h4>
+<p>Используя в градиентах прозрачный цвет, можно создавать вот такие эффекты.</p>
+<pre class="lang:default decode:true " >&lt;div class="container"&gt;
+&lt;div class="wrap"&gt;
+  &lt;img src="https://html5book.ru/wp-content/uploads/2015/10/flowers-by-barbara-florchik-2.jpg"&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+<pre class="lang:css decode:true " >.container {
+background: #B7D1D8;
+padding: 25px;
+}
+.wrap {
+background: radial-gradient(transparent, transparent 4px, white 4px,white);
+padding: 10px;
+width: 300px;
+height: 220px;
+background-size: 20px 20px;
+background-position: -10px -10px; /*обрезаем узор по краю*/
+margin: 0 auto;
+}
+img {
+width: 100%;
+}</pre>
+<div style="background:#B7D1D8;padding:25px;margin-bottom:15px">
+<div style="background: radial-gradient(transparent, transparent 4px, white 4px,white);padding:10px;width:300px;height:220px;background-size: 20px 20px;background-position: -10px -10px;margin: 0 auto">
+  <img src="https://html5book.ru/wp-content/uploads/2015/10/flowers-by-barbara-florchik-2.jpg" style="width:100%;display:block;height:200px;"></div>
+</div>
+<h3 id="repeating-gradient()">3. Повтор градиента</h3>
+<p>В добавление к линейному и радиальному градиентам существует повтор градиента, который задается с помощью функций <kbd>repeating-linear-gradient()</kbd> и <kbd>repeating-radial-gradient()</kbd> соответственно. Фон из повторяющихся градиентов выглядит неаккуратно, поэтому рекомендуется начинать следующий цвет с точки остановки предыдущего, создавая таким образом полосатые узоры. </p>
+<pre class="lang:css decode:true " >div {
+height: 200px;
+background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+}</pre>
+<div style="height:200px;background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);margin-bottom:15px"></div>
+<pre class="lang:css decode:true " >div {
+height: 200px;
+background: repeating-radial-gradient(circle, #B9ECFE, #B9ECFE 10px, #82DDFF 10px, #82DDFF 20px);
+}</pre>
+<div style="height:200px;background: repeating-radial-gradient(circle, #B9ECFE, #B9ECFE 10px, #82DDFF 10px, #82DDFF 20px);margin-bottom:15px"></div>
+<h3 id="part4">4. Кроссбраузерный градиент</h3>
+<p>Для корректного отображения градиентов во всех браузерах необходимо добавить кроссбраузерную запись. </p>
+<p><b>Линейный градиент</b></p>
+<pre class="lang:css decode:true">-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#1471da, endColorstr=#1C85FB)"; /* IE 8-9 */
+background: -webkit-linear-gradient(left, red, #f06d06); /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+background: -moz-linear-gradient(left, red, #f06d06); /* Firefox 3.6-15 */
+background: -o-linear-gradient(left, red, #f06d06); /* Opera 11.1-12 */
+background: linear-gradient(to right, red, #f06d06); /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */</pre>
+<p><b>Повтор линейного градиента</b></p>
+<pre class="lang:css decode:true">background: -webkit-repeating-linear-gradient(red, yellow 10%, green 20%); /* Safari 5.1 - 6.0 */
+background: -o-repeating-linear-gradient(red, yellow 10%, green 20%); /* Opera 11.1-12.0 */
+background: -moz-repeating-linear-gradient(red, yellow 10%, green 20%); /* Firefox 3.6-15 */
+background: repeating-linear-gradient(red, yellow 10%, green 20%); /* Стандартный синтаксис */</pre>
+<p><b>Радиальный градиент</b></p>
+<pre class="lang:css decode:true">background: -webkit-radial-gradient(red, yellow, green); /* Safari 5.1-6.0 */
+background: -o-radial-gradient(red, yellow, green); /* Opera 11.6-12.0 */
+background: -moz-radial-gradient(red, yellow, green); /* Firefox 3.6-15 */
+background: radial-gradient(red, yellow, green); /* Стандартный синтаксис */
+background: -webkit-radial-gradient(60% 55%, farthest-side, red, yellow, black); /* Safari 5.1-6.0 */
+background: -o-radial-gradient(60% 55%, farthest-side, red, yellow, black); /* Opera 11.6-12.0 */ 
+background: -moz-radial-gradient(60% 55%, farthest-side, red, yellow, black); /* Firefox 3.6-15 */
+background: radial-gradient(farthest-side at 60% 55%, red, yellow, black); /* Стандартный синтаксис */</pre>
+<p><b>Повтор радиального градиента</b></p>
+<pre class="lang:css decode:true">background: -webkit-repeating-radial-gradient(red, yellow 10%, green 15%); /* Safari 5.1-6.0 */
+background: -o-repeating-radial-gradient(red, yellow 10%, green 15%); /* Opera 11.6-12.0 */
+background: -moz-repeating-radial-gradient(red, yellow 10%, green 15%); /* Firefox 3.6-15 */
+background: repeating-radial-gradient(red, yellow 10%, green 15%); /* Стандартный синтаксис */</pre>
+<h3 id="part5">5. Комбинация градиента и фонового изображения</h3>
+<p>За счёт комбинации градиента и изображения можно создавать интересные эффекты. Для градиента нужно использовать полупрозрачные цвета, чтобы картинка оставалась видимой.</p>
+<div style="height:453px;background: linear-gradient(45deg, rgba(103, 0, 31, .8), rgba(34, 101, 163, .5)), url(https://html5book.ru/wp-content/uploads/2016/12/photo-8.jpg); background-size: cover;"></div>
+<pre class="lang:css decode:true " >div {
+  height: 453px;
+  background: linear-gradient(45deg, rgba(103, 0, 31, .8), rgba(34, 101, 163, .5)), url(https://html5book.ru/wp-content/uploads/2016/12/photo-8.jpg); 
+  background-size: cover;
+}</pre>
+
+<br><br><br><br><br><br></div></div></div>
+
+      
+      <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

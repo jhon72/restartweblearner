@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>CSS Flexbox</h2>
+                        <strong>CSS flexbox</strong> <em>(Flexible Box Layout Module)</em> &#8212; модуль макета гибкого контейнера &#8212; представляет собой способ компоновки элементов. </p>
+<p>Flexbox состоит из <b>flex-контейнера</b> &#8212; родительского контейнера и <b>flex-элементов</b> &#8212; дочерних блоков. Дочерние элементы могут выстраиваться в строку или столбик, а оставшееся свободное пространство распределяется между ними различными способами.</p>
+<p>Модуль flexbox позволяет решать следующие задачи:</p>
+<ul style="list-style:circle;margin-left:18px;margin-bottom:20px;">
+<li>Располагать элементы в одном из четырех направлений: слева направо, справа налево, сверху вниз или снизу вверх;</li>
+<li>Переопределять порядок отображения элементов;</li>
+<li>Автоматически определять размеры элементов таким образом, чтобы они вписывались в доступное пространство;</li>
+<li>Решать проблему с горизонтальным и вертикальным центрированием;</li>
+<li>Переносить элементы внутри контейнера, не допуская их переполнения;</li>
+<li>Создавать колонки одинаковой высоты;</li>
+<li>Создавать прижатый к низу страницы подвал сайта.</li>
+</ul>
+<p>В основе flexbox лежит идея оси. Flexbox является инструментом двумерной компоновки и использует для работы две оси &#8212; горизонтальную (главную ось) и поперечную.</p>
+
+<h2 style="clear: both;">Что такое flexbox</h2>
+<ul class="contents">
+<li style="color: white; background: #688cdd;">Содержание:</li>
+<li><a href="#display-flex">1.1. Свойство <kbd>display</kbd></a></li>
+<li><a href="#justify-content">1.2. Выравнивание элементов по горизонтали <kbd>justify-content</kbd></a></li>
+<li><a href="#align-items">1.3. Выравнивание элементов по вертикали <kbd>align-items</kbd></a></li>
+<li><a href="#flex-direction">1.4. Направление главной оси <kbd>flex-direction</kbd></a></li>
+<li><a href="#flex-wrap">1.5. Многострочность элементов <kbd>flex-wrap</kbd></a></li>
+<li><a href="#flex-flow">1.6. Краткая запись направления и многострочности <kbd>flex-flow</kbd></a></li>
+<li><a href="#align-content">1.7. Многострочное выравнивание <kbd>align-content</kbd></a></li>
+<li><a href="#order">2.1. Порядок отображения элементов <kbd>order</kbd></a></li>
+<li><a href="#flex-basis">2.2. Базовая ширина элемента <kbd>flex-basis</kbd></a></li>
+<li><a href="#flex-grow">2.3. Растяжение элементов <kbd>flex-grow</kbd></a></li>
+<li><a href="#flex-shrink">2.4. Сужение элементов <kbd>flex-shrink</kbd></a></li>
+<li><a href="#flex">2.5. Задание базовой ширины и трансформации элемента одним свойством <kbd>flex</kbd></a></li>
+<li><a href="#align-self">2.6. Выравнивание отдельных элементов <kbd>align-self</kbd></a></li>
+</ul>
+<h4>Поддержка браузерами</h4>
+<blockquote><p><b>IE:</b> 11.0, 10.0 -ms-<br />
+<b>Firefox:</b> 28.0, 18.0 -moz-<br />
+<b>Chrome:</b> 29.0, 21.0 -webkit-<br />
+<b>Safari:</b> 6.1 -webkit-<br />
+<b>Opera:</b> 12.1 -webkit-<br />
+<b>iOS Safari:</b> 7.0 -webkit-<br />
+<b>Opera Mini:</b> 8<br />
+<b>Android Browser:</b> 4.4, 4.1 -webkit-<br />
+<b>Chrome for Android:</b> 44</p></blockquote>
+<h3>1. Свойства flex-контейнера</h3>
+<p>Flex-контейнер устанавливает новый гибкий контекст форматирования для его содержимого. Flex-контейнер не является блочным контейнером, поэтому для внутренних блоков не работают такие CSS-свойства, как <kbd>float</kbd>, <kbd>clear</kbd>, <kbd>vertical-align</kbd>. Также, на flex-контейнер не оказывают влияние свойства <kbd>column-</kbd>, создающие колонки в тексте и псевдоэлементы <kbd>::first-line</kbd> и <kbd>::first-letter</kbd>.</p>
+<h4 id="display-flex">1.1. Свойство display</h4>
+<p>Модель flexbox-разметки связана с определенным значением CSS-свойства <kbd>display</kbd> родительского html-элемента, содержащего внутри себя дочерние блоки. Для управления элементами с помощью этой модели нужно установить свойство <kbd>display</kbd> следующим образом:</p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex; 
+display: flex; /*отображает контейнер как блочный элемент*/
+}
+.flex-container {
+ display: -webkit-inline-flex;
+ display: inline-flex; /*отображает контейнер как строчный элемент*/
+}</pre>
+<p>После установки данных значений свойства каждый дочерний элемент автоматически становится flex-элементом, выстраиваясь в ряд (вдоль главной оси) колонками одинаковой высоты, равной высоте блока-контейнера. При этом блочные и строчные дочерние элементы ведут себя одинаково, т.е. ширина блоков равна ширине их содержимого с учетом внутренних полей и рамок элемента.</p>
+<figure><img class="alignleft size-full wp-image-5863" src="https://html5book.ru/wp-content/uploads/2015/06/display-flex.png" alt="display-flex" width="660" height="251" srcset="https://html5book.ru/wp-content/uploads/2015/06/display-flex.png 660w, https://html5book.ru/wp-content/uploads/2015/06/display-flex-300x114.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 2. Выравнивание элементов в модели flexbox</figcaption></figure>
+<p>Если родительский блок содержит текст или изображения без оберток, они становятся анонимными flex-элементами. Текст выравнивается по верхнему краю блока-контейнера, а высота изображения становится равной высоте блока, т.е. оно деформируется.</p>
+<h4 id="justify-content">1.2. Выравнивание элементов по горизонтали justify-content</h4>
+<p>Свойство выравнивает flex-элементы по ширине flex-контейнера, распределяя оставшееся свободное пространство, незанятое flex-элементами. Для выравнивания элементов по вертикали используется свойство <kbd>align-content</kbd>. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">justify-content</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>flex-start</kbd></td>
+<td>Значение по умолчанию. Flex-элементы позиционируются от начала flex-контейнера.</td>
+</tr>
+<tr>
+<td><kbd>flex-end</kbd></td>
+<td>Flex-элементы позиционируются относительно правой границы flex-контейнера.</td>
+</tr>
+<tr>
+<td><kbd>center</kbd></td>
+<td>Flex-элементы выравниваются по центру flex-контейнера.</td>
+</tr>
+<tr>
+<td><kbd>space-between</kbd></td>
+<td>Flex-элементы выравниваются по главной оси, свободное место между ними распределяется следующим образом: первый блок располагается в начале flex-контейнера, последний блок – в конце, все остальные блоки равномерно распределены в оставшемся пространстве, а свободное пространство равномерно распределяется между элементами.</td>
+</tr>
+<tr>
+<td><kbd>space-around</kbd></td>
+<td>Flex-элементы выравниваются по главной оси, а свободное место делится поровну, добавляя отступы справа и слева.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<figure><img class="alignleft size-full wp-image-5868" src="https://html5book.ru/wp-content/uploads/2015/06/justify-content.png" alt="justify-content" width="660" height="548" srcset="https://html5book.ru/wp-content/uploads/2015/06/justify-content.png 660w, https://html5book.ru/wp-content/uploads/2015/06/justify-content-300x249.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 3. Выравнивание элементов и распределение свободного пространства с помощью свойства justify-content</figcaption></figure>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex; 
+-webkit-justify-content: flex-start;
+display: flex;
+justify-content: flex-start;
+}</pre>
+<h4 id="align-items">1.3. Выравнивание элементов по вертикали align-items</h4>
+<p>Свойство выравнивает flex-элементы, в том числе и анонимные flex-элементы по перпендикулярной оси (по высоте). Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">align-items</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>stretch</kbd></td>
+<td>Значение по умолчанию. Flex-элементы растягиваются, занимая все пространство по высоте.</td>
+</tr>
+<tr>
+<td><kbd>flex-start</kbd></td>
+<td>Flex-элементы выравниваются по левому краю flex-контейнера относительно верхнего края блока-контейнера.</td>
+</tr>
+<tr>
+<td><kbd>flex-end</kbd></td>
+<td>Flex-элементы выравниваются по левому краю flex-контейнера относительно нижнего края блока-контейнера.</td>
+</tr>
+<tr>
+<td><kbd>center</kbd></td>
+<td>Flex-элементы выравниваются по центру flex-контейнера.</td>
+</tr>
+<tr>
+<td><kbd>baseline</kbd></td>
+<td>Flex-элементы выравниваются по базовой линии.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<figure><img class="alignleft size-full wp-image-5861" src="https://html5book.ru/wp-content/uploads/2015/06/align-items.png" alt="align-items" width="660" height="807" srcset="https://html5book.ru/wp-content/uploads/2015/06/align-items.png 660w, https://html5book.ru/wp-content/uploads/2015/06/align-items-245x300.png 245w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 4. Выравнивание элементов в контейнере по вертикали</figcaption></figure>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex;
+-webkit-align-items: flex-start;
+display: flex;
+align-items: flex-start;
+}</pre>
+<h4 id="flex-direction">1.4. Направление главной оси flex-direction</h4>
+<p>Свойство определяет, каким образом flex-элементы укладываются во flex-контейнере, задавая направление главной оси flex-контейнера. Они могут располагаться в двух главных направлениях &#8212; горизонтально, как строки или вертикально, как колонки. Главная ось по умолчанию идет слева направо. Поперечная – сверху вниз. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">flex-direction</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>row</kbd></td>
+<td>Значение по умолчанию, слева направо (в rtl справа налево). Flex-элементы выкладываются в строку. Начало (main-start) и конец (main-end) направления главной оси соответствуют началу (inline-start) и концу (inline-end) инлайн оси (inline-axis).</td>
+</tr>
+<tr>
+<td><kbd>row-reverse</kbd></td>
+<td>Направление справа налево (в rtl слева направо). Flex-элементы выкладываются в строку относительно правого края контейнера (в rtl &#8212; левого).</td>
+</tr>
+<tr>
+<td><kbd>column</kbd></td>
+<td>Направление сверху вниз. Flex-элементы выкладываются в колонку.</td>
+</tr>
+<tr>
+<td><kbd>column-reverse</kbd></td>
+<td>Колонка с элементами в обратном порядке, снизу вверх.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<figure><img class="alignleft size-full wp-image-5864" src="https://html5book.ru/wp-content/uploads/2015/06/flex-direction.png" alt="flex-direction" width="660" height="635" srcset="https://html5book.ru/wp-content/uploads/2015/06/flex-direction.png 660w, https://html5book.ru/wp-content/uploads/2015/06/flex-direction-300x289.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 5. Свойство flex-direction для блочных и строчных элементов</figcaption></figure>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex; 
+-webkit-flex-direction: row-reverse;
+display: flex;
+flex-direction: row-reverse;
+}</pre>
+<h4 id="flex-wrap">1.5. Многострочность элементов flex-wrap</h4>
+<p>Свойство управляет тем, как flex-контейнер будет выкладывать flex-элементы — в одну строку или в несколько, и направлением, в котором будут укладываться новые строки. По умолчанию flex-элементы укладываются в одну строку. При переполнении контейнера их содержимое будет выходить за границы flex-элементов. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">flex-wrap</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>nowrap</kbd></td>
+<td>Значение по умолчанию. Flex-элементы не переносятся, а располагаются в одну линию слева направо (в rtl справа налево).</td>
+</tr>
+<tr>
+<td><kbd>wrap</kbd></td>
+<td>Flex-элементы переносятся, располагаясь в несколько горизонтальных рядов (если не помещаются в один ряд) в направлении слева направо (в rtl справа налево).</td>
+</tr>
+<tr>
+<td><kbd>wrap-reverse</kbd></td>
+<td>Flex-элементы переносятся, располагаясь в обратном порядке слева-направо, при этом перенос происходит снизу вверх.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<figure><img class="alignleft size-full wp-image-5867" src="https://html5book.ru/wp-content/uploads/2015/06/flex-wrap.png" alt="flex-wrap" width="660" height="374" srcset="https://html5book.ru/wp-content/uploads/2015/06/flex-wrap.png 660w, https://html5book.ru/wp-content/uploads/2015/06/flex-wrap-300x170.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 6. Управление многострочностью с помощью свойства flex-wrap</figcaption></figure>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex; 
+-webkit-flex-wrap: wrap;
+display: flex;
+flex-wrap: wrap;
+}</pre>
+<h4 id="flex-flow">1.6. Краткая запись направления и многострочности flex-flow</h4>
+<p>Свойство предоставляет возможность в одном свойстве задать направление главной оси и многострочность поперечной оси, т.е. сокращённая запись свойств <kbd>flex-direction</kbd> и <kbd>flex-wrap</kbd>. Значение по умолчанию <kbd>flex-flow: row nowrap;</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">flex-flow</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>направление</td>
+<td>Указывает направление главной оси. Значение по умолчанию <kbd>row</kbd>.</td>
+</tr>
+<tr>
+<td>многострочность</td>
+<td>Задаёт многострочность поперечной оси. Значение по умолчанию <kbd>nowrap</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex; 
+-webkit-flex-flow: row wrap; 
+display: flex;
+flex-flow: row wrap;
+}</pre>
+<h4 id="align-content">1.7. Многострочное выравнивание align-content</h4>
+<p>Свойство выравнивает строки flex-элементов по вертикали во flex-контейнере, позволяя управлять свободным пространством.<br />
+Свойство работает только в случае, если разрешен перенос строк и указано направление <kbd>flex-flow: row/row-reverse/column/column-reverse wrap/wrap-reverse;</kbd> и высота flex-контейнера. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">align-content</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>stretch</kbd></td>
+<td>Значение по умолчанию. Строки flex-элементов равномерно растягиваются, заполняя все доступное пространство.</td>
+</tr>
+<tr>
+<td><kbd>flex-start</kbd></td>
+<td>Строки flex-элементов выравниваются по левому краю flex-контейнера относительно верхнего края блока-контейнера.</td>
+</tr>
+<tr>
+<td><kbd>flex-end</kbd></td>
+<td>Строки flex-элементов выравниваются по левому краю flex-контейнера относительно нижнего края блока-контейнера.</td>
+</tr>
+<tr>
+<td><kbd>center</kbd></td>
+<td>Строки flex-элементов выравниваются по высоте по середине flex-контейнера относительно его левого края.</td>
+</tr>
+<tr>
+<td><kbd>space-between</kbd></td>
+<td>Строки flex-элементов выравниваются по высоте по середине flex-контейнера относительно его левого края. Свободное пространство распределяется между ними. Первый ряд flex-элементов прижимается к началу flex-контейнера, последний ряд &#8212; к нижнему краю.</td>
+</tr>
+<tr>
+<td><kbd>space-around</kbd></td>
+<td>Строки flex-элементов равномерно распределяются по высоте, свободное пространство добавляется сверху и снизу строки.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<figure><img class="alignleft size-full wp-image-5860" src="https://html5book.ru/wp-content/uploads/2015/06/align-content.png" alt="align-content" width="660" height="941" srcset="https://html5book.ru/wp-content/uploads/2015/06/align-content.png 660w, https://html5book.ru/wp-content/uploads/2015/06/align-content-210x300.png 210w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 7. Многострочное выравнивание flex-элементов</figcaption></figure>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex;
+-webkit-flex-flow: row wrap;
+-webkit-align-content: flex-end; 
+display: flex;
+flex-flow: row wrap;
+align-content: flex-end;
+height: 100px;
+}</pre>
+<h3>2. Свойства flex-элементов</h3>
+<h4 id="order">2.1. Порядок отображения элементов order</h4>
+<p>Свойство определяет порядок, в котором flex-элементы отображаются внутри flex-контейнера. По умолчанию для всех flex-элементов задан порядок <kbd>order: 0;</kbd> и они следуют друг за другом по мере добавления во flex-контейнер. Самый первый flex-элемент по умолчанию расположен слева. Чтобы поставить любой flex-элемент в начало строки, ему нужно назначить <kbd>order: -1;</kbd>, в конец строки &#8212; <kbd>order: 1;</kbd>. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">order</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>число</td>
+<td>Свойство задается целым числом, отвечающим за порядок отображения flex-элементов. Значение по умолчанию <kbd>0</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex;
+display: flex;
+}
+.flex-item {
+-webkit-order: 1;
+order: 1;
+}</pre>
+<figure><img class="alignleft size-full wp-image-5869" src="https://html5book.ru/wp-content/uploads/2015/06/order.png" alt="order" width="660" height="160" srcset="https://html5book.ru/wp-content/uploads/2015/06/order.png 660w, https://html5book.ru/wp-content/uploads/2015/06/order-300x73.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 8. Порядок отображения flex-элементов</figcaption></figure>
+<h4 id="flex-basis">2.2. Базовая ширина элемента flex-basis</h4>
+<p>Свойство позволяет задать базовую ширину flex-элемента, относительно которой будет происходить растяжение <kbd>flex-grow</kbd> или сужение <kbd>flex-shrink</kbd> элемента. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">flex-basis</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>auto</kbd></td>
+<td>Значение по умолчанию. Элемент получает базовую ширину, соответствующую ширине контента внутри него, если она не задана явно.</td>
+</tr>
+<tr>
+<td>число</td>
+<td>Ширина элемента задается в <kbd>px</kbd>, <kbd>%</kbd>, <kbd>em</kbd> и других единицах измерения.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex;
+display: flex;
+}
+.flex-item {
+-webkit-flex-basis: 100px; 
+flex-basis: 100px;
+}</pre>
+<h4 id="flex-grow">2.3. Растяжение элементов flex-grow</h4>
+<p>Свойство определяет коэффициент увеличения ширины flex-элемента относительно других flex-элементов. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">flex-grow</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>число</td>
+<td>Положительное целое или дробное число, устанавливающее коэффициент увеличения flex-элемента. Значение по умолчанию <kbd>0</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<figure><img class="alignleft size-full wp-image-5865" src="https://html5book.ru/wp-content/uploads/2015/06/flex-grow.png" alt="flex-grow" width="660" height="179" srcset="https://html5book.ru/wp-content/uploads/2015/06/flex-grow.png 660w, https://html5book.ru/wp-content/uploads/2015/06/flex-grow-300x81.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 10. Растяжение flex-элементов в строке</figcaption></figure>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex;
+display: flex;
+}
+.flex-item {
+-webkit-flex-grow: 3; 
+flex-grow: 3;
+}</pre>
+<h4 id="flex-shrink">2.4. Сужение элементов flex-shrink</h4>
+<p>Свойство указывает коэффициент уменьшения ширины flex-элемента относительно других flex-элементов. Работает только если для элемента задана ширина с помощью свойства <kbd>flex-basis</kbd> или <kbd>width</kbd>. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">flex-shrink</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>число</td>
+<td>Положительное целое или дробное число, устанавливающее коэффициент уменьшения flex-элемента. Значение по умолчанию <kbd>1</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<figure><img class="alignleft size-full wp-image-5866" src="https://html5book.ru/wp-content/uploads/2015/06/flex-shrink.png" alt="flex-shrink" width="660" height="244" srcset="https://html5book.ru/wp-content/uploads/2015/06/flex-shrink.png 660w, https://html5book.ru/wp-content/uploads/2015/06/flex-shrink-300x111.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 11. Сужение flex-элементов в строке</figcaption></figure>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex;
+display: flex;
+}
+.flex-item {
+-webkit-flex-shrink: 3; 
+flex-shrink: 3;
+}</pre>
+<h4 id="flex">2.5. Задание базовой ширины и трансформации элемента одним свойством flex</h4>
+<p>Свойство представляет собой сокращённую запись свойств <kbd>flex-grow</kbd>, <kbd>flex-shrink</kbd> и <kbd>flex-basis</kbd>. Значение по умолчанию: <kbd>flex: 0 1 auto;</kbd>. Можно указывать как одно, так и все три значения свойств. Свойство не наследуется.</p>
+<p>W3C рекомендует использовать сокращённую запись, так как она правильно сбрасывает любые неуказанные компоненты, чтобы подстроиться под типичное использование.</p>
+<table class="t1">
+<tr>
+<th colspan="2">flex</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>коэффициент растяжения</td>
+<td>Коэффициент увеличения ширины flex-элемента относительно других flex-элементов.</td>
+</tr>
+<tr>
+<td>коэффициент сужения</td>
+<td>Коэффициент уменьшения ширины flex-элемента относительно других flex-элементов.</td>
+</tr>
+<tr>
+<td>базовая ширина</td>
+<td>Базовая ширина flex-элемента.</td>
+</tr>
+<tr>
+<td><kbd>auto</kbd></td>
+<td>Эквивалентно <kbd>flex: 1 1 auto;</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Эквивалентно <kbd>flex: 0 0 auto;</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex;
+display: flex;
+}
+.flex-item {
+-webkit-flex: 3 1 100px; 
+-ms-flex:  3 1 100px; 
+flex:  3 1 100px;
+}</pre>
+<h4 id="align-self">2.6. Выравнивание отдельных элементов align-self</h4>
+<p>Свойство отвечает за выравнивание отдельно взятого flex-элемента по высоте flex-контейнера. Переопределяет выравнивание, заданное <kbd>align-items</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">align-self</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>auto</kbd></td>
+<td>Значение по умолчанию. Flex-элемент использует выравнивание, указанное в свойстве <kbd>align-items</kbd> flex-контейнера.</td>
+</tr>
+<tr>
+<td><kbd>flex-start</kbd></td>
+<td>Flex-элемент выравнивается по верхнему краю flex-контейнера, относительно левой границы.</td>
+</tr>
+<tr>
+<td><kbd>flex-end</kbd></td>
+<td>Flex-элемент выравнивается по нижнему краю flex-контейнера, относительно левой границы.</td>
+</tr>
+<tr>
+<td><kbd>center</kbd></td>
+<td>Flex-элемент выравнивается по высоте по середине flex-контейнера, относительно левой границы.</td>
+</tr>
+<tr>
+<td><kbd>baseline</kbd></td>
+<td>Flex-элемент выравнивается по базовой линии flex-контейнера, относительно левой границы.</td>
+</tr>
+<tr>
+<td><kbd>stretch</kbd></td>
+<td>Flex-элемент растягивается на всю высоту flex-контейнера, при этом учитываются поля и отступы.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<figure><img class="alignleft size-full wp-image-5862" src="https://html5book.ru/wp-content/uploads/2015/06/align-self.png" alt="align-self" width="660" height="605" srcset="https://html5book.ru/wp-content/uploads/2015/06/align-self.png 660w, https://html5book.ru/wp-content/uploads/2015/06/align-self-300x275.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 12. Выравнивание отдельных flex-элементов</figcaption></figure>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true ">.flex-container {
+display: -webkit-flex;
+display: flex;
+}
+.flex-item {
+-webkit-align-self: center; 
+align-self: center;
+}</pre>
+
+<br><br><br><br><br><br></div></div></div>
+<a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+
+     
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

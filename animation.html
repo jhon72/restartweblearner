@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+     <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>CSS3 Анимация</h2>
+                        <b>CSS3-анимация</b> придаёт сайтам динамичность. Она оживляет веб-страницы, улучшая взаимодействие с пользователем. В отличие от CSS3-переходов, создание анимации базируется на ключевых кадрах, которые позволяют автоматически воспроизводить и повторять эффекты на протяжении заданного времени, а также останавливать анимацию внутри цикла.</p>
+<p>CSS3-анимация может применяться практически для всех html-элементов, а также для псевдоэлементов <kbd>:before</kbd> и <kbd>:after</kbd>. При создании анимации не стоит забывать о возможных проблемах с производительностью, так как на изменение некоторых свойств требуется много ресурсов. </p>
+<h2>Введение в CSS-анимацию</h2>
+<ul class="contents">
+<li style="color:white; background:#5e4a3f;">Содержание:</li>
+<li><a href="#keyframes">1. Правило <kbd>@keyframes</kbd></a></li>
+<li><a href="#animation-name">2. Название анимации <kbd>animation-name</kbd></a></li>
+<li><a href="#animation-duration">3. Продолжительность анимации <kbd>animation-duration</kbd></a></li>
+<li><a href="#animation-timing-function">4. Временная функция <kbd>animation-timing-function</kbd></a></li>
+<li><a href="#animation-delay">5. Анимация с задержкой <kbd>animation-delay</kbd></a></li>
+<li><a href="#animation-iteration-count">6. Повтор анимации <kbd>animation-iteration-count</kbd></a></li>
+<li><a href="#animation-direction">7. Направление анимации <kbd>animation-direction</kbd></a></li>
+<li><a href="#animation">8. Краткая запись анимации <kbd>animation</kbd></a></li>
+<li><a href="#animation-play-state">9. Проигрывание анимации <kbd>animation-play-state</kbd></a></li>
+<li><a href="#animation-fill-mode">10. Состояние элемента до и после воспроизведения анимации <kbd>animation-fill-mode</kbd></a></li>
+<li><a href="#part10">11. Множественные анимации</a></li>
+<li><a href="https://html5book.ru/urok-sozdanie-animacii/">12. Урок: создание анимации</a></li>
+</ul>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 10.0<br />
+<b>Firefox:</b> 16.0, 5.0 -moz-<br />
+<b>Chrome:</b> 43.0, 4.0 -webkit-<br />
+<b>Safari:</b> 4.0 -webkit-<br />
+<b>Opera:</b> 12.1, 12.0 -o-<br />
+<b>iOS Safari:</b> 9, 7.1 -webkit-<br />
+<b>Opera Mini:</b> &#8212;<br />
+<b>Android Browser:</b> 44, 4.1 -webkit-<br />
+<b>Chrome for Android:</b> 44</p></blockquote>
+<p data-height="300" data-theme-id="5012" data-slug-hash="qaErzz" data-default-tab="result" data-user="nazarelen" data-pen-title="square loader" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen/pen/qaErzz/"  >square loader</a> by Elena Nazarova (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen"  >@nazarelen</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="keyframes">1. Правило @keyframes</h3>
+<p>Создание анимации начинается с установки <b>ключевых кадров</b> правила <kbd>@keyframes</kbd>. Кадры определяют, какие свойства на каком шаге будут анимированы. Каждый кадр может включать один или более блоков объявления из одного или более пар свойств и значений. Правило <kbd>@keyframes</kbd> содержит имя анимации элемента, которое связывает правило и блок объявления элемента. </p>
+<pre class="lang:css decode:true " >@keyframes shadow {
+from {text-shadow: 0 0 3px black;}
+50% {text-shadow: 0 0 30px black;}
+to {text-shadow: 0 0 3px black;}
+}</pre>
+<p>Ключевые кадры создаются с помощью ключевых слов <kbd>from</kbd> и <kbd>to</kbd> (эквивалентны значениям <kbd>0%</kbd> и <kbd>100%</kbd>) или с помощью процентных пунктов, которых можно задавать сколько угодно. Также можно комбинировать ключевые слова и процентные пункты. Если кадры имеют одинаковые свойства и значения, их можно объединить в одно объявление:</p>
+<pre class="lang:css decode:true " >@keyframes move {
+from, 
+to {
+top: 0;
+left: 0;
+}
+25%, 
+75% {top: 100%;}
+50% {top: 50%;}
+}</pre>
+<p>Если 0% или 100% кадры не указаны, то браузер пользователя создает их, используя вычисляемые (первоначально заданные) значения анимируемого свойства. Если у двух ключевых кадров будут одинаковые селекторы, то последующий отменит действие предыдущего. </p>
+<p>После объявления правила <kbd>@keyframes</kbd>, мы можем ссылаться на него в свойстве <kbd>animation</kbd>:</p>
+<pre class="lang:css decode:true " >h1 {
+font-size: 3.5em;
+color: darkmagenta;
+animation: shadow  2s infinite ease-in-out;
+}</pre>
+<p>Не рекомендуется анимировать нечисловые значения (за редким исключением), так как результат в браузере может быть непредсказуемым. Также не следует создавать ключевые кадры для значений свойств, не имеющих средней точки, например, для значений свойства <kbd>color: pink</kbd> и <kbd>color: #ffffff</kbd>, <kbd>width: auto</kbd> и <kbd>width: 100px</kbd> или <kbd>border-radius: 0</kbd> и <kbd>border-radius: 50%</kbd> (в этом случае правильно будет указать <kbd>border-radius: 0%</kbd>).  </p>
+<h3 id="animation-name">2. Название анимации animation-name</h3>
+<p>Свойство задаёт имя анимации. Имя анимации создаётся в правиле <kbd>@keyframes</kbd>. Рекомендуется использовать название, отражающее суть анимации, при этом можно использовать одно или несколько слов, связанных между собой при помощи пробела <kbd>-</kbd> или символа нижнего подчеркивания <kbd>_</kbd>. Свойство не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">animation-name</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>имя анимации</td>
+<td>Имя анимации, которое связывает правило <kbd>@keyframes</kbd> с селектором.</td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию, означает отсутствие анимации. Также используется, чтобы отменить анимацию элемента из группы элементов, для которых задана анимация.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {animation-name: mymove;}</pre>
+<h3 id="animation-duration">3. Продолжительность анимации animation-duration</h3>
+<p>Свойство устанавливает продолжительность анимации, задаётся в секундах или миллисекундах, отрицательные значения не допустимы. Не наследуется. Если для элемента задано более одной анимации, то можно установить разное время для каждой, перечислив значения через запятую.</p>
+<table class="t1">
+<tr>
+<th colspan="2">animation-duration</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>время</td>
+<td>Длительность анимации задается в секундах <kbd>s</kbd> или миллисекундах <kbd>ms</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию <kbd>0</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {animation-duration: 2s;}</pre>
+<h3 id="animation-timing-function">4. Временная функция animation-timing-function</h3>
+<p>Свойство определяет изменение скорости от начала до конца анимации с помощью временных функций. Задаётся при помощи ключевых слов или кривой Безье <kbd>cubic-bezier(x1, y1, x2, y2)</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">animation-timing-function</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>ease</kbd></td>
+<td>Функция по умолчанию, анимация начинается медленно, разгоняется быстро и замедляется в конце. Соответствует <kbd>cubic-bezier(0.25,0.1,0.25,1)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>linear</kbd></td>
+<td>Анимация происходит равномерно на протяжении всего времени, без колебаний в скорости. Соответствует <kbd>cubic-bezier(0,0,1,1)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>ease-in</kbd></td>
+<td>Анимация начинается медленно, а затем плавно ускоряется в конце. Соответствует <kbd>cubic-bezier(0.42,0,1,1)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>ease-out</kbd></td>
+<td>Анимация начинается быстро и плавно замедляется в конце. Соответствует <kbd>cubic-bezier(0,0,0.58,1)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>ease-in-out</kbd></td>
+<td>Анимация медленно начинается и медленно заканчивается. Соответствует <kbd>cubic-bezier(0.42,0,0.58,1)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>cubic-bezier(x1, y1, x2, y2)</kbd></td>
+<td>Позволяет вручную установить значения от 0 до 1. <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://roblaplaca.com/examples/bezierBuilder/"  target="_blank" class="site">На этом сайте</a> вы сможете построить любую траекторию скорости изменения анимации.</td>
+</tr>
+<tr>
+<td><kbd>step-start</kbd></td>
+<td>Задаёт пошаговую анимацию, разбивая анимацию на отрезки, изменения происходят в начале каждого шага. Эквивалентно <kbd>steps(1, start)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>step-end</kbd></td>
+<td>Пошаговая анимация, изменения происходят в конце каждого шага. Эквивалентно <kbd>steps(1, end)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>steps(количество шагов,start|end)</kbd></td>
+<td>Ступенчатая временная функция, которая принимает два параметра. Количество шагов</b> задается целым положительным числом. Второй параметр необязательный, указывает момент, в котором начинается анимация. Со значением <kbd>start</kbd> анимация начинается в начале каждого шага, со значением <kbd>end</kbd> — в конце каждого шага с задержкой. Задержка вычисляется как результат деления времени анимации на количество шагов. Если второй параметр не указан, используется значение по умолчанию <kbd>end</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {animation-timing-function: linear;}</pre>
+<p data-height="850" data-theme-id="0" data-slug-hash="xEAJZg" data-default-tab="result" data-user="html5book" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/xEAJZg/"  >xEAJZg</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<p>С помощью пошаговой анимации можно создавать интересные эффекты, например, печатающийся текст или индикатор загрузки. </p>
+<p data-height="270" data-theme-id="0" data-slug-hash="VKvWQW" data-default-tab="result" data-user="html5book" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/VKvWQW/"  >VKvWQW</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="animation-delay">5. Анимация с задержкой animation-delay</h3>
+<p>Свойство игнорирует анимацию заданное количество времени, что даёт возможность по отдельности запускать каждую анимацию. Отрицательная задержка начинает анимацию с определенного момента внутри её цикла, т.е. со времени, указанного в задержке. Это позволяет применять анимацию к нескольким элементам со сдвигом фазы, изменяя лишь время задержки. </p>
+<p>Чтобы анимация началась с середины, нужно задать отрицательную задержку, равную половине времени, установленном в <kbd>animation-duration</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">animation-delay</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>время</td>
+<td>Задержка анимации задается в секундах <kbd>s</kbd> или миллисекундах <kbd>ms</kbd>. Значение по умолчанию <kbd>0</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {animation-delay: 2s;}</pre>
+<p data-height="170" data-theme-id="5012" data-slug-hash="vEapjj" data-default-tab="result" data-user="nazarelen" class='codepen'>See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen/pen/vEapjj/"  >vEapjj</a> by HeleN (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen"  >@nazarelen</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="animation-iteration-count">6. Повтор анимации animation-iteration-count</h3>
+<p>Свойство позволяет запустить анимацию несколько раз. Значение <kbd>0</kbd> или любое отрицательное число удаляют анимацию из проигрывания. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">animation-iteration-count</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>число</td>
+<td>С помощью целого числа задается количество повторов анимации. Значение по умолчанию <kbd>1</kbd>. Дробные значения больше <kbd>1</kbd> будут воспроизводить анимацию, обрезая её на части следующей итерации.</td>
+</tr>
+<tr>
+<td><kbd>infinite</kbd></td>
+<td>Анимация проигрывается бесконечно.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {animation-iteration-count: 3;}</pre>
+<h3 id="animation-direction">7. Направление анимации animation-direction</h3>
+<p>Свойство задает направление повтора анимации. Если анимация повторяется только один раз, то это свойство не имеет смысла. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">animation-direction</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>alternate</kbd></td>
+<td>Анимация проигрывается с начала до конца, затем в обратном направлении.</td>
+</tr>
+<tr>
+<td><kbd>alternate-reverse</kbd></td>
+<td>Анимация проигрывается с конца до начала, затем в обратном направлении.</td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию, анимация проигрывается в обычном направлении, с начала и до конца.</td>
+</tr>
+<tr>
+<td><kbd>reverse</kbd></td>
+<td>Анимация проигрывается с конца.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {animation-direction: alternate;}</pre>
+<p data-height="530" data-theme-id="0" data-slug-hash="GjpExx" data-default-tab="result" data-user="html5book" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/GjpExx/"  >GjpExx</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="animation">8. Краткая запись анимации</h3>
+<p>Все параметры воспроизведения анимации можно объединить в одном свойстве &#8212; <kbd>animation</kbd>, перечислив их через пробел:</p>
+<pre class="lang:css decode:true " >animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction;</pre>
+<p>Для воспроизведения анимации достаточно указать только два свойства &#8212; <kbd>animation-name</kbd> и <kbd>animation-duration</kbd>, остальные свойства примут значения по умолчанию. Порядок перечисления свойств не имеет значения, единственное, время выполнения анимации <kbd>animation-duration</kbd> обязательно должно стоять перед задержкой <kbd>animation-delay</kbd>. </p>
+<h3 id="animation-play-state">9. Проигрывание анимации animation-play-state</h3>
+<p>Свойство управляет проигрыванием и остановкой анимации. Остановка анимации внутри цикла возможна через использование этого свойства в скрипте JavaScript. Также можно останавливать анимацию при наведении курсора мыши на объект &#8212; состояние <kbd>:hover</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">animation-play-state</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>paused</kbd></td>
+<td>Останавливает анимацию.</td>
+</tr>
+<tr>
+<td><kbd>running</kbd></td>
+<td>Значение по умолчанию, означает проигрывание анимации.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div:hover {animation-play-state: paused;}</pre>
+<p data-height="375" data-theme-id="5012" data-slug-hash="EjRagd" data-default-tab="result" data-user="nazarelen" class='codepen'>See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen/pen/EjRagd/"  >EjRagd</a> by Elena Nazarova (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/nazarelen"  >@nazarelen</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="animation-fill-mode">10. Состояние элемента до и после воспроизведения анимации animation-fill-mode</h3>
+<p>Свойство определяет порядок применения определенных в <kbd>@keyframes</kbd> стилей к объекту. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">animation-fill-mode</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию. Состояние элемента не меняется до или после воспроизведения анимации.</td>
+</tr>
+<tr>
+<td><kbd>forwards</kbd></td>
+<td>Воспроизводит анимацию до последнего кадра по окончанию последнего повтора и не отматывает ее к первоначальному состоянию.</td>
+</tr>
+<tr>
+<td><kbd>backwards</kbd></td>
+<td>Возвращает состояние элемента после загрузки страницы к первому кадру, даже если установлена задержка <kbd>animation-delay</kbd>, и оставляет его там, пока не начнется анимация.</td>
+</tr>
+<tr>
+<td><kbd>both</kbd></td>
+<td>Позволяет оставлять элемент в первом ключевом кадре до начала анимации (игнорируя положительное значение задержки) и задерживать на последнем кадре до конца последней анимации.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >div {animation-fill-mode: forwards;}</pre>
+<p data-height="355" data-theme-id="0" data-slug-hash="pEjwLX" data-default-tab="result" data-user="html5book" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/pEjwLX/"  >pEjwLX</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="part10">11. Множественные анимации</h3>
+<p>Для одного элемента можно задавать несколько анимаций, перечислив их названия через запятую:</p>
+<pre class="lang:css decode:true " >div {animation: shadow 1s ease-in-out 0.5s alternate, move 5s linear 2s;}</pre>
+
+<br><br><br><br><br><br></div></div></div>
+<a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+     
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

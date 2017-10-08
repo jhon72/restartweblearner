@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link rel="stylesheet" href="css/table.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+       <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        
+                        
+                        
+                        
+                        <h2>CSS Текст</h2>
+                        
+                        
+                        
+                        
+                        <strong>CSS-текст</strong> представляет набор свойств для форматирования текстового содержимого веб-страниц. Использование CSS-стилей для форматирования текста позволяет придать HTML-элементам желаемый вид, благодаря чему HTML-теги могут применяться только по своему прямому назначению &#8212; для определения структуры документа.</p>
+
+<h2 style="clear:both">Форматирование текста в CSS</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#text-align">1. Горизонтальное выравнивание <kbd>text-align</kbd></a></li>
+<li><a href="#text-indent">2. Отступ <kbd>text-indent</kbd></a></li>
+<li><a href="#line-height">3. Высота строки <kbd>line-height</kbd></a></li>
+<li><a href="#vertical-align">4. Вертикальное выравнивание <kbd>vertical-align</kbd></a></li>
+</ul>
+<h3 id="text-align">1. Горизонтальное выравнивание text-align</h3>
+<p>Свойство выравнивает строки текста внутри блока по ширине относительно его границ. Применяется только к блочным элементам, например, абзацам. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">text-align</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>left</kbd></td>
+<td>Выравнивание по левому краю элемента. Значение по умолчанию для языков, в которых чтение происходит слева-направо.</td>
+</tr>
+<tr>
+<td><kbd>right</kbd></td>
+<td>Выравнивание по правому краю элемента.</td>
+</tr>
+<tr>
+<td><kbd>center</kbd></td>
+<td>Выравнивание по центру элемента, управляет выравниванием содержимого, а не самих элементов. Центрирует каждую строчку текста элемента.</td>
+</tr>
+<tr>
+<td><kbd>justify</kbd></td>
+<td>Выравнивание по ширине элемента. В выровненном по ширине тексте оба конца строки прижимаются к левому и правому краям родительского элемента. Пробелы между словами и буквами распределяются таким образом, чтобы длина всех строк была равна. Разные браузеры могут увеличить как отступы между словами, так и интервалы между буквами.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {text-align: left;}
+p {text-align: right;}
+p {text-align: center;}
+p {text-align: justify;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/03/text-align.png" alt="text-align" width="660" height="228" class="alignleft size-full wp-image-4535" srcset="https://html5book.ru/wp-content/uploads/2014/03/text-align.png 660w, https://html5book.ru/wp-content/uploads/2014/03/text-align-300x104.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 1. Свойство text-align</figcaption></figure>
+<h3 id="text-indent">2. Отступ text-indent</h3>
+<p>Устанавливает отступ (выступ) в первой строке элемента, создавая иллюзию структурированного текста. Применяется к любому блочному элементу, значение по умолчанию 0. Если в первой строке блочного элемента присутствует изображение, то оно сдвинется вместе с остальным текстом. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">text-indent</th>
+</tr>
+<tr>
+<td>Значение:</td>
+<td></td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Значение задаётся в единицах длины <kbd>em</kbd>, <kbd>px</kbd> и т.д. Смещает первую строку текста. Можно использовать как положительные, так и отрицательные значения (см. пример ниже).</td>
+</tr>
+<tr>
+<td><kbd>%</kbd></td>
+<td>Величина смещения задаётся в процентах, вычисляется относительно ширины родительского блока.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {text-indent: 5px;}
+p {text-indent: 2%;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/03/text-indent.png" alt="text-indent" width="660" height="164" class="alignleft size-full wp-image-4537" srcset="https://html5book.ru/wp-content/uploads/2015/03/text-indent.png 660w, https://html5book.ru/wp-content/uploads/2015/03/text-indent-300x75.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 2. Свойство text-indent</figcaption></figure>
+<h3 id="line-height">3. Высота строки line-height</h3>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/03/line-height.png" alt="line-height" class="aligncenter size-full wp-image-77" srcset="https://html5book.ru/wp-content/uploads/2014/03/line-height.png 680w, https://html5book.ru/wp-content/uploads/2014/03/line-height-300x64.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption>Рис. 3. Контейнер строки</figcaption></figure>
+<p>Свойство задаёт расстояние между базовыми линиями строк текста, определяя величину, на которую увеличивается или уменьшается высота блока каждого элемента. Управляет межстрочным интервалом &#8212; дополнительным расстоянием между строками над и под текстом. Чтобы определить межстрочный интервал, нужно найти разность <kbd>line-height</kbd> и <kbd>font-size</kbd>, разницу поделить на два, а каждую половину прибавить к области содержимого сверху и снизу. Принимает только положительные значения. Стандартный межстрочный интервал эквивалентен 120%.</p>
+<p>При равных значениях <kbd>line-height</kbd> и <kbd>height</kbd> выравнивает текст по высоте. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">line-height</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Значение задаётся в единицах длины, создавая фиксированное значение высоты строки. Если задать значение меньше единицы, слова в смежных строках будут находить друг на друга.</td>
+</tr>
+<tr>
+<td><kbd>%</kbd></td>
+<td>Вычисляется относительно текущего значения свойства <kbd>font-size</kbd>.</td>
+</tr>
+<tr>
+<td>число</td>
+<td>Целое или дробное числовое значение, на которое будет умножен текущий размер шрифта.</td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение браузера по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >h1 {line-height: 20px;}
+h1 {line-height: 200%;}
+h1 {line-height: 1.2;}
+h1 {line-height: normal;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/03/line-height-text.png" alt="line-height-text" width="660" height="223" class="alignleft size-full wp-image-4539" srcset="https://html5book.ru/wp-content/uploads/2015/03/line-height-text.png 660w, https://html5book.ru/wp-content/uploads/2015/03/line-height-text-300x101.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 4. Пример отображения различных значений межстрочного интервала</figcaption></figure>
+<h3 id="vertical-align">4. Вертикальное выравнивание vertical-align</h3>
+<p>Применяется только к строчным элементам, к изображениям и полям форм. Не выравнивает содержимое блочного элемента. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">vertical-align</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>baseline</kbd></td>
+<td>Выравнивает базовую линию элемента по базовой линии его родителя, совмещая среднюю линию элемента со средней линией родительского элемента.</td>
+</tr>
+<tr>
+<td><kbd>sub</kbd></td>
+<td>Делает элемент подстрочным (аналогично с тегом <kbd>&lt;sub&gt;</kbd>). Величина понижения элемента может меняться в зависимости от браузера пользователя.</td>
+</tr>
+<tr>
+<td><kbd>super</kbd></td>
+<td>Делает элемент надстрочным (аналогично с тегом <kbd>&lt;sup&gt;</kbd>). При этом значения <kbd>sup</kbd> и <kbd>super</kbd> не меняют размер шрифта, по умолчанию текст надстрочного и подстрочного элемента имеет такой же размер, как и текст родительского элемента.</td>
+</tr>
+<tr>
+<td><kbd>top</kbd></td>
+<td>Верхний край элемента совмещается с верхним краем самого высокого элемента в линии.</td>
+</tr>
+<tr>
+<td><kbd>text-top</kbd></td>
+<td>Верхний край элемента совмещается с верхним краем шрифта родительского элемента.</td>
+</tr>
+<tr>
+<td><kbd>middle</kbd></td>
+<td>Средняя линия элемента (обычно изображения) совмещается с линией, проходящей через середину родительского элемента.</td>
+</tr>
+<tr>
+<td><kbd>bottom</kbd></td>
+<td>Нижний край элемента совмещается с нижним краем самого низкого элемента в линии.</td>
+</tr>
+<tr>
+<td><kbd>text-bottom</kbd></td>
+<td>Нижний край элемента совмещается с нижним краем шрифта родительского элемента.</td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Устанавливает значение в единицах длины, перемещая элемент на заданное расстояние.</td>
+</tr>
+<tr>
+<td><kbd>%</kbd></td>
+<td>Не позволяет устанавливать <kbd>middle</kbd>, вычисляется как часть <kbd>line-height</kbd> элемента, а не его родителя, т.е. если установить значение <kbd>vertical-align</kbd>, равное <kbd>50%</kbd> для элемента с <kbd>line-height</kbd> равным <kbd>20рх</kbd>, то базовая линия элемента поднимется на <kbd>10px</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >img {vertical-align: baseline;}
+img {vertical-align: sub;}
+img {vertical-align: super;}
+img {vertical-align: top;}
+img {vertical-align: text-top;}
+img {vertical-align: middle;}
+img {vertical-align: bottom;}
+img {vertical-align: text-bottom;}
+img {vertical-align: 5px;}
+img {vertical-align: 100%;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/03/vertical-align.png" alt="vertical-align" width="660" height="492" class="alignleft size-full wp-image-4540" srcset="https://html5book.ru/wp-content/uploads/2014/03/vertical-align.png 660w, https://html5book.ru/wp-content/uploads/2014/03/vertical-align-300x224.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 5. Свойство vertical-align</figcaption></figure>
+                        
+                        
+                        
+                        
+                        
+                        
+       <h2 style="clear:both">Обработка пробелов между буквами и словами</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#word-spacing">1. Расстояние между словами <kbd>word-spacing</kbd></a></li>
+<li><a href="#letter-spacing">2. Расстояние между буквами <kbd>letter-spacing</kbd></a></li>
+<li><a href="#white-space">3. Обработка пробелов <kbd>white-space</kbd></a></li>
+<li><a href="#tab-size">4. Настройка табуляции <kbd>tab-size</kbd></a></li>
+</ul>
+<h3 id="word-spacing">1. Расстояние между словами word-spacing</h3>
+<p>Устанавливает интервалы между словами. Можно использовать положительные и отрицательные значения. При отрицательном значении слова могут накладываться друг на друга. </p>
+<p>На значение <kbd>word-spacing</kbd> оказывает влияние значение свойства <kbd>text-align</kbd> в случае выравнивания текста по ширине. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">word-spacing</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию, равное <kbd>0.25em</kbd>.</td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Значение устанавливается в единицах длины &#8212; <kbd>px</kbd>, <kbd>em</kbd>. Принимает как положительные, так и отрицательные значения, увеличивая или уменьшая расстояние между словами.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {word-spacing: normal;}
+p {word-spacing: 2px;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/03/word-spacing.png" alt="word-spacing" width="660" height="194" class="alignleft size-full wp-image-4543" srcset="https://html5book.ru/wp-content/uploads/2015/03/word-spacing.png 660w, https://html5book.ru/wp-content/uploads/2015/03/word-spacing-300x88.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 1. Расстояние между словами</figcaption></figure>
+<h3 id="letter-spacing">2. Расстояние между буквами letter-spacing</h3>
+<p>Свойство устанавливает расстояние между буквами (величину трекинга) и символами. Может принимать положительные и отрицательные значения. Целесообразно применять для повышения выразительности и читаемости заголовков, определений и пр. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">letter-spacing</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию, не добавляет дополнительное пространство между буквами и символами.</td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Значение задаётся в единицах длины, положительные значения увеличивают промежутки между буквами и символами, отрицательные &#8212; уменьшают.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {letter-spacing: normal;}
+p {letter-spacing: 2px;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/03/letter-spacing.png" alt="letter-spacing" width="660" height="242" class="alignleft size-full wp-image-4545" srcset="https://html5book.ru/wp-content/uploads/2015/03/letter-spacing.png 660w, https://html5book.ru/wp-content/uploads/2015/03/letter-spacing-300x110.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 2. Изменение расстояния между буквами с помощью свойства letter-spacing</figcaption></figure>
+<h3 id="white-space">3. Обработка пробелов white-space</h3>
+<p>Свойство обрабатывает пробелы между словами и переносы строк внутри элемента. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">white-space</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию. Между словами вставляется только по одному пробелу, дополнительные пробелы отбрасываются. Текст переносится только в случае необходимости.</td>
+</tr>
+<tr>
+<td><kbd>nowrap</kbd></td>
+<td>Запрещает переносы строк, за исключением применения <kbd>&lt;br&gt;</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>pre</kbd></td>
+<td>Пробелы в тексте не игнорируются, браузер отображает дополнительные пробелы и переносы строк.</td>
+</tr>
+<tr>
+<td><kbd>pre-wrap</kbd></td>
+<td>Сохраняет пробелы в тексте, делая разрывы строк там, где это необходимо.</td>
+</tr>
+<tr>
+<td><kbd>pre-line</kbd></td>
+<td>Удаляет лишние пробелы, за исключением случаев <kbd>&lt;br&gt;</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {white-space: normal;}
+p {white-space: nowrap;}
+p {white-space: pre;}
+p {white-space: pre-wrap;}
+p {white-space: pre-line;}</pre>
+<h3 id="tab-size">4. Настройка табуляции tab-size</h3>
+<p>Для изменения величины отступа, получаемого с помощью клавиши ТAB, используется свойство <kbd>tab-size</kbd>. Значения свойства игнорируются, когда установлено одно из трёх значений <kbd>pre-line</kbd>, <kbd>normal</kbd> или <kbd>nowrap</kbd> свойства <kbd>white-space</kbd>.</p>
+<p>Работает только для элементов <kbd>&lt;textarea&gt;</kbd> и <kbd>&lt;pre&gt;</kbd>, для остальных блочных элементов значение всегда будет равно единице. Значения свойства, указанные в единицах длины, поддерживается только в Chrome 42+.</p>
+<table class="t1">
+<tr>
+<th colspan="2">tab-size</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>целое число</td>
+<td>Любое целое положительное число. По умолчанию табуляция делает отступ, равный восьми пробелам.</td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Значение отступа, указываемое в единицах длины, например, <kbd>рх</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >pre {-moz-tab-size: 16;} /* Firefox */
+pre {-o-tab-size: 16;} /* Opera 10.6-12.1 */
+pre {tab-size: 16;}</pre>
+                       
+                                        
+                                                         <h2 style="clear:both">Преобразование и оформление текста</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#text-transform">1. Преобразование текста <kbd>text-transform</kbd></a></li>
+<li><a href="#direction">2. Направление написания текста <kbd>direction</kbd></a></li>
+<li><a href="#unicode-bidi">3. Направление написания слов в тексте <kbd>unicode-bidi</kbd></a></li>
+<li><a href="#text-decoration">4. Декорирование текста <kbd>text-decoration</kbd></a></li>
+<li><a href="#part4">5. Форматирование первой буквы и первой строки абзаца <kbd>:first-letter</kbd> и <kbd>:first-line</kbd></a></li>
+<li><a href="#quotes">6. Кавычки <kbd>quotes</kbd></a></li>
+</ul>
+<h3 id="text-transform">1. Трансформирование текста text-transform</h3>
+<p>С помощью данного свойства можно преобразовать текст в верхний и нижний регистры, или превратить первые буквы каждого слова, которые были заглавными, в прописные. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">text-transform</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию, означает отсутствие трансформации. Также отменяет трансформацию текста для элемента в группе элементов с установленным свойством.</td>
+</tr>
+<tr>
+<td><kbd>capitalize</kbd></td>
+<td>Изменяет написание первой буквы каждого слова в элементе, делая её прописной.</td>
+</tr>
+<tr>
+<td><kbd>uppercase</kbd></td>
+<td>Выводит все слова в элементе прописными буквами.</td>
+</tr>
+<tr>
+<td><kbd>lowercase</kbd></td>
+<td>Выводит все слова в элементе строчными буквами.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >h2 {text-transform: none;}
+h2 {text-transform: capitalize;}
+h2 {text-transform: uppercase;}
+h2 {text-transform: lowercase;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/03/text-transform.png" alt="text-transform" width="660" height="139" class="alignleft size-full wp-image-4547" srcset="https://html5book.ru/wp-content/uploads/2014/03/text-transform.png 660w, https://html5book.ru/wp-content/uploads/2014/03/text-transform-300x63.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 1. Преобразование текста с помощью свойства text-transform</figcaption></figure>
+<h3 id="direction">2. Направление написания текста direction</h3>
+<p>Свойство задаёт направление написания текста, направление размещения столбца таблицы, направление, в котором блок заполняет содержимое по горизонтали и положение последней строки выровненного по ширине элемента. Рекомендуется использовать вместе со свойством <kbd>unicode-bidi</kbd>. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">direction</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>ltr</kbd></td>
+<td>Значение по умолчанию, текст отражается слева направо.</td>
+</tr>
+<tr>
+<td><kbd>rtl</kbd></td>
+<td>Текст отражается справа налево.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {direction: ltr;}
+p {direction: rtl;}</pre>
+<h3 id="unicode-bidi">3. Направление написания слов в тексте unicode-bidi</h3>
+<p>Свойство используется вместе со свойством <kbd>direction</kbd> для поддержки написания слов в двунаправленном тексте. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">unicode-bidi</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию, направление отображения текста определяется браузером на основе используемой кодировки.</td>
+</tr>
+<tr>
+<td><kbd>embed</kbd></td>
+<td>Устанавливает параметры отображения текста как указано в свойстве <kbd>direction</kbd>, но при этом, при изменении направления, изменяется лишь расположение конечных символов пунктуации.</td>
+</tr>
+<tr>
+<td><kbd>bidi-override</kbd></td>
+<td>Работает аналогично значению <kbd>embed</kbd>, но при этом, при изменении направления, меняется также и направление написания слов в тексте.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {unicode-bidi: normal;}
+p {unicode-bidi: embed;}
+p {unicode-bidi: bidi-override;}</pre>
+<h3 id="text-decoration">4. Декорирование текста text-decoration</h3>
+<p>Свойство декорирует текст. Также убирает подчёркивание ссылок. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">text-decoration</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Выводит текст без оформления, убирает нижнее подчёркивание у ссылок.</td>
+</tr>
+<tr>
+<td><kbd>underline</kbd></td>
+<td>Подчёркивает текст.</td>
+</tr>
+<tr>
+<td><kbd>overline</kbd></td>
+<td>Добавляет тексту черту сверху.</td>
+</tr>
+<tr>
+<td><kbd>line-through</kbd></td>
+<td>Перечёркивает текст.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >a {text-decoration: none;}
+span {text-decoration: underline;}
+span {text-decoration: overline;}
+span {text-decoration: line-through;}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/03/text-decoration.png" alt="text-decoration" width="660" height="91" class="alignleft size-full wp-image-4548" srcset="https://html5book.ru/wp-content/uploads/2014/03/text-decoration.png 660w, https://html5book.ru/wp-content/uploads/2014/03/text-decoration-300x41.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 2. Оформление текста с помощью свойства text-decoration</figcaption></figure>
+<h3 id="part4">5. Форматирование первой буквы и первой строки абзаца</h3>
+<p>CSS даёт возможность форматирование абзаца с использованием псевдоэлементов <kbd>:first-letter</kbd> и <kbd>:first-line</kbd>. Например, можно выделить первый символ каждого абзаца, имитируя буквицу или придать особое форматирование первому предложению абзаца. В качестве фона для <kbd>:first-letter</kbd> также можно устанавливать градиентую заливку.</p>
+<p><img src="https://html5book.ru/wp-content/uploads/2014/03/first-letter-first-line.png" alt="first-letter-first-line" width="660" height="654" class="alignleft size-full wp-image-4929" srcset="https://html5book.ru/wp-content/uploads/2014/03/first-letter-first-line.png 660w, https://html5book.ru/wp-content/uploads/2014/03/first-letter-first-line-150x150.png 150w, https://html5book.ru/wp-content/uploads/2014/03/first-letter-first-line-300x297.png 300w" sizes="(max-width: 660px) 100vw, 660px" /></p>
+<pre class="lang:css decode:true " >/*первый абзац*/
+p:first-letter {
+  font-size: 2em;
+  margin-right: 2px; 
+  color: #EE9966;
+  font-weight: bold;
+  text-shadow: -1px -1px 1px white, 1px 1px 1px #9E9D99;
+}
+p:first-line {
+  color: #EE9966;
+}
+/*второй абзац*/
+p:first-letter {
+  font-size: 1.2em;
+  padding: 5px 10px;
+  margin-right: 5px; 
+  background: #EE9966;
+  color: #FAF4F4;
+  float: left;
+  border-radius: 50% 0;
+  font-weight: bold;
+}
+/*третий абзац*/
+p:first-letter {
+  font-size: 1.2em;
+  padding: 5px 10px;
+  margin-right: 5px; 
+  margin-bottom: 2px;
+  background: #EE9966;
+  color: #FAF4F4;
+  float: left;
+  font-weight: bold;
+}
+/*четвертый абзац*/
+p:first-letter {
+  font-size: 1.2em;
+  padding: 3px 10px;
+  margin-right: 5px; 
+  background: #EE9966;
+  color: #FAF4F4;
+  float: left;
+  font-weight: bold;
+  border-radius: 50%;
+}
+/*пятый абзац*/
+p:first-letter{
+  font-size: 1.5em;
+  padding: 2px 10px;
+  margin-right: 5px; 
+  background: #FAF4F4;
+  border: 6px double;
+  color: #EE9966;
+  float: left;
+  font-weight: bold;
+}
+/*шестой абзац*/
+p:first-letter{
+  font-size: 1.5em;
+  padding: 2px 10px;
+  margin-right: 5px; 
+  background: url(https://html5book.ru/wp-content/uploads/2015/01/border-orange.png);
+  border: 2px solid #EE9966;
+  color: #544E3E;
+  float: left;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px #9E9D99;
+}</pre>
+<h3 id="quotes">5. Форматирование кавычек quotes</h3>
+<p>Свойство задаёт тип кавычек, используемых в документе для вложенных цитат. По умолчанию кавычками оформляется текст, заключенный в тег <kbd>&lt;q&gt;</kbd>. Также кавычки можно сгенерировать помощью свойства <kbd>content</kbd>, задав ему значения <kbd>open-quote</kbd> и <kbd>close-quote</kbd>. В качестве значения используется специальный символ HTML или символ Юникода. Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">quotes</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>[символ символ]+</td>
+<td>Определяет вид открывающей и закрывающей кавычек. Первая пара используется для отображения <b>внешнего уровня цитирования</b>, вторая и последующие &#8212; для <b>вложенных уровней цитирования</b>.</td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Текст отображается без кавычек.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {quotes:'«' '»';}
+p {quotes: none;}</pre>
+<table class="t3">
+<caption>Таблица 1. Кавычки в HTML</caption>
+<tr>
+<th>Описание</th>
+<th>Внешний вид</th>
+<th>Номер в Юникоде</th>
+<th>HTML-код/Мнемоника</th>
+</tr>
+<tr>
+<td>Двойная кавычка</td>
+<td style="font-size:150%">&quot;</td>
+<td>\0022</td>
+<td>&amp;quot;</td>
+</tr>
+<tr>
+<td>Апостроф</td>
+<td style="font-size:150%">&apos;</td>
+<td>\0027</td>
+<td>&amp;apos;</td>
+</tr>
+<tr>
+<td>Открывающая одинарная кавычка</td>
+<td style="font-size:150%">&lsquo;</td>
+<td>\2018</td>
+<td>&amp;lsquo;</td>
+</tr>
+<tr>
+<td>Закрывающая одинарная кавычка</td>
+<td style="font-size:150%">&rsquo;</td>
+<td>\2019</td>
+<td>&amp;rsquo;</td>
+</tr>
+<tr>
+<td>Закрывающая двойная кавычка</td>
+<td style="font-size:150%">&ldquo;</td>
+<td>\201C</td>
+<td>&amp;ldquo;</td>
+</tr>
+<tr>
+<td>Правая двойная кавычка</td>
+<td style="font-size:150%">&rdquo;</td>
+<td>\201D</td>
+<td>&amp;rdquo;</td>
+</tr>
+<tr>
+<td>Двойная нижняя кавычка</td>
+<td style="font-size:150%">&#11842;</td>
+<td>\2E42</td>
+<td>&amp;#11842;</td>
+</tr>
+<tr>
+<td>Открывающая левая кавычка «ёлочка»</td>
+<td style="font-size:150%">&laquo;</td>
+<td>\00AB</td>
+<td>&amp;laquo;</td>
+</tr>
+<tr>
+<td>Закрывающая правая кавычка «ёлочка»</td>
+<td style="font-size:150%">&raquo;</td>
+<td>\00BB</td>
+<td>&amp;raquo;</td>
+</tr>
+<tr>
+<td>Нижняя одинарная открывающая кавычка</td>
+<td style="font-size:150%">&sbquo;</td>
+<td>\201A</td>
+<td>&amp;sbquo;</td>
+</tr>
+<tr>
+<td>Верхняя одинарная обратная кавычка</td>
+<td style="font-size:150%">&#8219;</td>
+<td>\201B</td>
+<td>&amp;#8219;</td>
+</tr>
+<tr>
+<td>Нижняя двойная открывающая кавычка</td>
+<td style="font-size:150%">&bdquo;</td>
+<td>\201E</td>
+<td>&amp;bdquo;</td>
+</tr>
+<tr>
+<td>Двойная верхняя обратная кавычка</td>
+<td style="font-size:150%">&#8223;</td>
+<td>\201F</td>
+<td>&amp;#8223;</td>
+</tr>
+<tr>
+<td>Одинарная открывающая (левая) французская угловая кавычка</td>
+<td style="font-size:150%">&lsaquo;</td>
+<td>\2039</td>
+<td>&amp;lsaquo;</td>
+</tr>
+<tr>
+<td>Одинарная закрывающая (правая) французская угловая кавычка</td>
+<td style="font-size:150%">&rsaquo;</td>
+<td>\203A</td>
+<td>&amp;rsaquo;</td>
+</tr>
+</table>
+                       
+                                        
+                                                         
+<h2 style="clear:both">CSS3-свойства для форматирования текста</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#text-overflow">1. Обрезка строки <kbd>text-overflow</kbd></a></li>
+<li><a href="#word-break">2. Перенос внутри слов <kbd>word-break</kbd></a></li>
+<li><a href="#word-wrap">3. Перенос слов в строке <kbd>word-wrap</kbd></a></li>
+</ul>
+<h3 id="text-overflow">1. Обрезка строки text-overflow</h3>
+<p>Свойство позволяет ограничивать длину текста в случае, когда он не умещается в контейнер, визуально обрезая его или отображая многоточием. Свойство работает только при задании следующих условий: должна быть определена ширина контейнера, элемент должен иметь значения <kbd>overflow: hidden</kbd> и <kbd>white-space: nowrap</kbd>. Не наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">text-overflow</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>clip</kbd></td>
+<td>Значение по умолчанию. Текст обрезается в пределе области содержимого, при этом может отобразиться лишь часть символа.</td>
+</tr>
+<tr>
+<td><kbd>ellipsis</kbd></td>
+<td>Замещает текст, не уместившийся в блок, с помощью многоточия.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {
+width: 300px;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}</pre>
+<figure><img src="https://html5book.ru/wp-content/uploads/2015/03/text-overflow.png" alt="text-overflow" width="660" height="56" class="alignleft size-full wp-image-4551" srcset="https://html5book.ru/wp-content/uploads/2015/03/text-overflow.png 660w, https://html5book.ru/wp-content/uploads/2015/03/text-overflow-300x25.png 300w" sizes="(max-width: 660px) 100vw, 660px" /><figcaption>Рис. 1. Обрезка текста с помощью свойства text-overflow</figcaption></figure>
+<h3 id="word-break">2. Перенос внутри слов word-break</h3>
+<p>В обычной ситуации слова переносятся на другую строку в местах пробелов или дефисов (&#171;мягкий перенос&#187;), или же в случае принудительного переноса с использованием элемента <kbd>&lt;br&gt;</kbd>. Данное свойство позволяет установить правила переноса внутри слов для того, чтобы длинные строки полностью заполняли пространство внутри контейнера. Не используется для CJK-языков (китайский-японский-корейский). Наследуется.</p>
+<table class="t1">
+<tr>
+<th colspan="2">word-break</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию. Текст в контейнере отображается в привычном для нас виде в соответствии с правилами, установленными в языке.</td>
+</tr>
+<tr>
+<td><kbd>break-all</kbd></td>
+<td>Пробелы в словах могут быть оформлены между любыми двумя буквами.</td>
+</tr>
+<tr>
+<td><kbd>keep-all</kbd></td>
+<td>Запрещает разрывы между парами букв слова.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {word-break: normal;}
+p {word-break: break-all;}
+p {word-break: keep-all;}</pre>
+<h3 id="word-wrap">3. Перенос слов в строке word-wrap</h3>
+<p>Применяется в случаях, когда текст не умещается в свой контейнер и выходит за его границу. Позволяет разрывать длинные слова и переносить их на следующую строку. Наследуется. Срабатывает лишь в случае, если значение <kbd>white-space</kbd> разрешает разрыв строк.</p>
+<table class="t1">
+<tr>
+<th colspan="2">word-wrap</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию. Слова разрываются только по правилам, принятым в языке.</td>
+</tr>
+<tr>
+<td><kbd>break-word</kbd></td>
+<td>Разрыв слов и перенос на следующую строку происходит в месте границы контейнера.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p><b>Синтаксис</b></p>
+<pre class="lang:css decode:true " >p {word-wrap: normal;}
+p {word-wrap: break-word;}</pre>                 
+                        
+                        
+        <h2>CSS Тень текста</h2>                
+                        
+  <p>Свойство <kbd>text-shadow</kbd> используется для добавления тени к тексту. Тень текста &#8212; интересный инструмент, который позволяет создавать удивительные эффекты. Тени могут быть однослойными или многослойными, размытыми, цветными или полупрозрачными. Задавая тень для элемента, можно указывать только одно значение длины и цвет, таким образом создавая цветную копию отдельного символа или слова.</p>
+<h2 style="clear:both">Как сделать тень для текста</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#text-shadow">1. Синтаксис свойства <kbd>text-shadow</kbd></a></li>
+<li><a href="#part2">2. Примеры тени для текста</a></li>
+<li><a href="#part3">3. Эффекты для тени при наведении</a></li>
+<li><a href="#part4">4. Анимация тени</a></li>
+</ul>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 10.0<br />
+<b>Edge:</b> 12.0<br />
+<b>Firefox:</b> 3.5<br />
+<b>Chrome:</b> 4.0<br />
+<b>Safari:</b> 4.0<br />
+<b>Opera:</b> 10.1<br />
+<b>iOS Safari:</b> 3.2<br />
+<b>Android Browser:</b> 2.1<br />
+<b>Chrome for Android:</b> 55.0</p></blockquote>
+<h3 id="text-shadow">1. Синтаксис свойства <kbd>text-shadow</kbd></h3>
+<p>Каждая тень применяется как к самому тексту, так и к элементам его оформления (свойство <kbd>text-decoration</kbd>). Одновременно можно задавать несколько теней, указывая их через запятую. Тени накладываются друг на друга, но не перекрывают сам текст. Первая тень всегда расположена сверху над остальными тенями. Свойство наследуется.</p>
+<p>Каждая тень определяется двумя или тремя значениями длины (третье значение является обязательным) и цветом (необязательное значение). Если цвет тени не указан, используется цвет текста. </p>
+<p>Первая длина задаёт смещение по оси Х, вторая &#8212; смещение по оси Y. Если значения длин отрицательные, то тень смещается влево и вверх от текста. </p>
+<p>Третье значение устанавливает радиус размытия, который определяется как расстояние от контура тени до края эффекта размытия. </p>
+<figure><img src="https://html5book.ru/wp-content/uploads/2014/11/text-shadow-syntax.png" alt="text-shadow-syntax" width="680" height="323" class="alignleft size-full wp-image-9941" srcset="https://html5book.ru/wp-content/uploads/2014/11/text-shadow-syntax.png 680w, https://html5book.ru/wp-content/uploads/2014/11/text-shadow-syntax-300x143.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption style="clear:both">Рис. 1. Синтаксис свойства text-shadow</figcaption></figure>
+<table class="t1">
+<tr>
+<th colspan="2">text-shadow</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>x-offset</td>
+<td>Обязательное значение. Смещение тени по горизонтали относительно текста. Может принимать как положительные, так и отрицательные значения.</td>
+</tr>
+<tr>
+<td>y-offset</td>
+<td>Обязательное значение. Смещение тени по вертикали относительно текста. Может принимать как положительные, так и отрицательные значения.</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>Необязательное значение. Определяет радиус размытия тени. Чем больше радиус, тем сильнее размыта тень.</td>
+</tr>
+<tr>
+<td>цвет</td>
+<td>Необязательное значение. По умолчанию принимает цвет текста. Для установления значения можно использовать следующие форматы записи цвета: <kbd>#RRGGBB</kbd>, <kbd>rgb(red, green, blue)</kbd>, <kbd>rgba(red, green, blue, alpha)</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию, означает отсутствие тени текста. Убирает тень элемента из группы элементов с заданным свойством.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h3 id="part2">2. Примеры тени для текста</h3>
+<h4>2.1. Плакатная тень</h4>
+<p class="text-shadow-1">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-1 {
+  background: #77F7DE;
+  color: white;
+  text-shadow: -2px -2px 0 #4D4644, 2px -2px 0 #4D4644, -2px 2px 0 #4D4644, 2px 2px 0 #4D4644, 4px 4px 0 white, 5px 5px 0 white, 6px 6px 0 white;
+  letter-spacing: 0.1em;
+}</pre>
+<h4>2.2. 3D тень</h4>
+<p class="text-shadow-2">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-2 {
+  background: linear-gradient(-45deg, #FEE864, #F5965E);
+  color: #f4f4f4;
+  text-shadow: -1px -1px white, 1px 1px gray, 2px 2px #7a7a7a, 3px 3px #757575, 4px 4px #707070, 5px 5px #6b6b6b, 6px 6px #666666, 7px 7px #616161, 8px 8px #5c5c5c, 9px 9px #575757, 10px 10px #525252, 11px 11px #4d4d4d, 18px 18px 30px rgba(0, 0, 0, .4), 18px 18px 10px rgba(0, 0, 0, .4);
+}</pre>
+<h4>2.3. Тень-текст</h4>
+<p class="text-shadow-3">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-3 {
+  background: #FFE6DB;
+  color: #FFE6DB;
+  letter-spacing: .1em;
+  text-shadow: 3px 0 rgba(250, 111, 142, .5), 6px 0 rgba(250, 111, 142, .4), 9px 0 rgba(250, 111, 142, .3), 12px 0 rgba(250, 111, 142, .2), 15px 0 rgba(250, 111, 142, .1);
+}</pre>
+<h4>2.4. Ретро-тень</h4>
+<p class="text-shadow-4">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-4 {
+  color: #FB631E;
+  letter-spacing: .1em;
+  text-shadow: 4px 4px white, 6px 6px #D7CC88;
+}</pre>
+<h4>2.5. Многослойная тень</h4>
+<p class="text-shadow-5">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-5 {
+  background: #f1f1f1;
+  color: #fcc105;
+  letter-spacing: .1em;
+  text-shadow: 4px 4px #ff981d, 7px 7px rgba(200, 120, 22, .2);
+}</pre>
+<h4>2.6. Прозрачная тень</h4>
+<p class="text-shadow-6">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-6 {
+  color: transparent;
+  text-shadow: 4px -4px rgba(157, 217, 227, .7), -2px -2px rgba(159, 141, 105, .7), 0 2px rgba(254, 216, 21, .7);
+}</pre>
+<h4>2.7. Тень-зебра</h4>
+<p class="text-shadow-7">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-7 {
+  background: #E02A91;
+  color: white;
+  text-shadow: 2px 2px black, 4px 4px white, 6px 6px black, 8px 8px white, 10px 10px black, 12px 12px white, 14px 14px black, 16px 16px white, 18px 18px black, 20px 20px white, 22px 22px black, 24px 24px white, 26px 26px black;
+}</pre>
+<h4>2.8. Неоновая тень</h4>
+<p class="text-shadow-8">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-8 {
+  background: black;
+  color: white;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px crimson, 0 0 35px crimson, 0 0 40px crimson, 0 0 50px crimson, 0 0 75px crimson;
+}</pre>
+<h4>2.9. Тень-обводка</h4>
+<p class="text-shadow-9">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-9 {
+  color: white;
+  text-shadow: 1px 1px #732372, 1px -1px #732372, -1px 1px #732372, -1px -1px #732372, 3px 3px 6px rgba(0,0,0,.5);
+}</pre>
+<h4>2.10. Стиль LETTERPRESS</h4>
+<p class="text-shadow-10">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-10 {
+  background: #F9C941;
+  color: #F9C941; 
+  letter-spacing: 2px;
+  text-shadow: 1px 1px #F3E7CF, -1px -1px #56433D;
+}</pre>
+<h4>2.11. Стиль ТВИТТЕР</h4>
+<p class="text-shadow-11">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-11 {
+  color: #3CF; 
+  text-shadow: -1px 0 1px white, 0 -1px 1px white, 0 1px 1px white, 1px 0 1px white, 0 0 8px white, 0 0 8px white, 0 0 8px white, 2px 2px 3px black;
+}</pre>
+<h4>2.12. Тень с обводкой</h4>
+<p class="text-shadow-12">Тень текста</p>
+<pre class="lang:css decode:true " >.text-shadow-12 {
+  color:#E34C38;
+  text-shadow: 1px 1px white, 2px 2px white, -1px -1px white, -2px -2px white, -1px 1px white, 1px -1px white, -2px 2px white, 2px -2px white, -3px -3px 4px rgba(0,0,0,.3), -3px 3px 4px rgba(0,0,0,.3), 3px 3px 4px rgba(0,0,0,.3), 3px -3px 4px rgba(0,0,0,.3); 
+}</pre>
+<h3 id="part3">3. Эффекты для тени при наведении</h3>
+<p data-height="265" data-theme-id="0" data-slug-hash="ENjrvy" data-default-tab="result" data-user="html5book" data-pen-title="ENjrvy" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/ENjrvy/"  >ENjrvy</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></p>
+<p data-height="265" data-theme-id="0" data-slug-hash="yVYOdY" data-default-tab="result" data-user="html5book" data-pen-title="yVYOdY" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/yVYOdY/"  >yVYOdY</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="part4">4. Анимация тени</h3>
+<p data-height="265" data-theme-id="0" data-slug-hash="jVbqZo" data-default-tab="result" data-user="html5book" data-pen-title="jVbqZo" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/jVbqZo/"  >jVbqZo</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></p>
+<p data-height="265" data-theme-id="0" data-slug-hash="NbGNBm" data-default-tab="result" data-user="html5book" data-pen-title="NbGNBm" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/NbGNBm/"  >NbGNBm</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></p>
+<p data-height="265" data-theme-id="0" data-slug-hash="dOYMrd" data-default-tab="result" data-user="html5book" data-pen-title="dOYMrd" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/dOYMrd/"  >dOYMrd</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></p>                      
+                        
+                        
+                        
+                        
+
+<br><br><br><br><br><br></div></div></div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+       <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+      
+      
+      
+      
+      
+     
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

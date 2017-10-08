@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>CSS Content</h2>
+                        <strong>CSS content</strong> дает возможность генерации содержимого и отображения его браузером на экране монитора пользователя. </p>
+<p>С помощью CSS можно добавить содержимое, не принадлежащее дереву HTML следующими способами:<br />
+&#8212; с использованием свойства <kbd>content</kbd> в сочетании с псевдоэлементами <kbd>:before</kbd> и <kbd>:after</kbd>;<br />
+&#8212; автоматическая нумерация с помощью свойств <kbd>counter-increment</kbd> и <kbd>counter-reset</kbd>.</p>
+<h2 style="clear:both">Добавление генерируемого содержимого на веб-страницу</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#content-prop">1. Свойство <kbd>content</kbd></a></li>
+<li><a href="#part2">1.1. Добавление специального символа</a></li>
+<li><a href="#part3">1.2. Добавление текста</a></li>
+<li><a href="#part4">1.3. Добавление изображения</a></li>
+<li><a href="#part5">1.4. Добавление блочного содержимого</a></li>
+<li><a href="#attr()">1.5. Добавление значения атрибута</a></li>
+<li><a href="#part7">1.6. Добавление кавычек</a></li>
+<li><a href="#part8">1.7. Добавление счетчика элементов</a></li>
+<li><a href="#part9">2. Свойство <kbd>display: list-item</kbd></a></li>
+</ul>
+<h3 id="content-prop">1. Свойство content</h3>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 9.0, не поддерживает анимацию и переходы псевдоэлементов<br />
+<b>Firefox:</b> 4.0<br />
+<b>Chrome:</b> 4.0, анимация и переходы псевдоэлементов &#8212; с 26.0<br />
+<b>Safari:</b> 4.0, не поддерживает анимацию и переходы псевдоэлементов<br />
+<b>Opera:</b> 4.0, не поддерживает анимацию и переходы псевдоэлементов<br />
+<b>iOS Safari:</b> 7.1<br />
+<b>Opera Mini:</b> 8<br />
+<b>Android Browser:</b> 4.1<br />
+<b>Chrome for Android:</b> 44</p></blockquote>
+<p>Данное свойство определяет содержимое, которое появляется до или после элемента. Используется с псевдоэлементами  <kbd>:before</kbd> или <kbd>:after</kbd>: </p>
+<pre data-language="css">h1:before, h1:after {
+content: "";
+}</pre>
+<p>Генерируемое содержимое наследует значение от элемента, к которому оно прикрепляется. При этом наследуются только наследуемые свойства.</p>
+<table class="t1">
+<tr>
+<th colspan="2">content</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>normal</kbd></td>
+<td>Значение по умолчанию, означает отсутствие добавляемого содержимого.</td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Не добавляет содержимое. Используется в случае, когда нужно удалить генерируемое содержимое для одного элемента из группы элементов (например, элементы списка), для которых уже задано это свойство.</td>
+</tr>
+<tr>
+<td><kbd>counter()</kbd></td>
+<td>Даёт возможность создавать счётчики, задавая для них точку отсчёта и приращение на некоторую величину с помощью свойства <kbd>counter-reset</kbd>. Для прямого увеличения счёта необходимо использовать свойство <kbd>counter-increment</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>attr()</kbd></td>
+<td>Добавляет до или после элемента значение атрибута, заключённого в скобки. Чтобы вставить пробел между основным содержимым и генерируемым, нужно добавить пробел перед скобкой или после нее, например, <kbd>content: attr( href);</kbd></td>
+</tr>
+<tr>
+<td><kbd>"  "</kbd></td>
+<td>Текст, который добавляется на веб-страницу, должен быть заключен в двойные или одинарные кавычки. Пустые кавычки можно использовать для добавления блочного содержимого.</td>
+</tr>
+<tr>
+<td><kbd>open-quote</kbd></td>
+<td>Добавляет к содержимому открывающую кавычку.</td>
+</tr>
+<tr>
+<td><kbd>close-quote</kbd></td>
+<td>Добавляет к содержимому закрывающую кавычку.</td>
+</tr>
+<tr>
+<td><kbd>no-open-quote</kbd></td>
+<td>Удаляет открывающую кавычку, при этом уровень их вложенности продолжает учитываться.</td>
+</tr>
+<tr>
+<td><kbd>no-close-quote</kbd></td>
+<td>Удаляет закрывающую кавычку.</td>
+</tr>
+<tr>
+<td><kbd>url()</kbd></td>
+<td>Добавляет медиа-содержимое, например, изображение, звук, видео. В качестве значения атрибута в скобках  указывается адрес внешнего ресурса, который вставляется в выбранное место документа.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h4 id="part2" style="margin-bottom:30px">1.1. Добавление специального символа</h4>
+
+<p><script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
+<p>Можно оживить текст с помощью добавления специальных символов. В качестве значения используется символ Юникода.</p>
+<pre data-language="css">h1 { 
+font-family: 'Niconne', cursive; 
+font-size: 50px; 
+color: #e12527; 
+}
+h1:before, h1:after { 
+content: "\2746"; 
+display: inline-block; 
+font-size: 60px; 
+color: #38afaa; 
+-webkit-animation: my 4s infinite alternate; 
+animation: my 4s infinite alternate; 
+}
+h1:before { 
+margin-right: 0.5em; 
+}
+h1:after { 
+margin-left: 0.5em; 
+}
+@-webkit-keyframes my {
+    0%   {color: #2e2f92;}
+    25%  {color: #38afaa;}
+    50%  {color: #5b59a7;}
+    75%  {color: #f7b21c;}
+    100% {color: #e12527;}
+ }
+@keyframes my {
+    0%   {color: #2e2f92;}
+    25%  {color: #38afaa;}
+    50%  {color: #5b59a7;}
+    75%  {color: #f7b21c;}
+    100% {color: #e12527;}
+ }</pre>
+<h4 id="part3">1.2. Добавление текста</h4>
+<p><img src="https://html5book.ru/wp-content/uploads/2014/12/content_text.png" alt="content_text" width="680" height="93" class="alignleft size-full wp-image-3593" srcset="https://html5book.ru/wp-content/uploads/2014/12/content_text.png 680w, https://html5book.ru/wp-content/uploads/2014/12/content_text-300x41.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><br />
+В качестве генерируемого содержимого между кавычками можно поместить любой текст, и он появится в указанном месте, при этом текст в кавычках выводится как есть. </p>
+<pre data-language="css" style="clear:both">h1:before, h1:after {
+content: "Yay!";
+font-family: 'Dancing Script', cursive;
+color: #f7b21c;
+text-shadow: 1px 1px 2px grey; 
+}
+h1:before {
+margin-right: 30px;
+}
+h1:after {
+margin-left: 30px;
+}</pre>
+<h4 id="part4">1.3. Добавление изображения</h4>
+<p><img src="https://html5book.ru/wp-content/uploads/2014/12/content_image.png" alt="content_image" width="680" height="97" class="alignleft size-full wp-image-3588" srcset="https://html5book.ru/wp-content/uploads/2014/12/content_image.png 680w, https://html5book.ru/wp-content/uploads/2014/12/content_image-300x43.png 300w" sizes="(max-width: 680px) 100vw, 680px" /></p>
+<pre data-language="css" style="clear:both">h1:before { 
+content: url(https://html5book.ru/images/left-twig.png); 
+display: inline-block;
+margin-right: 10px; 
+}</pre>
+<h4 id="part5">1.4. Добавление блочного содержимого</h4>
+<p><img src="https://html5book.ru/wp-content/uploads/2015/01/content_block.png" alt="content_block" width="680" height="546" class="alignleft size-full wp-image-3645" srcset="https://html5book.ru/wp-content/uploads/2015/01/content_block.png 680w, https://html5book.ru/wp-content/uploads/2015/01/content_block-300x241.png 300w" sizes="(max-width: 680px) 100vw, 680px" /></p>
+<pre class="lang:css decode:true " >*{box-sizing:border-box;}
+div {
+  position: relative;
+  width: 680px;
+  height: 100px;
+  border: 1px solid #C2C9D5;
+  margin-top: 40px;
+  background: linear-gradient(to top,#D7DFED, #F5FCFD, #D7DFED)
+}
+/*Кружок*/
+div:nth-child(1):before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: calc(50% - 11px);
+  left: -webkit-calc(50% - 11px);
+  top: -11px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #AC170E;
+  background: orangered;
+  box-shadow: 0 2px 4px  #292825;
+}
+/*Треугольник*/
+div:nth-child(2):before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 20px 20px 20px;
+  border-color: transparent transparent hotpink transparent;
+  position: absolute;
+  left: calc(50% - 15px);
+  left: -webkit-calc(50% - 15px);
+  top: -21px;
+}
+/*Зебра*/
+div:nth-child(3):before{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  background: repeating-linear-gradient(45deg, turquoise, turquoise 10px, #D7DFED 10px, #D7DFED 20px);
+}
+/*Треугольник с обводкой*/
+div:nth-child(4) {
+  border: 3px solid #3E3A40;
+}
+div:nth-child(4):before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #3E3A40;
+  transform: rotate(135deg);
+  position: absolute;
+  left: calc(50% - 11px);
+  left: -webkit-calc(50% - 11px);
+  top: -15px;
+  background:linear-gradient(to top right,#CDD3CD, #EEF0EE, #CDD3CD);
+  z-index: -1;
+}</pre>
+<h4 id="attr()">1.5. Добавление значения атрибута</h4>
+<p>Функция <kbd>attr()</kbd> позволяет добавить любое значение атрибута, например, url-адрес ссылки, который будет выводиться при печати текста. </p>
+<pre class="lang:css decode:true " >a:after {
+  content: attr(href);
+}</pre>
+<h4 id="part7">1.6. Добавление кавычек</h4>
+<p><img src="https://html5book.ru/wp-content/uploads/2015/01/content_quotes.png" alt="content_quotes" width="680" height="80" class="alignleft size-full wp-image-3650" srcset="https://html5book.ru/wp-content/uploads/2015/01/content_quotes.png 680w, https://html5book.ru/wp-content/uploads/2015/01/content_quotes-300x35.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><br />
+С помощью значений <kbd>open-quote</kbd> и <kbd>close-quote</kbd> можно генерировать открывающие и закрывающие кавычки. Внешний вид кавычек указывается в свойстве <kbd>quotes</kbd>. Если оно не задано, то будут использованы значения браузера по умолчанию.</p>
+<pre class="lang:default decode:true " >&lt;blockquote&gt;Some text&lt;/blockquote&gt;</pre>
+<pre class="lang:css decode:true " >blockquote {
+  quotes: "\2039" "\203A";
+  font-size: 40px;
+  font-family: 'Sigmar One', cursive;
+}
+blockquote:before {
+  content: open-quote;
+  color: mediumvioletred;
+  margin-right: 10px;
+}
+  blockquote:after  {
+  content: close-quote;
+  color: mediumvioletred;
+  margin-left: 10px;
+}</pre>
+<h4 id="part8">1.7. Добавление счетчика элементов</h4>
+<p><img src="https://html5book.ru/wp-content/uploads/2015/01/ccontent_counters.png" alt="ccontent_counters" width="680" height="326" class="alignleft size-full wp-image-3653" srcset="https://html5book.ru/wp-content/uploads/2015/01/ccontent_counters.png 680w, https://html5book.ru/wp-content/uploads/2015/01/ccontent_counters-300x144.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><br />
+Значение функции <kbd>counter()</kbd> позволяет пронумеровать любые блочные элементы на веб-странице. Счетчики создаются при помощи CSS-свойств <kbd>counter-reset</kbd> и <kbd>counter-increment</kbd>.</p>
+<h5 id="counter-reset">1.7.1. Имя счетчика</h5>
+<p>Свойство <kbd>counter-reset</kbd> задает имя одного или нескольких счетчиков, позволяя устанавливать или сбрасывать значение счетчика до любого значения. Свойство используется только в сочетании со вторым свойством &#8212; <kbd>counter-increment</kbd>. Работает для любых HTML-элементов.</p>
+<table class="t1">
+<tr>
+<th colspan="2">counter-reset</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию. Счетчик не установлен.</td>
+</tr>
+<tr>
+<td>имя счётчика число</td>
+<td>Имя счётчика выбирает один или несколько элементов, для которых требуется изменить значение счетчика. Число задает начальное счетчика. Не допускается использование ключевых слов в качестве имени счетчика. Если нужно установить нумерацию с единицы, необходимо задать <kbd>counter-reset: 0;</kbd>. Если нужно, чтобы нумерация начиналась с нуля, то <kbd>counter-reset: -1;</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h5 id="counter-increment">1.7.2. Приращение счетчика</h5>
+<p>Свойство <kbd>counter-increment</kbd> принимает одно или несколько значений, которые определяют имена счетчиков, которые будут приращены. </p>
+<table class="t1">
+<tr>
+<th colspan="2">counter-increment</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию. Отсутствие приращения для счетчика.</td>
+</tr>
+<tr>
+<td>имя счётчика число</td>
+<td>Имя счётчика определяет, какой счетчик будет приращен. Значение по умолчанию <kbd>1</kbd>. Если задано отрицательное число, то нумерация элементов будет отрицательная. Число задает начальное значение, а также шаг приращения, т.е. если установить <kbd>counter-increment: id 2;</kbd>, то первый элемент будет нумероваться с <kbd>2</kbd>, второй &#8212; с <kbd>4</kbd> и т.д. Если идентификатор ссылается на счетчик, который не был инициализирован с помощью <kbd>counter-reset</kbd>, то начальное значение будет равно <kbd>0</kbd>.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<p>Значение свойства <kbd>content: counter(имя счетчика)</kbd> выводит значение счетчика в качестве содержимого псевдоэлемента.</p>
+<pre class="lang:default decode:true " >&lt;h2&gt;Title&lt;/h2&gt;
+    &lt;p&gt;Some text&lt;/p&gt;
+    &lt;p&gt;Some text&lt;/p&gt;
+    &lt;p&gt;Some text&lt;/p&gt;
+&lt;h2&gt;Title&lt;/h2&gt;
+    &lt;p&gt;Some text&lt;/p&gt;
+    &lt;p&gt;Some text&lt;/p&gt;</pre>
+<pre class="lang:css decode:true " >body {
+  counter-reset: h2;/*создаем счетчик для любого заголовка h2*/
+  } 
+h2 {
+  counter-reset: p; /*создаем счетчик для абзацев р так, чтобы в каждой группе абзацев нумерация шла от номера заголовка*/
+  color: #0ba7e2;
+  }
+h2:before {
+  content: "Part " counter(h2) ". "; /*добавляем в начале каждого заголовка текст с пробелом, текущее значение счетчика и снова текст (в данном случае точку и пробел)*/
+  counter-increment: h2; /*задаем увеличение нумерации, при каждом появлении элемента h2 счетчик будет увеличиваться на единицу*/}
+p {
+color: #3b4849;
+  }
+p:before {
+  margin-left: 30px;
+  content: counter(h2) "." counter(p) '. ';/*добавляем в начале каждого абзаца значение счетчика h2, текст (в данном случае точка), счетчик абзацев и снова текст (точку с пробелом)*/
+  counter-increment: p; /*задаем увеличение нумерации на единицу*/
+  }</pre>
+<h3 id="part9">2. Свойство display: list-item</h3>
+<p><img src="https://html5book.ru/wp-content/uploads/2014/12/list_item.png" alt="list_item" width="680" height="132" class="alignleft size-full wp-image-3599" srcset="https://html5book.ru/wp-content/uploads/2014/12/list_item.png 680w, https://html5book.ru/wp-content/uploads/2014/12/list_item-300x58.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><br />
+В спецификации CSS есть еще одна возможность генерации содержимого, она реализуется с использованием элементов, свойство <kbd>display</kbd> которых принимает значение <kbd>list-item</kbd>. Значение  <kbd>list-item</kbd> свойства <kbd>display</kbd> превращает любые блочные элементы в элементы списка, позволяя задать для них любой вид нумерации через свойство <kbd>list-style-type</kbd>.</p>
+<pre class="lang:css decode:true " >div {
+display: list-item;
+list-style-type: decimal-leading-zero;
+font-weight: bold; 
+font-size: 20px;
+color: #DC143C;
+}</pre>
+
+<br><br><br><br><br><br></div></div></div>
+      
+     <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a class="active" href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>CSS Тени блока</h2>
+                        Свойство <kbd>box-shadow</kbd> добавляет элементу одну или более теней. Тень представляет собой копию элемента, смещенную на указанное расстояние. Тени бывают внешние или внутренние, размытые или плоские, они могут следовать контурам блоков со скругленными углами. С помощью ключевого слова <kbd>inset</kbd> создаются тени внутри элемента, делая элемент визуально объёмным или вдавленным. </p>
+<h2>Как сделать тень блока с помощью свойства box-shadow</h2>
+<ul class="contents">
+<li style="color:white; background:#688cdd;">Содержание:</li>
+<li><a href="#box-shadow">1. Синтаксис свойства <kbd>box-shadow</kbd></a></li>
+<li><a href="#part2">2. Примеры тени для блока</a></li>
+<li><a href="#part3">3. Эффекты для тени при наведении</a></li>
+<li><a href="#part4">4. Анимация тени</a></li>
+</ul>
+<h4>Поддержка браузерами</h4>
+<blockquote><p>
+<b>IE:</b> 9.0<br />
+<b>Edge:</b> 12.0<br />
+<b>Firefox:</b> 4.0, 3.5 -moz-<br />
+<b>Chrome:</b> 10.0, 4.0 -webkit-<br />
+<b>Safari:</b> 5.1, 3.1 -webkit-<br />
+<b>Opera:</b> 11.5<br />
+<b>iOS Safari:</b> 5.1, 3.1 -webkit-<br />
+<b>Android Browser:</b> 4.0, 2.1 -webkit-</p></blockquote>
+<h3 id="box-shadow">1. Синтаксис свойства box-shadow</h3>
+<p>Каждая тень принимает от одного до пяти параметров: горизонтальное смещение, вертикальное смещение, радиус размытия (необязательное значение), радиус распространения (необязательное значение) и цвет тени. Тени не влияют на компоновку и могут перекрывать соседние элементы или их тени. Свойство не наследуется.</p>
+<figure><img src="https://html5book.ru/wp-content/uploads/2016/11/box-shadow-syntax.png" width="680" height="350" class="alignleft size-full wp-image-9964" alt="box-shadow" srcset="https://html5book.ru/wp-content/uploads/2016/11/box-shadow-syntax.png 680w, https://html5book.ru/wp-content/uploads/2016/11/box-shadow-syntax-300x154.png 300w" sizes="(max-width: 680px) 100vw, 680px" /><figcaption style="clear:both">Рис. 1. Синтаксис свойства box-shadow</figcaption></figure>
+<table class="t1">
+<tr>
+<th colspan="2">box-shadow</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>x-offset</td>
+<td>Обязательное значение. Смещение тени по горизонтали относительно блока. Может принимать как положительные, так и отрицательные значения, положительное смещает тень вправо от блока, отрицательное – влево.
+</td>
+</tr>
+<tr>
+<td>y-offset</td>
+<td>Обязательное значение. Смещение тени по вертикали относительно блока. Может принимать как положительные, так и отрицательные значения, положительное смещает тень вниз, отрицательное &#8212; вверх.</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>Необязательное значение. Определяет радиус размытия тени. Чем больше радиус, тем сильнее размыта тень. Можно использовать только положительные значения.</td>
+</tr>
+<tr>
+<td>растяжение</td>
+<td>Необязательное значение, расширяет тень, утолщая ее сплошную часть между размытыми краями. Принимает как положительные, так и отрицательные значения, задаётся в единицах длины &#8212; <kbd>px</kbd> и т.д.</td>
+</tr>
+<tr>
+<td>цвет</td>
+<td>Необязательное значение. По умолчанию тень черного цвета. Для установления значения можно использовать следующие форматы записи цвета: <kbd>#RRGGBB</kbd>, <kbd>rgb(red, green, blue)</kbd>, <kbd>rgba(red, green, blue, alpha)</kbd>. Для Safari цвет тени указывать обязательно.</td>
+</tr>
+<tr>
+<td><kbd>inset</kbd></td>
+<td>Создаёт тень внутри блока.</td>
+</tr>
+<tr>
+<td><kbd>none</kbd></td>
+<td>Значение по умолчанию, означает отсутствие тени.</td>
+</tr>
+<tr>
+<td><kbd>initial</kbd></td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td><kbd>inherit</kbd></td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h3 id="part2">2. Примеры тени для блока</h3>
+<style>.example-shadow-1 {background: #e6e3df;text-align:center}
+.example-shadow-1 span {margin: 50px;height: 100px;width: 200px;display: inline-block;box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);}
+.example-shadow-2 {background: beige;text-align: center;}
+.example-shadow-2 span  {display: inline-block;border-radius: 5px;padding: 15px 35px;font-size: 22px; margin: 20px;color: white; background: #55acee; box-shadow: 0 5px 0 #3C93D5;}
+.example-shadow-2 span:hover { background: #6FC6FF;}
+.example-shadow-3 { background: #e8e8e8; text-align: center;}
+.example-shadow-3 span { background: white; display: inline-block; width: 200px; height: 100px; margin: 50px; box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}</style>
+<h4>2.1. Внутренняя тень</h4>
+<p class="example-shadow-1"><span></span></p>
+<pre class="lang:default decode:true " >&lt;p class="example-shadow-1"&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+<pre class="lang:css decode:true " >.example-shadow-1 {
+  background: #e6e3df;
+  text-align: center;
+}
+.example-shadow-1 span {
+  margin: 50px;
+  height: 100px;
+  width: 200px;
+  display: inline-block;
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+}</pre>
+<h4>2.2. Плоская тень с одной стороны</h4>
+<p class="example-shadow-2"><span>flat</span></p>
+<pre class="lang:default decode:true " >&lt;p class="example-shadow-2"&gt;&lt;a href="#btn"&gt;flat&lt;/a&gt;&lt;/p&gt;</pre>
+<pre class="lang:css decode:true " >.example-shadow-2 {
+  background: beige;
+  text-align: center;
+}
+.example-shadow-2 a  {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 15px 35px;
+  font-size: 22px;
+  margin: 20px;
+  color: white;
+  background: #55acee;
+  box-shadow: 0 5px 0 #3C93D5;
+}
+.example-shadow-2 a:hover {
+  background: #6FC6FF;
+}</pre>
+<h4>2.3. Тень в стиле &#171;материальный дизайн&#187;</h4>
+<p class="example-shadow-3"><span></span></p>
+<pre class="lang:default decode:true " >&lt;p class="example-shadow-3"&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;</pre>
+<pre class="lang:css decode:true " >.example-shadow-3 {
+  background: #e8e8e8;
+  text-align: center;
+}
+.example-shadow-3 span {
+  background: white;
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 50px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}</pre>
+<h3 id="part3">3. Эффекты для тени при наведении</h3>
+<p data-height="350" data-theme-id="0" data-slug-hash="xRwqWo" data-default-tab="result" data-user="html5book" data-pen-title="xRwqWo" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/xRwqWo/"  >xRwqWo</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></p>
+<h3 id="part4">4. Анимация тени</h3>
+<p data-height="350" data-theme-id="0" data-slug-hash="YpypeE" data-default-tab="result" data-user="html5book" data-pen-title="YpypeE" class="codepen">See the Pen <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book/pen/YpypeE/"  >YpypeE</a> by Elena (<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io/html5book"  >@html5book</a>) on <a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://codepen.io"  >CodePen</a>.</p>
+<p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script></p>
+
+<br><br><br><br><br><br></div></div></div>
+
+      
+     <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ResWebLearn72</title>
+                <meta charset="utf-8">
+                <link rel="stylesheet" href="css/navbar.css">
+                <link rel="stylesheet" href="css/footer.css">
+                <link rel="stylesheet" href="css/content.css">
+                <link rel="stylesheet" href="css/other.css">
+                <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+            <style>body{background: url(img/fon.png);}</style>
+        <nav class="blend">
+       <ul>
+     <div class="hdr">
+	   <span>R</span><span>e</span><span>s</span><span>W</span><span>e</span><span>b</span> <div><span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>7</span><span>2</span></div></div><br>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="openserver.html">OS Panel</a></li>
+      <li><a href="htmlandcss.html">HTML5 & CSS3</a></li>
+      <li><a href="bootstrap.html">Bootstrap</a></li>   
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a class="active" href="jquery.html">Jquery Framework</a></li>
+      <li><a href="angular.html">Angular Framework</a></li>
+      <li><a href="mysql.html">MySQL</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="phpframework.html">Yii2 Framework</a></li>
+      <li><a href="cms.html">CMS</a></li>
+      <li><a href="crm.html">CRM</a></li>
+      <li><a href="host.html">HOST</a></li>
+      <li><a href="contacts.html">О нас</a></li></ul></nav><br><br><br><br><br><br><br><br><br><br><br><br><body>
+      
+      <div class="container">
+                      <div class="bubble">
+                        <div class="info">
+                        <h2>Основы JQuery</h2>
+                        <p>Библиотека jQuery производит манипуляции с html-элементами, управляя их поведением и используя DOM для изменения структуры веб-страницы. При этом исходные файлы HTML и CSS не меняются, изменения вносятся лишь в отображение страницы для пользователя. </p>
+<p>Для выбора элементов используются селекторы CSS. Выбор осуществляется с помощью функции <kbd>$()</kbd>. При вызове функция <kbd>$()</kbd> возвращает новый экземпляр объекта JQuery, который оборачивает ноль или более элементов DOM и позволяет взаимодействовать с ними различными способами.</p>
+<p>Выполнение различных сценариев возможно только после окончания загрузки структуры документа <kbd>document</kbd>, когда браузер преобразует html-код страницы в дерево DOM. Управление процессом загрузки обеспечивает конструкция </p>
+<pre class="lang:js decode:true " >jQuery(document).ready(function() {
+...
+});</pre>
+<p>Сначала производится обертывание экземпляра <kbd>document</kbd> в функцию <kbd>jQuery()</kbd>, после применяется метод <kbd>ready()</kbd>, которому передается функция <kbd>function() {...}</kbd>, исполняемая после загрузки документа.</p>
+<p>На практике обычно используется сокращенная форма такой записи <kbd>jQuery(function() {...});</kbd>, или <kbd>$(function() {...});</kbd>.</p>
+<p>Для хранения информации при работе с библиотекой jQuery используются переменные JavaScript. В переменных могут храниться элементы. Имена переменных, предназначенных для хранения возвращаемых элементов, начинаются со знака <kbd>$</kbd>, например:</p>
+<pre class="lang:js decode:true " >$h = $(".list").parent().parent().detach();</pre>
+<p>Для хранения нескольких элементов используются массивы JavaScript:</p>
+<pre class="lang:js decode:true " >$k[3] = 15;</pre>
+<h2>Правила работы с библиотекой jQuery</h2>
+<h3>1. Как добавить jQuery на веб-страницу</h3>
+<p>Добавить библиотеку jQuery на свою веб-страницу можно двумя способами:</p>
+<p><span class="first"> Использовать</span> версию файла jQuery, размещенную на ресурсах <strong>Google</strong>, <strong>Microsoft</strong> или <strong>jQuery.com</strong>.<br />
+Данный метод использует <strong>&#171;Сеть дистрибуции контента&#187; (CDN, content distribution network),</strong> т.е. файл jQuery расположен на другом веб-сайте, который при запросе пользователем отправляет данный файл на его компьютер. Очевидные преимущества данного способа &#8212; снижение нагрузки на собственный веб-сервер и ускорение загрузки файла в силу разветвленности сети серверов дистрибьютора.</p>
+<p>Чтобы воспользоваться данным способом, необходимо перейти по одной из ссылок:<br />
+<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/https://developers.google.com/speed/libraries/devguide#jquery"  target="_blank" class="site">Google CDN</a><br />
+<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://www.asp.net/ajaxlibrary/cdn.ashx#jQuery_Releases_on_the_CDN_0"  target="_blank" class="site">Microsoft CDN</a><br />
+<a target="_blank" rel="nofollow" href="https://html5book.ru/goto/http://cdnjs.com/libraries/jquery/"  target="_blank" class="site">CDNJS CDN</a><br />
+После перехода на сайт ресурса вам  потребуется всего лишь скопировать ссылку на jQuery-файл и добавить её на свою веб-страницу между тегами <kbd>&lt;script&gt;...&lt;/script&gt;.</kbd> В результате у вас должно получиться, например, </p>
+<pre class="lang:default decode:true " >&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;</pre>
+<p><span class="first">Загрузить</span> последнюю версию библиотеки jQuery с официального сайта. Для этого вам необходимо перейти по адресу <a href ="http://jquery.com/download/" class="site">jQuery.com</a> и выбрать интересующую вас версию библиотеки. Для загрузки предлагается две версии jQuery-файла &#8212; минимизированный и несжатый. Размер несжатого файла около 300 Кб, он содержит комментарии, поэтому его лучше использовать с целью разработки и отладки кода.<br />
+Минимизированная версия файла весит около 100Кб, в ней удалены все комментарии и ненужные пробелы, что ускоряет загрузку файла браузером.</p>
+<p>Для загрузки нужно перейти по ссылке, и в открывшемся окне щелкнуть правой кнопкой мыши и выбрать &#171;Сохранить как &#8230;&#187;. После этого поместить файл в нужную папку (обычно для этого используется папка &#171;scripts&#187;) и добавить его на вашу страницу:</p>
+<pre class="lang:default decode:true " >&lt;script src="scripts/jquery-2.0.0.min.js"&gt;&lt;/script&gt;</pre>
+<h3>2. Правила добавления jQuery на страницу</h3>
+<p><span class="first"> Размещайте</span> ссылки на jQuery-файл внутри тега <kbd>&lt;head&gt;</kbd>.<br />
+<span class="first">Размещайте</span> ссылки на jQuery-файл после ссылок на стили CSS, так как зачастую библиотека jQuery производит манипуляции со стилями элементов веб-страницы.<br />
+<span class="first">Размещайте</span> другие теги <kbd>&lt;script&gt;...&lt;/script&gt;</kbd> только после ссылки на файл jQuery, если данный скрипт использует библиотеку jQuery.</p>
+<h3>3. Как создать новый html-элемент</h3>
+<p>Создать пустой html-элемент, например, блок, можно несколькими способами:</p>
+<p>1) с помощью краткой формы записи <kbd>$("&lt;div&gt;")</kbd><br />
+2) с помощью инструкции <kbd>$("&lt;div&gt;&lt;/div&gt;")</kbd><br />
+3) с помощью инструкции <kbd>$("&lt;div/&gt;")</kbd></p>
+<p>Все три способа рабочие, но, тем не менее, рекомендуется включать открывающие и закрывающие теги, чтобы показать, что данный элемент может содержать другие элементы.</p>
+<p>При создании нового элемента методу <kbd>$()</kbd> можно передать второй параметр в виде объекта JavaScript, определяющий дополнительные атрибуты элемента:</p>
+<pre class="lang:js decode:true " >$("img", 
+{src: "images/flower.jpg",
+title: "Rose_in_garden",
+click: function() {...}
+}).appendTo("body");</pre>
+<p>Таким образом создается элемент <kbd>&lt;img&gt;</kbd> с заданными атрибутами и включается в дерево DOM.</p>
+
+                        
+<br><br><br><br><br><br></div></div></div>
+     <a href="#" title="Вернуться к началу" class="topbutton">Наверх</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br></body>
+                <footer class="footer" align="center"><br><br>
+	           Restart72 &copy;2017 Дмитрий Сидоров (Казанцев) | Open Source Project ||| Материалы взяты с сайта <a href="https://html5book.ru">HTML5BOOK.RU</a>
+        </footer>
+    </head>
+</html>

@@ -32,3 +32,5 @@ function FindOnPage(inputId) {
   lastResFind=textToFind; 
   window.location = '#'+textToFind; 
  } 
+
+
